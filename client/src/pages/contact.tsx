@@ -1,0 +1,370 @@
+import { motion } from "framer-motion";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { pageTransition } from "@/utils/animations";
+import { contactInfo, locations } from "@/data/content";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  interest: z.string().min(1, "Please select an area of interest"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type FormValues = z.infer<typeof formSchema>;
+
+const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      interest: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    try {
+      await apiRequest("POST", "/api/contact", data);
+      toast({
+        title: "Message Sent",
+        description: "We'll get back to you as soon as possible!",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <motion.div
+      className="pt-16"
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={pageTransition}
+    >
+      {/* Hero */}
+      <section className="relative py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Have questions or ready to start a project? Reach out to our team
+              today.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              className="glass-effect rounded-xl p-8"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-6">
+                Send Us a Message
+              </h3>
+
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your name"
+                            className="bg-background border-gray-700 focus:border-primary"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your email"
+                            className="bg-background border-gray-700 focus:border-primary"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="interest"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Area of Interest</FormLabel>
+                        <Select
+                          onValueChange={field.onChange}
+                          defaultValue={field.value}
+                        >
+                          <FormControl>
+                            <SelectTrigger className="bg-background border-gray-700 focus:ring-primary">
+                              <SelectValue placeholder="Select your interest" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="ai">
+                              AI & Machine Learning
+                            </SelectItem>
+                            <SelectItem value="cloud">
+                              Cloud Infrastructure
+                            </SelectItem>
+                            <SelectItem value="security">
+                              Cybersecurity
+                            </SelectItem>
+                            <SelectItem value="development">
+                              Custom Development
+                            </SelectItem>
+                            <SelectItem value="analytics">
+                              Data Analytics
+                            </SelectItem>
+                            <SelectItem value="mobile">
+                              Mobile Solutions
+                            </SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="How can we help you?"
+                            className="bg-background border-gray-700 focus:border-primary"
+                            rows={4}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </Form>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-8"
+            >
+              <div className="glass-effect rounded-xl p-8 mb-8">
+                <h3 className="text-xl font-semibold text-white mb-6">
+                  Our Locations
+                </h3>
+
+                <div className="space-y-6">
+                  {locations.map((location) => (
+                    <div key={location.id} className="flex items-start">
+                      <div className="text-primary mr-4 mt-1">
+                        <MapPin />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-medium text-white">
+                          {location.title}
+                        </h4>
+                        <p className="text-gray-300">
+                          {location.address}
+                          <br />
+                          {location.city}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="glass-effect rounded-xl p-8">
+                <h3 className="text-xl font-semibold text-white mb-6">
+                  Connect With Us
+                </h3>
+
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="text-primary mr-4">
+                      <Mail className="h-6 w-6" />
+                    </div>
+                    <a
+                      href={`mailto:${contactInfo.email}`}
+                      className="text-gray-300 hover:text-primary transition duration-300"
+                    >
+                      {contactInfo.email}
+                    </a>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="text-primary mr-4">
+                      <Phone className="h-6 w-6" />
+                    </div>
+                    <a
+                      href={`tel:${contactInfo.phone.replace(/[^0-9+]/g, '')}`}
+                      className="text-gray-300 hover:text-primary transition duration-300"
+                    >
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="text-primary mr-4">
+                      <Clock className="h-6 w-6" />
+                    </div>
+                    <p className="text-gray-300">{contactInfo.hours}</p>
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <div className="flex space-x-4">
+                    <a
+                      href="#"
+                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      aria-label="LinkedIn"
+                    >
+                      <FaLinkedinIn />
+                    </a>
+                    <a
+                      href="#"
+                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      aria-label="Twitter"
+                    >
+                      <FaTwitter />
+                    </a>
+                    <a
+                      href="#"
+                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      aria-label="GitHub"
+                    >
+                      <FaGithub />
+                    </a>
+                    <a
+                      href="#"
+                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      aria-label="Medium"
+                    >
+                      <FaMediumM />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Visit Our Offices
+            </h2>
+          </motion.div>
+
+          <div className="relative h-[400px] rounded-xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0952123206644!2d-122.39633072405955!3d37.79133111459036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858061cbb5a467%3A0x3ed6b05f41229f9c!2sEmbarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111!5e0!3m2!1sen!2sus!4v1659463264075!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0"
+              title="NovaCore Headquarters Map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </motion.div>
+  );
+};
+
+export default Contact;
