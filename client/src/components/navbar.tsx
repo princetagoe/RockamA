@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "@/utils/animations";
 import ScrollLink from "@/components/scroll-link";
+import ThemeToggle from "@/components/theme-toggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

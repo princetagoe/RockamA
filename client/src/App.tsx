@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { AnimatePresence } from "framer-motion";
+import { ThemeProvider } from "@/lib/theme-provider";
 
 // Pages
 import Home from "@/pages/home";
@@ -41,9 +42,11 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <ScrollToTopButton />
-      <Toaster />
+      <ThemeProvider>
+        <Router />
+        <ScrollToTopButton />
+        <Toaster />
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }
