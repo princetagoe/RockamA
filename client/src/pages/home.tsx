@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import ScrollLink from "@/components/scroll-link"; 
 import {
   Brain,
   Cloud,
@@ -13,6 +14,7 @@ import SolutionCard from "@/components/solution-card";
 import IndustryCard from "@/components/industry-card";
 import { solutions, industries } from "@/data/content";
 import { fadeInAnimation, pageTransition, floatAnimation } from "@/utils/animations";
+import { scrollToTop } from "@/lib/utils";
 
 const Home = () => {
   return (
@@ -217,7 +219,7 @@ const Home = () => {
               className="border-gray-600 text-white hover:border-primary hover:text-primary"
               asChild
             >
-              <Link href="/solutions">View All Solutions</Link>
+              <ScrollLink to="/solutions">View All Solutions</ScrollLink>
             </Button>
           </div>
         </div>
@@ -267,7 +269,7 @@ const Home = () => {
               className="border-gray-600 text-white hover:border-primary hover:text-primary"
               asChild
             >
-              <Link href="/industries">Explore All Industries</Link>
+              <ScrollLink to="/industries">Explore All Industries</ScrollLink>
             </Button>
           </div>
         </div>
@@ -298,7 +300,7 @@ const Home = () => {
               className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
               asChild
             >
-              <Link href="/contact">Get Started</Link>
+              <ScrollLink to="/contact">Get Started</ScrollLink>
             </Button>
           </motion.div>
         </div>
