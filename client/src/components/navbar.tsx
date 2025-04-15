@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "@/utils/animations";
+import ScrollLink from "@/components/scroll-link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,18 +49,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
+              <ScrollLink to="/" className="flex items-center">
                 <span className="text-primary font-bold text-xl mr-1">Nova</span>
                 <span className="text-white font-bold text-xl">Core</span>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {navLinks.map((link, i) => (
-                <Link
+                <ScrollLink
                   key={i}
-                  href={link.path}
+                  to={link.path}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition duration-300 ${
                     location === link.path
                       ? "text-primary border-b-2 border-primary"
@@ -67,7 +68,7 @@ const Navbar = () => {
                   }`}
                 >
                   {link.name}
-                </Link>
+                </ScrollLink>
               ))}
             </div>
           </div>
@@ -94,9 +95,9 @@ const Navbar = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link, i) => (
-              <Link
+              <ScrollLink
                 key={i}
-                href={link.path}
+                to={link.path}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   location === link.path
                     ? "text-primary bg-muted"
@@ -104,7 +105,7 @@ const Navbar = () => {
                 }`}
               >
                 {link.name}
-              </Link>
+              </ScrollLink>
             ))}
           </div>
         </motion.div>

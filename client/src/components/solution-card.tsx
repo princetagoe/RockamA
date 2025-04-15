@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { LucideIcon } from "lucide-react";
+import ScrollLink from "@/components/scroll-link";
+import { scrollToTop } from "@/lib/utils";
 
 interface SolutionCardProps {
   icon: LucideIcon;
@@ -55,7 +57,7 @@ const SolutionCard = ({
           className="p-0 text-primary font-medium flex items-center group-hover:gap-2 transition-all"
           asChild
         >
-          <a href={link}>
+          <ScrollLink to={link}>
             Learn more{" "}
             <motion.span
               className="ml-2"
@@ -65,7 +67,7 @@ const SolutionCard = ({
             >
               →
             </motion.span>
-          </a>
+          </ScrollLink>
         </Button>
       </div>
     </motion.div>

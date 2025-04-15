@@ -15,6 +15,7 @@ import NotFound from "@/pages/not-found";
 // Components
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 function Router() {
   const [location] = useLocation();
