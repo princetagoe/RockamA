@@ -18,6 +18,7 @@ export const solutions = [
     description:
       "Leverage the power of artificial intelligence to automate processes, gain insights, and deliver personalized experiences.",
     link: "/solutions#ai",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const solutions = [
     description:
       "Build scalable, secure, and resilient cloud infrastructure tailored to your business needs and growth trajectory.",
     link: "/solutions#cloud",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const solutions = [
     description:
       "Protect your business with comprehensive security solutions that safeguard your data, systems, and reputation.",
     link: "/solutions#security",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const solutions = [
     description:
       "Create tailor-made software solutions that perfectly align with your unique business processes and objectives.",
     link: "/solutions#development",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const solutions = [
     description:
       "Transform raw data into actionable business intelligence with our advanced analytics and visualization tools.",
     link: "/solutions#analytics",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const solutions = [
     description:
       "Deliver exceptional mobile experiences with cutting-edge apps that engage users and drive business growth.",
     link: "/solutions#mobile",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
 ];
 

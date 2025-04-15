@@ -52,6 +52,7 @@ const Solutions = () => {
                 title={solution.title}
                 description={solution.description}
                 link={solution.link}
+                image={solution.image}
                 delay={index}
               />
             ))}
