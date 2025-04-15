@@ -42,6 +42,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router />
+      <ScrollToTopButton />
       <Toaster />
     </QueryClientProvider>
   );
