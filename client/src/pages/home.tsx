@@ -25,16 +25,46 @@ const Home = () => {
     >
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32">
-        <Particles count={50} />
+        <Particles count={75} />
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.div 
+            className="absolute top-1/4 left-0 w-64 h-64 rounded-full bg-primary/5"
+            animate={{ x: [0, 50, 0], y: [0, 30, 0] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="absolute bottom-1/3 right-10 w-80 h-80 rounded-full bg-primary/10"
+            animate={{ x: [0, -70, 0], y: [0, 40, 0] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="absolute top-1/2 left-1/4 w-40 h-40 rounded-full bg-primary/5"
+            animate={{ x: [0, 60, 0], y: [0, -40, 0] }}
+            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <motion.h1
               className="text-4xl md:text-6xl font-bold tracking-tight"
               variants={fadeInAnimation}
             >
-              <span className="text-white">Advanced Technology</span>
+              <motion.span 
+                className="text-white inline-block"
+                whileHover={{ scale: 1.05, color: "#f0f0f0", transition: { duration: 0.2 } }}
+              >
+                Advanced Technology
+              </motion.span>
               <br />
-              <span className="text-primary">for Tomorrow's Solutions</span>
+              <motion.span 
+                className="text-primary inline-block"
+                whileHover={{ scale: 1.05, textShadow: "0 0 8px rgba(80, 250, 123, 0.7)", transition: { duration: 0.2 } }}
+              >
+                for Tomorrow's Solutions
+              </motion.span>
             </motion.h1>
             <motion.p
               className="mt-6 mx-auto max-w-2xl text-xl text-gray-300"
@@ -53,19 +83,23 @@ const Home = () => {
               animate="visible"
               transition={{ delay: 0.4 }}
             >
-              <Button
-                size="lg"
-                className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
-              >
-                Book a Demo
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-gray-600 text-white hover:border-primary hover:text-primary"
-              >
-                Learn More
-              </Button>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  size="lg"
+                  className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                >
+                  Book a Demo
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-gray-600 text-white hover:border-primary hover:text-primary"
+                >
+                  Learn More
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
 
@@ -75,14 +109,19 @@ const Home = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.6 }}
+            whileHover={{ scale: 1.02 }}
           >
-            <div className="absolute inset-0 flex items-center justify-center animate-pulse opacity-70">
-              <div className="w-[80%] h-[80%] rounded-full bg-primary/10"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div 
+                className="w-[90%] h-[90%] rounded-full bg-primary/10"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
             </div>
             <img
               src="https://images.unsplash.com/photo-1581089778245-3ce67677f718?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
               alt="Advanced technology visualization"
-              className="w-full h-auto max-h-[500px] object-cover rounded-xl mx-auto"
+              className="w-full h-auto max-h-[500px] object-cover rounded-xl mx-auto shadow-lg shadow-primary/20"
             />
             <div className="absolute inset-0 gradient-overlay rounded-xl"></div>
             <div className="absolute bottom-8 left-8 right-8 text-white">

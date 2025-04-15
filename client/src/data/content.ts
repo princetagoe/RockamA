@@ -156,3 +156,34 @@ export const contactInfo = {
   phone: "+1 (800) 123-4567",
   hours: "Monday - Friday: 9am - 6pm PST",
 };
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Alexandra Chen",
+    position: "CEO & Founder",
+    bio: "Alexandra brings 15+ years of technology leadership experience, having previously led innovation teams at Fortune 500 companies.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 2,
+    name: "Marcus Johnson",
+    position: "CTO",
+    bio: "With a background in AI research and cloud architecture, Marcus leads our technical strategy and innovation initiatives.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 3,
+    name: "Sophia Rodriguez",
+    position: "VP of Product",
+    bio: "Sophia excels at translating complex technical concepts into elegant product solutions that address real business needs.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 4,
+    name: "David Kim",
+    position: "Director of Engineering",
+    bio: "David's engineering leadership has been instrumental in building our robust, scalable technology stack and developer team.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  }
+];

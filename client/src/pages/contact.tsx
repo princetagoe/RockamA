@@ -349,17 +349,83 @@ const Contact = () => {
             </h2>
           </motion.div>
 
-          <div className="relative h-[400px] rounded-xl overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0952123206644!2d-122.39633072405955!3d37.79133111459036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858061cbb5a467%3A0x3ed6b05f41229f9c!2sEmbarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111!5e0!3m2!1sen!2sus!4v1659463264075!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
-              title="NovaCore Headquarters Map"
-            ></iframe>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <motion.div
+              className="relative h-[400px] rounded-xl overflow-hidden"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0952123206644!2d-122.39633072405955!3d37.79133111459036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858061cbb5a467%3A0x3ed6b05f41229f9c!2sEmbarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111!5e0!3m2!1sen!2sus!4v1659463264075!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+                title="NovaCore Headquarters Map"
+              ></iframe>
+              <div className="absolute inset-0 pointer-events-none border-4 border-primary rounded-xl"></div>
+            </motion.div>
+
+            <motion.div
+              className="glass-effect rounded-xl p-8 h-[400px] flex flex-col"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-6">
+                Office Hours & Information
+              </h3>
+              
+              <div className="grid gap-6">
+                <div className="flex items-center">
+                  <div className="h-12 w-12 rounded-full bg-background flex items-center justify-center text-primary mr-4">
+                    <Clock className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium">Business Hours</h4>
+                    <p className="text-gray-300">{contactInfo.hours}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <div className="h-12 w-12 rounded-full bg-background flex items-center justify-center text-primary mr-4">
+                    <Phone className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium">Phone Support</h4>
+                    <p className="text-gray-300">{contactInfo.phone}</p>
+                    <p className="text-gray-400 text-sm">For urgent inquiries</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <div className="h-12 w-12 rounded-full bg-background flex items-center justify-center text-primary mr-4">
+                    <Mail className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium">Email</h4>
+                    <p className="text-gray-300">{contactInfo.email}</p>
+                    <p className="text-gray-400 text-sm">We respond within 24 hours</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-auto">
+                <Button 
+                  className="w-full bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                  asChild
+                >
+                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                    Schedule a Meeting
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
