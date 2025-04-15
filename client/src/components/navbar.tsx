@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <ScrollLink to="/" className="flex items-center">
                 <span className="text-primary font-bold text-xl mr-1">Nova</span>
-                <span className="text-white font-bold text-xl">Core</span>
+                <span className="text-foreground font-bold text-xl">Core</span>
               </ScrollLink>
             </div>
           </div>
@@ -65,12 +65,13 @@ const Navbar = () => {
                   className={`px-3 py-2 rounded-md text-sm font-medium transition duration-300 ${
                     location === link.path
                       ? "text-primary border-b-2 border-primary"
-                      : "text-gray-300 hover:text-primary"
+                      : "text-foreground/80 hover:text-primary"
                   }`}
                 >
                   {link.name}
                 </ScrollLink>
               ))}
+              <ThemeToggle />
             </div>
           </div>
           <div className="md:hidden">
@@ -102,12 +103,16 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   location === link.path
                     ? "text-primary bg-muted"
-                    : "text-gray-300 hover:text-primary hover:bg-muted"
+                    : "text-foreground/80 hover:text-primary hover:bg-muted"
                 }`}
               >
                 {link.name}
               </ScrollLink>
             ))}
+            <div className="flex items-center px-3 py-2">
+              <span className="text-sm font-medium text-foreground/80 mr-2">Toggle Theme</span>
+              <ThemeToggle />
+            </div>
           </div>
         </motion.div>
       )}
