@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -12,11 +13,26 @@ import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM } from "react-icons/fa";
 import Particles from "@/components/particles";
 import SolutionCard from "@/components/solution-card";
 import IndustryCard from "@/components/industry-card";
+import DemoModal from "@/components/demo-modal";
+import LearnMoreModal from "@/components/learn-more-modal";
 import { solutions, industries } from "@/data/content";
 import { fadeInAnimation, pageTransition, floatAnimation } from "@/utils/animations";
 import { scrollToTop } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 
 const Home = () => {
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [learnMoreModalOpen, setLearnMoreModalOpen] = useState(false);
+  const { toast } = useToast();
+  
+  // Handle social media link clicks
+  const handleSocialClick = (platform: string) => {
+    toast({
+      title: `${platform} clicked`,
+      description: `This would normally navigate to NovaCore's ${platform} profile.`
+    });
+  };
+  
   return (
     <motion.div
       className="pt-16"
@@ -89,6 +105,7 @@ const Home = () => {
                 <Button
                   size="lg"
                   className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                  onClick={() => setDemoModalOpen(true)}
                 >
                   Book a Demo
                 </Button>
@@ -98,6 +115,7 @@ const Home = () => {
                   size="lg"
                   variant="outline"
                   className="border-gray-600 text-white hover:border-primary hover:text-primary"
+                  onClick={() => setLearnMoreModalOpen(true)}
                 >
                   Learn More
                 </Button>
@@ -328,6 +346,7 @@ const Home = () => {
             >
               <a
                 href="#"
+                onClick={(e) => { e.preventDefault(); handleSocialClick('LinkedIn'); }}
                 className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
                 aria-label="LinkedIn"
               >
@@ -335,6 +354,7 @@ const Home = () => {
               </a>
               <a
                 href="#"
+                onClick={(e) => { e.preventDefault(); handleSocialClick('Twitter'); }}
                 className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
                 aria-label="Twitter"
               >
@@ -342,6 +362,7 @@ const Home = () => {
               </a>
               <a
                 href="#"
+                onClick={(e) => { e.preventDefault(); handleSocialClick('GitHub'); }}
                 className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
                 aria-label="GitHub"
               >
@@ -349,6 +370,7 @@ const Home = () => {
               </a>
               <a
                 href="#"
+                onClick={(e) => { e.preventDefault(); handleSocialClick('Medium'); }}
                 className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
                 aria-label="Medium"
               >
@@ -358,6 +380,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Modals */}
+      <DemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
+      <LearnMoreModal open={learnMoreModalOpen} onOpenChange={setLearnMoreModalOpen} />
     </motion.div>
   );
 };
