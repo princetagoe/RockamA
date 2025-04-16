@@ -39,33 +39,36 @@ const PageTransition = ({ children }: PageTransitionProps) => {
             transition={{ duration: 0.3 }}
           >
             <div className="relative">
-              <div className="h-16 w-16 rounded-full border-t-4 border-primary border-opacity-50 animate-spin"></div>
+              <div className="loader-ring"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-12 w-12 rounded-full border-r-4 border-primary animate-spin"></div>
+                <div className="loader-ring-inner"></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div 
-                  className="h-2 w-2 bg-primary rounded-full"
-                  animate={{ 
-                    scale: [1, 1.5, 1],
-                    opacity: [1, 0.8, 1]
-                  }}
-                  transition={{ 
-                    duration: 1.5, 
-                    repeat: Infinity,
-                    ease: "easeInOut" 
-                  }}
-                />
+                <div className="loader-dot"></div>
               </div>
+              <motion.div 
+                className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-primary font-medium"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+              >
+                Loading...
+              </motion.div>
             </div>
           </motion.div>
         ) : (
           <motion.div
             key="page"
-            initial={{ opacity: 0, y: 5 }}
+            className="w-full"
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ 
+              type: "tween", 
+              ease: "easeInOut", 
+              duration: 0.4,
+              staggerChildren: 0.1
+            }}
           >
             {children}
           </motion.div>
