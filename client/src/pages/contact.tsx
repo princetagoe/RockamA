@@ -54,13 +54,15 @@ const Contact = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      await apiRequest("POST", "/api/contact", data);
+      const response = await apiRequest("POST", "/api/contact", data);
       toast({
         title: "Message Sent",
-        description: "We'll get back to you as soon as possible!",
+        description: "Your message has been received and would be sent to info@rockam.ai in a production environment.",
       });
+      console.log("Contact form submission:", response);
       form.reset();
     } catch (error) {
+      console.error("Contact form error:", error);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
