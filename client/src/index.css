@@ -14,7 +14,7 @@
     --popover: 217 44% 22%;
     --popover-foreground: 0 0% 96%;
     
-    --primary: 90 100% 72%;
+    --primary: 210 100% 40%;
     --primary-foreground: 220 58% 12%;
     
     --secondary: 0 0% 88%;
@@ -31,7 +31,7 @@
     
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 90 100% 72%;
+    --ring: 210 100% 40%;
     
     --radius: 0.5rem;
   }
@@ -50,7 +50,7 @@
   }
   
   .glow-on-hover:hover {
-    @apply shadow-[0_0_15px_rgba(193,255,114,0.5)];
+    @apply shadow-[0_0_15px_rgba(0,114,206,0.5)];
   }
 }
 
@@ -62,4 +62,22 @@
   .gradient-overlay {
     @apply bg-gradient-to-r from-[#0D1B2A]/90 to-[#0D1B2A]/60;
   }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0072CE;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 114, 206, 0.8);
 }
