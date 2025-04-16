@@ -17,10 +17,10 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       setIsLoading(true);
       setPrevLocation(location);
       
-      // Simulate loading time (remove this in production and replace with actual loading logic)
+      // Use a very short loading time for quick transitions
       const timeout = setTimeout(() => {
         setIsLoading(false);
-      }, 800);
+      }, 300);
       
       return () => clearTimeout(timeout);
     }
@@ -50,7 +50,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
                 className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-primary font-medium"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.3 }}
+                transition={{ delay: 0.1, duration: 0.2 }}
               >
                 Loading...
               </motion.div>
@@ -60,14 +60,14 @@ const PageTransition = ({ children }: PageTransitionProps) => {
           <motion.div
             key="page"
             className="w-full"
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            exit={{ opacity: 0, y: -5 }}
             transition={{ 
               type: "tween", 
               ease: "easeInOut", 
-              duration: 0.4,
-              staggerChildren: 0.1
+              duration: 0.2,
+              staggerChildren: 0.05
             }}
           >
             {children}
