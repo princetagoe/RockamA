@@ -90,7 +90,7 @@ const Home = () => {
                   className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
                   asChild
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  <ScrollLink to="/contact">Contact Us</ScrollLink>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
@@ -196,7 +196,7 @@ const Home = () => {
                 size="lg"
                 asChild
               >
-                <Link href="/contact">Contact Us</Link>
+                <ScrollLink to="/contact">Contact Us</ScrollLink>
               </Button>
               <Button
                 variant="outline"
@@ -204,7 +204,7 @@ const Home = () => {
                 className="border-gray-600 text-white hover:border-primary hover:text-primary"
                 asChild
               >
-                <Link href="/services">Our Services</Link>
+                <ScrollLink to="/services">Our Services</ScrollLink>
               </Button>
             </div>
           </motion.div>
@@ -249,7 +249,7 @@ const Home = () => {
                 Explore our comprehensive suite of data analytics and insights services
               </p>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/services">View Services</Link>
+                <ScrollLink to="/services">View Services</ScrollLink>
               </Button>
             </motion.div>
             
@@ -266,7 +266,7 @@ const Home = () => {
                 See how we serve different industries with specialized data solutions
               </p>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/industries">View Industries</Link>
+                <ScrollLink to="/industries">View Industries</ScrollLink>
               </Button>
             </motion.div>
             
@@ -283,7 +283,7 @@ const Home = () => {
                 Understand our process and how we help you get the most from your data
               </p>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/how-it-works">Learn More</Link>
+                <ScrollLink to="/how-it-works">Learn More</ScrollLink>
               </Button>
             </motion.div>
           </div>
@@ -302,7 +302,7 @@ const Home = () => {
                 See real-world examples of how we've helped our clients succeed
               </p>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/case-studies">View Case Studies</Link>
+                <ScrollLink to="/case-studies">View Case Studies</ScrollLink>
               </Button>
             </motion.div>
             
