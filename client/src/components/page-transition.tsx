@@ -17,10 +17,10 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       setIsLoading(true);
       setPrevLocation(location);
       
-      // Use a very short loading time for quick transitions
+      // Use an extremely short loading time for near-instant transitions
       const timeout = setTimeout(() => {
         setIsLoading(false);
-      }, 300);
+      }, 100);
       
       return () => clearTimeout(timeout);
     }
@@ -36,7 +36,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
           >
             <div className="relative">
               <div className="loader-ring"></div>
@@ -60,14 +60,14 @@ const PageTransition = ({ children }: PageTransitionProps) => {
           <motion.div
             key="page"
             className="w-full"
-            initial={{ opacity: 0, y: 5 }}
+            initial={{ opacity: 0, y: 2 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
+            exit={{ opacity: 0, y: -2 }}
             transition={{ 
               type: "tween", 
-              ease: "easeInOut", 
-              duration: 0.2,
-              staggerChildren: 0.05
+              ease: "easeOut", 
+              duration: 0.1,
+              staggerChildren: 0.02
             }}
           >
             {children}
