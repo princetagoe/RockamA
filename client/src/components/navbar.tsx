@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInAnimation } from "@/utils/animations";
 import ScrollLink from "@/components/scroll-link";
+import rockamLogo from "@/assets/rockam-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,8 +31,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Solutions", path: "/solutions" },
+    { name: "Services", path: "/services" },
     { name: "Industries", path: "/industries" },
+    { name: "How It Works", path: "/how-it-works" },
+    { name: "Case Studies", path: "/case-studies" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -50,12 +53,15 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <ScrollLink to="/" className="flex items-center">
-                <span className="text-primary font-bold text-xl mr-1">Nova</span>
-                <span className="text-white font-bold text-xl">Core</span>
+                <img 
+                  src={rockamLogo} 
+                  alt="Rockam Data Services" 
+                  className="h-10 mr-2" 
+                />
               </ScrollLink>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-4">
               {navLinks.map((link, i) => (
                 <ScrollLink
@@ -72,7 +78,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               className="text-gray-400 hover:text-white"
@@ -87,7 +93,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden glass-effect"
+          className="lg:hidden glass-effect"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}

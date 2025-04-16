@@ -1,0 +1,108 @@
+Here’s a Replit-ready brief you can use to update your existing Rockam Data Services website. This focuses on structure, flow, content updates, and design refinements—keeping everything aligned with your original PDF content:
+
+⸻
+
+Rockam Website Update Brief (Replit Implementation)
+
+Project Goal:
+Refactor and enhance the current Rockam website with a more structured layout, bolder copy, and clearer calls-to-action—based on updated brand and content guidelines.
+
+⸻
+
+Core Style Guide
+	•	Brand Colors: Blue (primary), with subtle purple accents
+	•	Font Style: Professional, modern sans-serif
+	•	Tone: Professional, bold, humble
+	•	Logo: 3-bar chart above a half pie chart. Text: “Rockam” in blue
+
+⸻
+
+Updated Website Navigation
+	1.	Home
+	2.	Services
+	3.	Industries We Serve
+	4.	How It Works
+	5.	Case Studies / Testimonials
+	6.	About
+	7.	Contact / Get a Quote
+
+⸻
+
+Page-by-Page Update Plan
+
+1. Home Page
+	•	Hero:
+	•	Headline: “Smarter Decisions. Simplified Data.”
+	•	Subline: “Rockam is your data team—automated, intelligent, and affordable.”
+	•	Tagline: “…Your Data Team, Without the Overhead.”
+	•	CTA Buttons: [ Get a Free Consultation ] and [ Explore Services ]
+	•	Mid Page Sections:
+	•	Trustworthy Analytics at Scale
+	•	“Rockam is your in-between” (problem framing section)
+	•	Benefits: Actionable insights, AI forecasting, data engineering, secure infra
+	•	Testimonial banner: “Rockam runs our numbers. We run the business.”
+	•	Quick Summary Box: “Decision-ready dashboards, forecasts, reports.”
+
+⸻
+
+2. Services Page
+	•	Header: “What We Offer”
+	•	Intro: “Every insight, every dashboard, every forecast—without the cost of a full-house data team.”
+	•	Three Service Sections (Use icons + cards format):
+A. Data Analytics & Intelligence
+B. Data Infrastructure & Engineering
+C. Governance & Automation
+
+⸻
+
+3. Industries We Serve
+	•	Header: “We Work Where the Data Matters”
+	•	Industries: Retail, Healthcare, Travel, Logistics, Education, Energy
+	•	Mini-case: Pharmacy chain saved 18% on expired product waste
+
+⸻
+
+4. How It Works
+	•	Title: “From Raw Data to Results—Fast”
+	•	Subline: “Our process is simple, human, and fast. You don’t need to know data science—we do.”
+	•	Steps (with icons):
+	1.	Book a Discovery Call
+	2.	Connect Data Sources
+	3.	We Analyze, Build, Automate
+	4.	You Get Clear Reports & Insights
+
+⸻
+
+5. Case Studies / Testimonials
+	•	Header: “What Our Clients Say”
+	•	Use quote cards or sliders:
+	•	“Rockam gave us all we needed.”
+	•	“We finally understand our numbers.”
+	•	“They feel like part of the team.”
+
+⸻
+
+6. About Page
+	•	Tagline Banner: “…Your Data Team, Without the Overhead.”
+	•	Mission: “Data for Decision Makers”
+	•	Copy:
+	•	Rockam helps SMBs grow with data—not guesswork
+	•	We blend science, intelligence, and business insight
+	•	Insights shouldn’t be a luxury
+
+⸻
+
+7. Contact Page
+	•	Header: “Let’s Unlock Your Data”
+	•	Form Fields:
+	•	Name, Business/Org, Email
+	•	Dropdown: Services You’re Interested In
+	•	Message box
+	•	CTA Button: [ Request a Free Proposal ]
+	•	Contact Info:
+	•	31 Tippett Road, Ontario, M3H 0C8, Canada
+	•	info@rockam.ai
+
+⸻
+
+Let me know if you want this turned into a Replit project structure or need HTML/CSS templates for each page.

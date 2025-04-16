@@ -6,8 +6,10 @@ import { AnimatePresence } from "framer-motion";
 
 // Pages
 import Home from "@/pages/home";
-import Solutions from "@/pages/solutions";
+import Services from "@/pages/services";
 import Industries from "@/pages/industries";
+import HowItWorks from "@/pages/how-it-works";
+import CaseStudies from "@/pages/case-studies";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
@@ -26,8 +28,10 @@ function Router() {
       <AnimatePresence mode="wait">
         <Switch key={location}>
           <Route path="/" component={Home} />
-          <Route path="/solutions" component={Solutions} />
+          <Route path="/services" component={Services} />
           <Route path="/industries" component={Industries} />
+          <Route path="/how-it-works" component={HowItWorks} />
+          <Route path="/case-studies" component={CaseStudies} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />

@@ -1,113 +1,89 @@
 import {
-  Brain,
-  Cloud,
+  BarChart3,
+  Database,
   ShieldCheck,
-  Code,
+  FileBarChart,
   LineChart,
-  Smartphone,
   Lightbulb,
   Users,
   Shield,
+  Calendar,
+  CalendarDays,
+  Link,
+  Cog
 } from "lucide-react";
 
-export const solutions = [
+export const services = [
   {
     id: 1,
-    icon: Brain,
-    title: "AI & Machine Learning",
+    icon: BarChart3,
+    title: "Data Analytics & Intelligence",
     description:
-      "Leverage the power of artificial intelligence to automate processes, gain insights, and deliver personalized experiences.",
-    link: "/solutions#ai",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+      "Transform your data into actionable insights with dashboards, forecasts, and reports that drive smarter decisions.",
+    link: "/services#analytics",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 2,
-    icon: Cloud,
-    title: "Cloud Infrastructure",
+    icon: Database,
+    title: "Data Infrastructure & Engineering",
     description:
-      "Build scalable, secure, and resilient cloud infrastructure tailored to your business needs and growth trajectory.",
-    link: "/solutions#cloud",
+      "Build robust data foundations with scalable pipelines, storage solutions, and integration systems tailored to your needs.",
+    link: "/services#infrastructure",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 3,
     icon: ShieldCheck,
-    title: "Cybersecurity",
+    title: "Governance & Automation",
     description:
-      "Protect your business with comprehensive security solutions that safeguard your data, systems, and reputation.",
-    link: "/solutions#security",
+      "Ensure data quality, security, and compliance while automating routine processes to save time and reduce errors.",
+    link: "/services#governance",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 4,
-    icon: Code,
-    title: "Custom Development",
-    description:
-      "Create tailor-made software solutions that perfectly align with your unique business processes and objectives.",
-    link: "/solutions#development",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 5,
-    icon: LineChart,
-    title: "Data Analytics",
-    description:
-      "Transform raw data into actionable business intelligence with our advanced analytics and visualization tools.",
-    link: "/solutions#analytics",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 6,
-    icon: Smartphone,
-    title: "Mobile Solutions",
-    description:
-      "Deliver exceptional mobile experiences with cutting-edge apps that engage users and drive business growth.",
-    link: "/solutions#mobile",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
 ];
 
 export const industries = [
   {
     id: 1,
-    title: "Healthcare",
-    description:
-      "Enhance patient care and operational efficiency with our AI-driven healthcare solutions.",
-    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 2,
-    title: "Finance",
-    description:
-      "Secure, compliant solutions for banking, fintech, and financial services institutions.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 3,
     title: "Retail",
     description:
-      "Transform customer experiences with personalized, omnichannel retail technologies.",
+      "Drive inventory optimization, customer insights, and sales forecasting with data-driven retail analytics.",
     image: "https://images.unsplash.com/photo-1561715276-a2d087060f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
-    id: 4,
-    title: "Manufacturing",
+    id: 2,
+    title: "Healthcare",
     description:
-      "Optimize production, supply chains, and operations with IoT and automation solutions.",
-    image: "https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+      "Improve patient outcomes and operational efficiency through tailored healthcare analytics solutions.",
+    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 3,
+    title: "Travel",
+    description:
+      "Optimize revenue management and enhance customer experience with travel industry data solutions.",
+    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 4,
+    title: "Logistics",
+    description:
+      "Streamline supply chain operations and improve delivery efficiency with logistics data analytics.",
+    image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 5,
     title: "Education",
     description:
-      "Empower educators and students with innovative learning technologies and platforms.",
+      "Enhance learning outcomes and administrative efficiency through education-focused data solutions.",
     image: "https://images.unsplash.com/photo-1530973428-5bf2db2e4d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 6,
     title: "Energy",
     description:
-      "Drive sustainability and efficiency with smart grid and renewable energy solutions.",
+      "Optimize resource allocation and improve sustainability with data-driven energy sector solutions.",
     image: "https://images.unsplash.com/photo-1458129453883-6a4b1fa6be7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
 ];
@@ -116,23 +92,84 @@ export const values = [
   {
     id: 1,
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Actionable Insights",
     description:
-      "We constantly push the boundaries of what's possible, embracing new technologies and approaches.",
+      "We deliver clear, practical intelligence that drives real business decisions, not just fancy charts.",
   },
   {
     id: 2,
-    icon: Users,
-    title: "Collaboration",
+    icon: LineChart,
+    title: "AI Forecasting",
     description:
-      "We work closely with our clients, becoming an extension of their team to drive success.",
+      "Our predictive models help you see what's coming, so you can plan better and react faster.",
   },
   {
     id: 3,
-    icon: Shield,
-    title: "Integrity",
+    icon: Database,
+    title: "Data Engineering",
     description:
-      "We maintain the highest standards of honesty, transparency, and ethical conduct in all we do.",
+      "We build reliable data pipelines and infrastructure that grow with your business needs.",
+  },
+  {
+    id: 4,
+    icon: Shield,
+    title: "Secure Infrastructure",
+    description:
+      "Your data's safety is our priority with enterprise-grade security and compliance standards.",
+  },
+];
+
+export const howItWorks = [
+  {
+    id: 1,
+    icon: CalendarDays,
+    title: "Book a Discovery Call",
+    description: "We'll discuss your goals, challenges, and data sources to understand your needs.",
+  },
+  {
+    id: 2,
+    icon: Link,
+    title: "Connect Data Sources",
+    description: "We'll securely connect to your existing systems and data to begin analysis.",
+  },
+  {
+    id: 3,
+    icon: Cog,
+    title: "We Analyze, Build, Automate",
+    description: "Our team gets to work creating dashboards, reports, and automated processes.",
+  },
+  {
+    id: 4,
+    icon: FileBarChart,
+    title: "You Get Clear Reports & Insights",
+    description: "Access decision-ready dashboards and actionable reports on demand.",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    quote: "Rockam gave us all we needed to make better inventory decisions.",
+    author: "Sarah Chen",
+    position: "COO, RetailPlus",
+  },
+  {
+    id: 2,
+    quote: "We finally understand our numbers and what they mean for our business.",
+    author: "Michael Johnson",
+    position: "CEO, HealthFirst Clinic",
+  },
+  {
+    id: 3,
+    quote: "They feel like part of the team, but without the overhead of hiring.",
+    author: "Priya Patel",
+    position: "CFO, LogisTech Solutions",
+  },
+  {
+    id: 4,
+    quote: "Rockam runs our numbers. We run the business.",
+    author: "David Wilson",
+    position: "Director, EduTrack Systems",
   },
 ];
 
@@ -140,50 +177,51 @@ export const locations = [
   {
     id: 1,
     title: "Headquarters",
-    address: "100 Tech Plaza, Suite 300",
-    city: "San Francisco, CA 94105",
-  },
-  {
-    id: 2,
-    title: "East Coast Office",
-    address: "500 Innovation Drive",
-    city: "Boston, MA 02110",
-  },
+    address: "31 Tippett Road",
+    city: "Ontario, M3H 0C8, Canada",
+  }
 ];
 
 export const contactInfo = {
-  email: "info@novacore.com",
-  phone: "+1 (800) 123-4567",
-  hours: "Monday - Friday: 9am - 6pm PST",
+  email: "info@rockam.ai",
+  phone: "+1 (647) 555-1234",
+  address: "31 Tippett Road, Ontario, M3H 0C8, Canada",
+  hours: "Monday - Friday: 9am - 5pm EST",
+  socialMedia: {
+    twitter: "https://twitter.com/rockamdata",
+    linkedin: "https://linkedin.com/company/rockam",
+    facebook: "https://facebook.com/rockamdata",
+    instagram: "https://instagram.com/rockamdata",
+  },
 };
 
 export const teamMembers = [
   {
     id: 1,
-    name: "Alexandra Chen",
-    position: "CEO & Founder",
-    bio: "Alexandra brings 15+ years of technology leadership experience, having previously led innovation teams at Fortune 500 companies.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 2,
-    name: "Marcus Johnson",
-    position: "CTO",
-    bio: "With a background in AI research and cloud architecture, Marcus leads our technical strategy and innovation initiatives.",
+    name: "Alex Morgan",
+    position: "Chief Data Officer",
+    bio: "Alex brings over 15 years of data science and analytics experience, leading Rockam's technical strategy and implementation.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
+    id: 2,
+    name: "Sophia Williams",
+    position: "Head of Client Success",
+    bio: "Sophia ensures every client gets maximum value from our solutions with tailored strategies and ongoing optimization.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+  },
+  {
     id: 3,
-    name: "Sophia Rodriguez",
-    position: "VP of Product",
-    bio: "Sophia excels at translating complex technical concepts into elegant product solutions that address real business needs.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    name: "Noah Chen",
+    position: "Lead Data Engineer",
+    bio: "Noah designs and implements the robust data pipelines and infrastructure that power our analytics solutions.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 4,
-    name: "David Kim",
-    position: "Director of Engineering",
-    bio: "David's engineering leadership has been instrumental in building our robust, scalable technology stack and developer team.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    name: "Olivia Patel",
+    position: "Data Analytics Director",
+    bio: "Olivia translates complex data into clear, actionable insights that drive meaningful business improvements.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   }
 ];
