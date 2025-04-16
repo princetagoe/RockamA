@@ -319,7 +319,7 @@ const Home = () => {
                 Learn about our team, mission, and why we're passionate about data
               </p>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/about">About Rockam</Link>
+                <ScrollLink to="/about">About Rockam</ScrollLink>
               </Button>
             </motion.div>
           </div>
