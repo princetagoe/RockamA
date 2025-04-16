@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function scrollToTop(options?: ScrollToOptions) {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: "auto",
     ...options
   })
 }
