@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM } from "react-icons/fa";
 import { fadeInAnimation } from "@/utils/animations";
+import ScrollLink from "@/components/scroll-link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,11 +19,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-5">
-              <span className="text-primary font-bold text-xl mr-1">Nova</span>
-              <span className="text-white font-bold text-xl">Core</span>
+              <span className="text-primary font-bold text-xl mr-1">Rockam</span>
+              <span className="text-white font-bold text-xl">Data</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Innovative technology solutions for tomorrow's challenges.
+              Transforming your data into actionable insights for smarter decisions.
             </p>
             <div className="flex space-x-4">
               <a
@@ -57,47 +58,47 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-5">Solutions</h3>
+            <h3 className="text-white font-semibold mb-5">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/solutions"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  AI & Machine Learning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/solutions"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/solutions"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/solutions"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Custom Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/solutions"
+                <ScrollLink
+                  to="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Data Analytics
-                </Link>
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/services"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  Data Engineering
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/services"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  AI & Machine Learning
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/services"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  Business Intelligence
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/services"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  Data Visualization
+                </ScrollLink>
               </li>
             </ul>
           </div>
@@ -106,44 +107,44 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-5">Industries</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/industries"
+                <ScrollLink
+                  to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Healthcare
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/industries"
+                <ScrollLink
+                  to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Finance
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/industries"
+                <ScrollLink
+                  to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Retail
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/industries"
+                <ScrollLink
+                  to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Manufacturing
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/industries"
+                <ScrollLink
+                  to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Education
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
           </div>
@@ -152,44 +153,36 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-5">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/about"
+                <ScrollLink
+                  to="/about"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   About
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
+                <ScrollLink
+                  to="/case-studies"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Case Studies
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/contact"
+                <ScrollLink
+                  to="/how-it-works"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  How It Works
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/contact"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Contact
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
           </div>
@@ -197,27 +190,27 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} NovaCore Systems. All rights reserved.
+            © {currentYear} Rockam Data Services. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="#"
+            <ScrollLink
+              to="/privacy-policy"
               className="text-gray-500 hover:text-primary text-sm transition duration-300"
             >
               Privacy Policy
-            </Link>
-            <Link
-              href="#"
+            </ScrollLink>
+            <ScrollLink
+              to="/terms-of-service"
               className="text-gray-500 hover:text-primary text-sm transition duration-300"
             >
               Terms of Service
-            </Link>
-            <Link
-              href="#"
+            </ScrollLink>
+            <ScrollLink
+              to="/cookie-policy"
               className="text-gray-500 hover:text-primary text-sm transition duration-300"
             >
               Cookie Policy
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>

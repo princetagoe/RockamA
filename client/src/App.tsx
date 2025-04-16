@@ -18,6 +18,7 @@ import NotFound from "@/pages/not-found";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
+import PageTransition from "@/components/page-transition";
 
 function Router() {
   const [location] = useLocation();
@@ -25,7 +26,7 @@ function Router() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <AnimatePresence mode="wait">
+      <PageTransition>
         <Switch key={location}>
           <Route path="/" component={Home} />
           <Route path="/services" component={Services} />
@@ -36,7 +37,7 @@ function Router() {
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
-      </AnimatePresence>
+      </PageTransition>
       <Footer />
     </div>
   );
