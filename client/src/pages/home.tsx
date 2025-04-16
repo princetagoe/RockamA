@@ -7,32 +7,14 @@ import {
   BarChart3,
   Database,
   ShieldCheck,
-  FileBarChart,
   LineChart,
 } from "lucide-react";
-import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import Particles from "@/components/particles";
-import SolutionCard from "@/components/solution-card";
-import IndustryCard from "@/components/industry-card";
 import DemoModal from "@/components/demo-modal";
-import LearnMoreModal from "@/components/learn-more-modal";
-import { services, industries, values, testimonials } from "@/data/content";
 import { fadeInAnimation, pageTransition, floatAnimation } from "@/utils/animations";
-import { scrollToTop } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
-  const [learnMoreModalOpen, setLearnMoreModalOpen] = useState(false);
-  const { toast } = useToast();
-  
-  // Handle social media link clicks
-  const handleSocialClick = (platform: string) => {
-    toast({
-      title: `${platform} clicked`,
-      description: `This would normally navigate to Rockam's ${platform} profile.`
-    });
-  };
   
   return (
     <motion.div
@@ -106,9 +88,9 @@ const Home = () => {
                 <Button
                   size="lg"
                   className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
-                  onClick={() => setDemoModalOpen(true)}
+                  asChild
                 >
-                  Get a Free Consultation
+                  <Link href="/contact">Contact Us</Link>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
@@ -116,9 +98,9 @@ const Home = () => {
                   size="lg"
                   variant="outline"
                   className="border-gray-600 text-white hover:border-primary hover:text-primary"
-                  asChild
+                  onClick={() => setDemoModalOpen(true)}
                 >
-                  <ScrollLink to="/services">Explore Services</ScrollLink>
+                  Get a Free Consultation
                 </Button>
               </motion.div>
             </motion.div>
@@ -192,395 +174,160 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Problem Framing Section */}
+      {/* CTA Section */}
       <section className="py-16 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Rockam is your in-between
-            </motion.h2>
-            <motion.p
-              className="text-gray-300 max-w-3xl mx-auto text-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              You've outgrown basic analytics tools, but you're not ready for expensive in-house data teams.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-background/30 p-6 rounded-lg"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">The Challenge</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="h-6 w-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-red-500">✕</span>
-                  </span>
-                  <span className="text-gray-300">Creating reports is too manual and time-consuming</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="h-6 w-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-red-500">✕</span>
-                  </span>
-                  <span className="text-gray-300">Your data lives in multiple places with no single source of truth</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="h-6 w-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-red-500">✕</span>
-                  </span>
-                  <span className="text-gray-300">You can't afford a full data team but need professional analytics</span>
-                </li>
-              </ul>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-background/30 p-6 rounded-lg"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">The Solution</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-primary">✓</span>
-                  </span>
-                  <span className="text-gray-300">Automated data pipelines that save hours of manual work</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-primary">✓</span>
-                  </span>
-                  <span className="text-gray-300">Unified dashboards with real-time insights across all your data</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <span className="text-primary">✓</span>
-                  </span>
-                  <span className="text-gray-300">Fractional data team at a fraction of the cost, scale as you grow</span>
-                </li>
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Our Services
-            </motion.h2>
-            <motion.p
-              className="text-gray-300 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              Every insight, every dashboard, every forecast—without the cost of a full-house data team.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <SolutionCard
-                key={service.id}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                link={service.link}
-                image={service.image}
-                delay={index}
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-gray-600 text-white hover:border-primary hover:text-primary"
-              asChild
-            >
-              <ScrollLink to="/services">Learn More About Our Services</ScrollLink>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <motion.div
-              className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Client Success Stories
-            </motion.div>
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-white mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              "Rockam runs our numbers. We run the business."
-            </motion.h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {testimonials.slice(0, 2).map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                className="bg-background/30 p-6 rounded-lg relative"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="absolute -top-4 -left-2 text-5xl text-primary opacity-30">"</div>
-                <p className="text-gray-300 mb-4 relative z-10">
-                  {testimonial.quote}
-                </p>
-                <div className="flex items-center">
-                  <div className="h-10 w-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-primary font-bold text-sm">
-                      {testimonial.author.split(' ').map(name => name[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-white">{testimonial.author}</p>
-                    <p className="text-sm text-gray-400">{testimonial.position}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-10">
-            <Button
-              variant="outline"
-              className="border-gray-600 text-white hover:border-primary hover:text-primary"
-              asChild
-            >
-              <ScrollLink to="/case-studies">View All Case Studies</ScrollLink>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Preview */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              We Work Where Data Matters
-            </motion.h2>
-            <motion.p
-              className="text-gray-300 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              Our industry-specific solutions address unique data challenges with tailored approaches.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.slice(0, 3).map((industry, index) => (
-              <IndustryCard
-                key={industry.id}
-                title={industry.title}
-                description={industry.description}
-                image={industry.image}
-                delay={index}
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-gray-600 text-white hover:border-primary hover:text-primary"
-              asChild
-            >
-              <ScrollLink to="/industries">Explore All Industries</ScrollLink>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Summary Box */}
-      <section className="py-16 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="glass-effect rounded-xl p-8 md:p-10 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
+            className="glass-effect rounded-xl p-8 md:p-10 text-center"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-              Decision-Ready Data
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to transform your data strategy?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="h-14 w-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileBarChart className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-white mb-2">Dashboards</h3>
-                <p className="text-gray-300 text-sm">
-                  Interactive visualizations that give you the full picture at a glance
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="h-14 w-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <LineChart className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-white mb-2">Forecasts</h3>
-                <p className="text-gray-300 text-sm">
-                  AI-powered predictions to help you plan ahead with confidence
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="h-14 w-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-white mb-2">Reports</h3>
-                <p className="text-gray-300 text-sm">
-                  Detailed analysis delivered automatically when and where you need it
-                </p>
-              </div>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Schedule a free consultation with our data experts to discover how Rockam can help your business make better decisions, faster.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                size="lg"
+                asChild
+              >
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-gray-600 text-white hover:border-primary hover:text-primary"
+                asChild
+              >
+                <Link href="/services">Our Services</Link>
+              </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-background relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-primary opacity-5"></div>
-        </div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="glass-effect rounded-xl p-8 md:p-10 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Let's Unlock Your Data
-            </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Schedule a free consultation to discuss how Rockam can transform your business data into a competitive advantage.
-            </p>
-            <Button
-              size="lg"
-              className="bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
-              asChild
-            >
-              <ScrollLink to="/contact">Get a Free Proposal</ScrollLink>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Connect With Us Section */}
-      <section className="py-16 bg-card">
+      {/* Navigation Section */}
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mb-12">
             <motion.h2
-              className="text-2xl md:text-3xl font-bold text-white mb-6"
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Connect With Us
+              Explore Rockam Data Services
             </motion.h2>
-            <motion.div
-              className="flex justify-center space-x-6 mt-6"
+            <motion.p
+              className="text-gray-300 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); handleSocialClick('LinkedIn'); }}
-                className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn size={20} />
-              </a>
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); handleSocialClick('Twitter'); }}
-                className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
-                aria-label="Twitter"
-              >
-                <FaTwitter size={20} />
-              </a>
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); handleSocialClick('Facebook'); }}
-                className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
-                aria-label="Facebook"
-              >
-                <FaFacebookF size={20} />
-              </a>
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); handleSocialClick('Instagram'); }}
-                className="bg-background w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={20} />
-              </a>
+              Discover how we can help transform your data into actionable insights
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              className="glass-effect rounded-xl p-6 hover:border-primary hover:shadow-md transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4">Services</h3>
+              <p className="text-gray-300 mb-6">
+                Explore our comprehensive suite of data analytics and insights services
+              </p>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/services">View Services</Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              className="glass-effect rounded-xl p-6 hover:border-primary hover:shadow-md transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4">Industries</h3>
+              <p className="text-gray-300 mb-6">
+                See how we serve different industries with specialized data solutions
+              </p>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/industries">View Industries</Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              className="glass-effect rounded-xl p-6 hover:border-primary hover:shadow-md transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4">How It Works</h3>
+              <p className="text-gray-300 mb-6">
+                Understand our process and how we help you get the most from your data
+              </p>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/how-it-works">Learn More</Link>
+              </Button>
+            </motion.div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <motion.div
+              className="glass-effect rounded-xl p-6 hover:border-primary hover:shadow-md transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4">Case Studies</h3>
+              <p className="text-gray-300 mb-6">
+                See real-world examples of how we've helped our clients succeed
+              </p>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/case-studies">View Case Studies</Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              className="glass-effect rounded-xl p-6 hover:border-primary hover:shadow-md transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4">About Us</h3>
+              <p className="text-gray-300 mb-6">
+                Learn about our team, mission, and why we're passionate about data
+              </p>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/about">About Rockam</Link>
+              </Button>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Modals */}
+      {/* Demo Modal */}
       <DemoModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
-      <LearnMoreModal open={learnMoreModalOpen} onOpenChange={setLearnMoreModalOpen} />
     </motion.div>
   );
 };
