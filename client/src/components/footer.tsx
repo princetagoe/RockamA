@@ -1,8 +1,9 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { fadeInAnimation } from "@/utils/animations";
 import ScrollLink from "@/components/scroll-link";
+import { contactInfo } from "@/data/content";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,32 +28,40 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href={contactInfo.socialMedia.linkedin}
                 className="text-gray-400 hover:text-primary transition duration-300"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="#"
+                href={contactInfo.socialMedia.twitter}
                 className="text-gray-400 hover:text-primary transition duration-300"
                 aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaTwitter />
               </a>
               <a
-                href="#"
+                href={contactInfo.socialMedia.facebook}
                 className="text-gray-400 hover:text-primary transition duration-300"
-                aria-label="GitHub"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaGithub />
+                <FaFacebookF />
               </a>
               <a
-                href="#"
+                href={contactInfo.socialMedia.instagram}
                 className="text-gray-400 hover:text-primary transition duration-300"
-                aria-label="Medium"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaMediumM />
+                <FaInstagram />
               </a>
             </div>
           </div>
@@ -65,7 +74,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
-                  Data Analytics
+                  Data Analytics & Intelligence
                 </ScrollLink>
               </li>
               <li>
@@ -73,7 +82,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
-                  Data Engineering
+                  Data Infrastructure & Engineering
                 </ScrollLink>
               </li>
               <li>
@@ -81,23 +90,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
-                  AI & Machine Learning
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="/services"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Business Intelligence
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="/services"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Data Visualization
+                  Governance & Automation
                 </ScrollLink>
               </li>
             </ul>
@@ -111,22 +104,6 @@ const Footer = () => {
                   to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
-                  Healthcare
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
-                  Finance
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
-                >
                   Retail
                 </ScrollLink>
               </li>
@@ -135,7 +112,23 @@ const Footer = () => {
                   to="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
-                  Manufacturing
+                  Healthcare
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/industries"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  Travel
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/industries"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  Logistics
                 </ScrollLink>
               </li>
               <li>
@@ -144,6 +137,14 @@ const Footer = () => {
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Education
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  to="/industries"
+                  className="text-gray-400 hover:text-primary transition duration-300"
+                >
+                  Energy
                 </ScrollLink>
               </li>
             </ul>
