@@ -525,8 +525,8 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Citibank.svg/2560px-Citibank.svg.png" 
-                  alt="Citibank" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png" 
+                  alt="Nike" 
                   className="h-12 w-auto object-contain" 
                 />
               </motion.div>
