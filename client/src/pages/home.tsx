@@ -41,23 +41,38 @@ const Home = () => {
                 variants={fadeInAnimation}
               >
                 <motion.span className="text-white block mb-2">
-                  Rockam runs our
-                </motion.span>
-                <motion.span className="text-white block mb-2">
-                  numbers.
+                  Smarter Decisions.
                 </motion.span>
                 <motion.span className="text-white block">
-                  We run the business.
+                  Simplified Data.
                 </motion.span>
               </motion.h1>
               <motion.p
-                className="mt-6 text-xl text-gray-300 mb-2"
+                className="mt-6 text-xl text-gray-300 mb-6"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.2 }}
               >
-                <span className="text-lg font-medium text-primary">...Your Data Team, Without the Overhead.</span>
+                Rockam is your data team—automated, intelligent, and affordable.
+              </motion.p>
+              <motion.p
+                className="text-lg font-medium text-primary"
+                variants={fadeInAnimation}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.3 }}
+              >
+                ...Your Data Team, Without the Overhead.
+              </motion.p>
+              <motion.p
+                className="text-sm text-gray-400 mt-2"
+                variants={fadeInAnimation}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.4 }}
+              >
+                The trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
               <motion.div
                 className="mt-10 flex flex-col sm:flex-row gap-4"
