@@ -27,14 +27,17 @@ const Home = () => {
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32 bg-gradient-to-b from-gray-800 to-gray-950">
+      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-36 bg-cover bg-center" 
+        style={{ 
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url(https://images.unsplash.com/photo-1484589065579-248aad0d8b13?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80)'
+        }}>
         <Particles count={40} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-12">
             <motion.div 
-              className="md:w-1/2 lg:w-3/5"
               variants={fadeInAnimation}
+              className="mb-8"
             >
               <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
@@ -47,8 +50,14 @@ const Home = () => {
                   Simplified Data.
                 </motion.span>
               </motion.h1>
+              <motion.div 
+                className="w-20 h-1 bg-primary mx-auto my-8"
+                initial={{ width: 0 }}
+                animate={{ width: 80 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              />
               <motion.p
-                className="mt-6 text-xl text-gray-300 mb-6"
+                className="text-xl text-gray-200 mb-6 max-w-3xl mx-auto"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
@@ -57,7 +66,7 @@ const Home = () => {
                 Rockam is your data team—automated, intelligent, and affordable.
               </motion.p>
               <motion.p
-                className="text-lg font-medium text-primary"
+                className="text-xl font-medium text-primary"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
@@ -66,7 +75,7 @@ const Home = () => {
                 ...Your Data Team, Without the Overhead.
               </motion.p>
               <motion.p
-                className="text-sm text-gray-400 mt-2"
+                className="text-base text-gray-300 mt-2 max-w-2xl mx-auto"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
@@ -74,68 +83,69 @@ const Home = () => {
               >
                 The trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
-              <motion.div
-                className="mt-10 flex flex-col sm:flex-row gap-4"
-                variants={fadeInAnimation}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.4 }}
-              >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                  <Button
-                    size="lg"
-                    className="bg-primary text-white font-semibold hover:bg-primary/90"
-                    asChild
-                  >
-                    <ScrollLink to="/contact">Contact Us</ScrollLink>
-                  </Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-gray-400 text-white hover:border-primary hover:text-primary"
-                    onClick={() => setDemoModalOpen(true)}
-                  >
-                    Get a Free Consultation
-                  </Button>
-                </motion.div>
-              </motion.div>
             </motion.div>
             
-            <motion.div 
-              className="mt-10 md:mt-0 md:w-1/2 lg:w-2/5"
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 mt-6 justify-center"
               variants={fadeInAnimation}
               initial="hidden"
               animate="visible"
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.5 }}
             >
-              <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white p-1">
-                <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Data analytics dashboard"
-                  className="w-full h-auto object-cover rounded-lg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-1/3"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex justify-between items-center">
-                    <div className="text-gray-800 bg-white/80 shadow-md backdrop-blur-sm rounded-lg px-3 py-2">
-                      <div className="flex items-center">
-                        <BarChart3 className="h-4 w-4 mr-2 text-primary" />
-                        <span className="text-sm font-medium">Performance Trends</span>
-                      </div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  size="lg"
+                  className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-lg px-8 py-6 text-lg"
+                  asChild
+                >
+                  <ScrollLink to="/contact">Contact Us</ScrollLink>
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:border-primary hover:text-primary px-8 py-6 text-lg"
+                  onClick={() => setDemoModalOpen(true)}
+                >
+                  Get a Free Consultation
+                </Button>
+              </motion.div>
+            </motion.div>
+          </div>
+          
+          <motion.div 
+            className="mt-16 relative rounded-xl overflow-hidden shadow-2xl mx-auto max-w-3xl"
+            variants={fadeInAnimation}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.8 }}
+          >
+            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white p-1">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                alt="Data analytics dashboard"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-1/3"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="flex justify-between items-center">
+                  <div className="text-gray-800 bg-white/80 shadow-md backdrop-blur-sm rounded-lg px-3 py-2">
+                    <div className="flex items-center">
+                      <BarChart3 className="h-4 w-4 mr-2 text-primary" />
+                      <span className="text-sm font-medium">Performance Trends</span>
                     </div>
-                    <div className="text-gray-800 bg-white/80 shadow-md backdrop-blur-sm rounded-lg px-3 py-2">
-                      <div className="flex items-center">
-                        <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-                        <span className="text-sm font-medium">View Dashboard</span>
-                      </div>
+                  </div>
+                  <div className="text-gray-800 bg-white/80 shadow-md backdrop-blur-sm rounded-lg px-3 py-2">
+                    <div className="flex items-center">
+                      <ArrowRight className="h-4 w-4 mr-2 text-primary" />
+                      <span className="text-sm font-medium">View Dashboard</span>
                     </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
