@@ -14,6 +14,9 @@ import {
 import Particles from "@/components/particles";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition, floatAnimation } from "@/utils/animations";
+import teamMeetingImg from "@/assets/images/team-meeting.jpg";
+import coffeeReportsImg from "@/assets/images/coffee-reports.jpg";
+import dataBackgroundImg from "@/assets/images/data-background.jpg";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
