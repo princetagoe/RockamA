@@ -14,9 +14,6 @@ import {
 import Particles from "@/components/particles";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition, floatAnimation } from "@/utils/animations";
-import teamMeetingImg from "@/assets/images/team-meeting.jpg";
-import coffeeReportsImg from "@/assets/images/coffee-reports.jpg";
-import dataBackgroundImg from "@/assets/images/data-background.jpg";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
@@ -30,15 +27,7 @@ const Home = () => {
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32">
-        <div className="absolute inset-0">
-          <img 
-            src={dataBackgroundImg} 
-            alt="Data Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-800/80 to-gray-950/90"></div>
-        </div>
+      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32 bg-gradient-to-b from-gray-800 to-gray-950">
         <Particles count={40} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -148,8 +137,8 @@ const Home = () => {
             >
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src={coffeeReportsImg}
-                  alt="Business professional reading reports over coffee"
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Business professional reviewing data reports"
                   className="w-full h-auto object-cover rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>

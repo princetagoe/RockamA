@@ -4,7 +4,6 @@ import { Link } from "wouter";
 import IndustryCard from "@/components/industry-card";
 import { industries } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
-import teamMeetingImg from "@/assets/images/team-meeting.jpg";
 
 const Industries = () => {
   return (
@@ -16,16 +15,8 @@ const Industries = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={teamMeetingImg} 
-            alt="Team meeting" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/90"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
