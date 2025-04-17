@@ -139,72 +139,97 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+      {/* Benefits Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <motion.div 
-              className="md:w-1/2"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Business professional reviewing data reports"
-                  className="w-full h-auto object-cover rounded-xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-primary rounded-full p-2 shadow-lg">
-                      <Coffee className="h-5 w-5 text-white" />
-                    </div>
-                    <div className="text-white text-sm font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full">
-                      Data-driven decisions, simplified
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Governed, trustworthy analytics at scale
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hiring full-house analysts is expensive. Doing nothing is risky. Rockam is your in-between.
+            </p>
+          </motion.div>
 
-            <motion.div 
-              className="md:w-1/2"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                "I used to spend Mondays building reports."
-              </h2>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">
-                "Now I read them over coffee."
-              </h3>
-              <p className="text-xl text-gray-700 mb-6">
-                We didn't need a full data department. We needed answers. 
-                Rockam delivered both.
-              </p>
-              <p className="text-lg text-gray-500 mb-8">
-                Your Data Team, Without the Overhead.
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-white shadow-md flex items-center justify-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
-                    alt="Client" 
-                    className="h-full w-full object-cover rounded-full"
-                  />
-                </div>
-                <div>
-                  <p className="text-gray-800 font-medium">Michael Richardson</p>
-                  <p className="text-gray-500 text-sm">CFO, TechVision Inc.</p>
-                </div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Database className="h-6 w-6 text-primary" />
               </div>
-            </motion.div>
-          </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Trustworthy analytics at scale</h3>
+              <p className="text-gray-600">Analytics that grow with your business needs and deliver reliable insights.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Actionable insights</h3>
+              <p className="text-gray-600">Insights you can understand and act on, not just data points and charts.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <LineChart className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">AI-powered forecasts</h3>
+              <p className="text-gray-600">Predictive analytics that help you see what's coming and respond faster.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheck className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">End-to-end data engineering</h3>
+              <p className="text-gray-600">Automated pipelines and processes that save time and reduce manual work.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Database className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Secure infrastructure</h3>
+              <p className="text-gray-600">Enterprise-grade security and compliance for your most valuable data assets.</p>
+            </div>
+          </motion.div>
+
+          {/* Testimonial Pull Quote Banner */}
+          <motion.div
+            className="bg-primary rounded-xl p-8 mb-16 text-center shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-white">
+              "Rockam runs our numbers. We run the business."
+            </h3>
+          </motion.div>
+
+          {/* Quick Solution Highlight */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              Rockam delivers decision-ready dashboards, forecasts, and reports—so you can grow with clarity.
+            </p>
+          </motion.div>
         </div>
       </section>
 
