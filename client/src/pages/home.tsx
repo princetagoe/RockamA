@@ -525,7 +525,7 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Citi.svg/1200px-Citi.svg.png" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Citibank.svg/2560px-Citibank.svg.png" 
                   alt="Citibank" 
                   className="h-12 w-auto object-contain" 
                 />
