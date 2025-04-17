@@ -82,7 +82,7 @@ const Contact = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 bg-card">
+      <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"
@@ -94,7 +94,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Have questions or ready to start a project? Reach out to our team
+              Have questions or ready to transform your data strategy? Reach out to our team
               today.
             </p>
           </motion.div>
@@ -102,16 +102,16 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
-              className="glass-effect rounded-xl p-8"
+              className="bg-white shadow-xl rounded-xl p-8 border border-gray-200"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-xl font-semibold text-white mb-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-6">
                 Send Us a Message
               </h3>
 
@@ -125,11 +125,11 @@ const Contact = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel className="text-gray-700">Name</FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Your name"
-                            className="bg-background border-gray-700 focus:border-primary"
+                            className="bg-white border-gray-300 focus:border-primary"
                             {...field}
                           />
                         </FormControl>
@@ -143,11 +143,11 @@ const Contact = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="text-gray-700">Email</FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Your email"
-                            className="bg-background border-gray-700 focus:border-primary"
+                            className="bg-white border-gray-300 focus:border-primary"
                             {...field}
                           />
                         </FormControl>
@@ -161,13 +161,13 @@ const Contact = () => {
                     name="interest"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Area of Interest</FormLabel>
+                        <FormLabel className="text-gray-700">Area of Interest</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger className="bg-background border-gray-700 focus:ring-primary">
+                            <SelectTrigger className="bg-white border-gray-300 focus:ring-primary">
                               <SelectValue placeholder="Select your interest" />
                             </SelectTrigger>
                           </FormControl>
@@ -203,11 +203,11 @@ const Contact = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel className="text-gray-700">Message</FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="How can we help you?"
-                            className="bg-background border-gray-700 focus:border-primary"
+                            className="bg-white border-gray-300 focus:border-primary"
                             rows={4}
                             {...field}
                           />
@@ -219,7 +219,7 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    className="w-full bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                    className="w-full bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
@@ -234,7 +234,7 @@ const Contact = () => {
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
-              <div className="glass-effect rounded-xl p-8 mb-8">
+              <div className="bg-primary rounded-xl p-8 mb-8 shadow-lg text-white">
                 <h3 className="text-xl font-semibold text-white mb-6">
                   Our Locations
                 </h3>
@@ -242,14 +242,14 @@ const Contact = () => {
                 <div className="space-y-6">
                   {locations.map((location) => (
                     <div key={location.id} className="flex items-start">
-                      <div className="text-primary mr-4 mt-1">
-                        <MapPin />
+                      <div className="bg-white/20 rounded-full p-2 mr-4 mt-0.5">
+                        <MapPin className="h-5 w-5 text-white" />
                       </div>
                       <div>
                         <h4 className="text-lg font-medium text-white">
                           {location.title}
                         </h4>
-                        <p className="text-gray-300">
+                        <p className="text-blue-100">
                           {location.address}
                           <br />
                           {location.city}
@@ -260,41 +260,41 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="glass-effect rounded-xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-6">
+              <div className="bg-gray-50 rounded-xl p-8 shadow-lg border border-gray-200">
+                <h3 className="text-xl font-semibold text-gray-800 mb-6">
                   Connect With Us
                 </h3>
 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="text-primary mr-4">
-                      <Mail className="h-6 w-6" />
+                    <div className="bg-primary/10 rounded-full p-2 mr-4">
+                      <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <a
                       href={`mailto:${contactInfo.email}`}
-                      className="text-gray-300 hover:text-primary transition duration-300"
+                      className="text-gray-700 hover:text-primary transition duration-300"
                     >
                       {contactInfo.email}
                     </a>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="text-primary mr-4">
-                      <Phone className="h-6 w-6" />
+                    <div className="bg-primary/10 rounded-full p-2 mr-4">
+                      <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <a
                       href={`tel:${contactInfo.phone.replace(/[^0-9+]/g, '')}`}
-                      className="text-gray-300 hover:text-primary transition duration-300"
+                      className="text-gray-700 hover:text-primary transition duration-300"
                     >
                       {contactInfo.phone}
                     </a>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="text-primary mr-4">
-                      <Clock className="h-6 w-6" />
+                    <div className="bg-primary/10 rounded-full p-2 mr-4">
+                      <Clock className="h-5 w-5 text-primary" />
                     </div>
-                    <p className="text-gray-300">{contactInfo.hours}</p>
+                    <p className="text-gray-700">{contactInfo.hours}</p>
                   </div>
                 </div>
 
@@ -302,28 +302,28 @@ const Contact = () => {
                   <div className="flex space-x-4">
                     <a
                       href="#"
-                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition duration-300 shadow-sm border border-gray-200"
                       aria-label="LinkedIn"
                     >
                       <FaLinkedinIn />
                     </a>
                     <a
                       href="#"
-                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition duration-300 shadow-sm border border-gray-200"
                       aria-label="Twitter"
                     >
                       <FaTwitter />
                     </a>
                     <a
                       href="#"
-                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition duration-300 shadow-sm border border-gray-200"
                       aria-label="GitHub"
                     >
                       <FaGithub />
                     </a>
                     <a
                       href="#"
-                      className="bg-background w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-primary transition duration-300"
+                      className="bg-white w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition duration-300 shadow-sm border border-gray-200"
                       aria-label="Medium"
                     >
                       <FaMediumM />
@@ -337,7 +337,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-card">
+      <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-10"
@@ -353,7 +353,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <motion.div
-              className="relative h-[400px] rounded-xl overflow-hidden"
+              className="relative h-[400px] rounded-xl overflow-hidden shadow-xl"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -367,59 +367,59 @@ const Contact = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0"
-                title="NovaCore Headquarters Map"
+                title="Rockam Data Services Headquarters Map"
               ></iframe>
-              <div className="absolute inset-0 pointer-events-none border-4 border-primary rounded-xl"></div>
+              <div className="absolute inset-0 pointer-events-none border-2 border-white/30 rounded-xl"></div>
             </motion.div>
 
             <motion.div
-              className="glass-effect rounded-xl p-8 h-[400px] flex flex-col"
+              className="bg-white rounded-xl p-8 h-[400px] flex flex-col shadow-xl"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-white mb-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-6">
                 Office Hours & Information
               </h3>
               
               <div className="grid gap-6">
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full bg-background flex items-center justify-center text-primary mr-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
                     <Clock className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="text-white font-medium">Business Hours</h4>
-                    <p className="text-gray-300">{contactInfo.hours}</p>
+                    <h4 className="text-gray-800 font-medium">Business Hours</h4>
+                    <p className="text-gray-600">{contactInfo.hours}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full bg-background flex items-center justify-center text-primary mr-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
                     <Phone className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="text-white font-medium">Phone Support</h4>
-                    <p className="text-gray-300">{contactInfo.phone}</p>
-                    <p className="text-gray-400 text-sm">For urgent inquiries</p>
+                    <h4 className="text-gray-800 font-medium">Phone Support</h4>
+                    <p className="text-gray-600">{contactInfo.phone}</p>
+                    <p className="text-gray-500 text-sm">For urgent inquiries</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full bg-background flex items-center justify-center text-primary mr-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="text-white font-medium">Email</h4>
-                    <p className="text-gray-300">{contactInfo.email}</p>
-                    <p className="text-gray-400 text-sm">We respond within 24 hours</p>
+                    <h4 className="text-gray-800 font-medium">Email</h4>
+                    <p className="text-gray-600">{contactInfo.email}</p>
+                    <p className="text-gray-500 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-auto">
                 <Button 
-                  className="w-full bg-primary text-background font-semibold hover:bg-primary/90 glow-on-hover"
+                  className="w-full bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
                   asChild
                 >
                   <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
