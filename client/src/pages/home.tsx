@@ -550,43 +550,43 @@ const Home = () => {
           >
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-blue-500 font-bold text-xl">
-                  Tech Craft
+                <div className="h-10 flex items-center justify-center text-blue-600 font-bold text-lg">
+                  MIT Labs
                 </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-emerald-600 font-bold text-xl">
-                  DataFlow
+                <div className="h-10 flex items-center justify-center text-emerald-600 font-bold text-lg">
+                  Greenpeace
                 </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-purple-600 font-bold text-xl">
-                  ByteWise
+                <div className="h-10 flex items-center justify-center text-purple-600 font-bold text-lg">
+                  Khan Academy
                 </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-red-500 font-bold text-xl">
-                  InnovateCo
+                <div className="h-10 flex items-center justify-center text-red-500 font-bold text-lg">
+                  TED Talks
                 </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-amber-600 font-bold text-xl">
-                  NextLevel
+                <div className="h-10 flex items-center justify-center text-teal-600 font-bold text-lg">
+                  Coursera
                 </div>
               </motion.div>
             </div>
