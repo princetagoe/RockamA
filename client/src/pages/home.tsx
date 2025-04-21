@@ -31,9 +31,8 @@ const Home = () => {
         <Particles count={40} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
             <motion.div 
-              className="md:w-1/2 lg:w-3/5"
               variants={fadeInAnimation}
             >
               <motion.h1
@@ -75,7 +74,7 @@ const Home = () => {
                 The trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
               <motion.div
-                className="mt-10 flex flex-col sm:flex-row gap-4"
+                className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
@@ -102,45 +101,91 @@ const Home = () => {
                 </motion.div>
               </motion.div>
             </motion.div>
-            
-            <motion.div 
-              className="mt-10 md:mt-0 md:w-1/2 lg:w-2/5"
-              variants={fadeInAnimation}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.6 }}
-            >
-              <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white p-1">
-                <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Data analytics dashboard"
-                  className="w-full h-auto object-cover rounded-lg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent h-1/3"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex justify-between items-center">
-                    <div className="text-gray-800 bg-white/80 shadow-md backdrop-blur-sm rounded-lg px-3 py-2">
-                      <div className="flex items-center">
-                        <BarChart3 className="h-4 w-4 mr-2 text-primary" />
-                        <span className="text-sm font-medium">Performance Trends</span>
-                      </div>
-                    </div>
-                    <div className="text-gray-800 bg-white/80 shadow-md backdrop-blur-sm rounded-lg px-3 py-2">
-                      <div className="flex items-center">
-                        <ArrowRight className="h-4 w-4 mr-2 text-primary" />
-                        <span className="text-sm font-medium">View Dashboard</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Services Section - Moved up as requested */}
       <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Our Data Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive data solutions to help you make smarter decisions with your business data.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                  alt="Data Analytics & Intelligence"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Analytics & Intelligence</h3>
+                <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <ScrollLink to="/services" className="w-full">Learn More</ScrollLink>
+                </Button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                  alt="Data Infrastructure & Engineering"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Infrastructure & Engineering</h3>
+                <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <ScrollLink to="/services" className="w-full">Learn More</ScrollLink>
+                </Button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1633158829875-e5316a358c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                  alt="Governance & Automation"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Governance & Automation</h3>
+                <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
+                <Button variant="outline" size="sm" asChild>
+                  <ScrollLink to="/services" className="w-full">Learn More</ScrollLink>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Benefits Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
