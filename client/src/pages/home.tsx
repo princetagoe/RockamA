@@ -554,7 +554,7 @@ const Home = () => {
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl font-medium text-gray-600">Trusted by Industry Leaders</h2>
+            <h2 className="text-xl font-medium text-gray-600">Trusted by Growing Businesses</h2>
           </motion.div>
           
           <motion.div 
@@ -564,24 +564,14 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
               <motion.div 
                 className="grayscale hover:grayscale-0 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png" 
-                  alt="Nike" 
-                  className="h-12 w-auto object-contain" 
-                />
-              </motion.div>
-              <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/1200px-Coca-Cola_logo.svg.png" 
-                  alt="Coca-Cola" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Mailchimp.svg/1200px-Mailchimp.svg.png" 
+                  alt="Mailchimp" 
                   className="h-10 w-auto object-contain" 
                 />
               </motion.div>
@@ -590,8 +580,8 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1280px-Microsoft_logo_%282012%29.svg.png" 
-                  alt="Microsoft" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Squarespace_Logo.svg/1200px-Squarespace_Logo.svg.png" 
+                  alt="Squarespace" 
                   className="h-8 w-auto object-contain" 
                 />
               </motion.div>
@@ -600,9 +590,29 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png" 
-                  alt="BMW" 
-                  className="h-14 w-auto object-contain" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Shopify_logo.svg/1024px-Shopify_logo.svg.png" 
+                  alt="Shopify" 
+                  className="h-8 w-auto object-contain" 
+                />
+              </motion.div>
+              <motion.div 
+                className="grayscale hover:grayscale-0 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Hubspot_logo.svg/2560px-Hubspot_logo.svg.png" 
+                  alt="HubSpot" 
+                  className="h-9 w-auto object-contain" 
+                />
+              </motion.div>
+              <motion.div 
+                className="grayscale hover:grayscale-0 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Slack_logo_2019.svg/2560px-Slack_logo_2019.svg.png" 
+                  alt="Slack" 
+                  className="h-8 w-auto object-contain" 
                 />
               </motion.div>
             </div>
