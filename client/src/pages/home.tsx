@@ -538,7 +538,7 @@ const Home = () => {
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl font-medium text-gray-600">Trusted by Growing Businesses</h2>
+            <h2 className="text-xl font-medium text-gray-600">We Use the Same Tools Used By</h2>
           </motion.div>
           
           <motion.div 
@@ -548,46 +548,57 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
+            <h3 className="text-center text-lg text-gray-500 mb-8">Helping small to medium businesses achieve data-driven growth</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-blue-600 font-bold text-lg">
-                  MIT Labs
-                </div>
+                <img 
+                  src="https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.jpg"
+                  alt="Shopify" 
+                  className="max-h-10 w-auto object-contain" 
+                />
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-emerald-600 font-bold text-lg">
-                  Greenpeace
-                </div>
+                <img 
+                  src="https://1000logos.net/wp-content/uploads/2021/02/Asana-logo.png"
+                  alt="Asana" 
+                  className="max-h-10 w-auto object-contain" 
+                />
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-purple-600 font-bold text-lg">
-                  Khan Academy
-                </div>
+                <img 
+                  src="https://1000logos.net/wp-content/uploads/2021/05/Atlassian-logo.png"
+                  alt="Atlassian" 
+                  className="max-h-10 w-auto object-contain" 
+                />
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-red-500 font-bold text-lg">
-                  TED Talks
-                </div>
+                <img 
+                  src="https://1000logos.net/wp-content/uploads/2021/05/Slack-logo.png"
+                  alt="Slack" 
+                  className="max-h-8 w-auto object-contain" 
+                />
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="h-10 flex items-center justify-center text-teal-600 font-bold text-lg">
-                  Coursera
-                </div>
+                <img 
+                  src="https://1000logos.net/wp-content/uploads/2021/10/Hubspot-Logo.png"
+                  alt="Hubspot" 
+                  className="max-h-8 w-auto object-contain" 
+                />
               </motion.div>
             </div>
           </motion.div>
