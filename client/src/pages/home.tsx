@@ -27,58 +27,42 @@ const Home = () => {
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32 bg-gradient-to-b from-gray-800 to-gray-950">
-        <Particles count={40} />
+      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+            alt="Professional team analyzing data"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gray-900/70"></div>
+        </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+          <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
             <motion.div 
               variants={fadeInAnimation}
             >
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
                 variants={fadeInAnimation}
               >
-                <motion.span className="text-white block mb-2">
-                  Smarter Decisions.
-                </motion.span>
-                <motion.span className="text-white block">
-                  Simplified Data.
-                </motion.span>
+                Your Data Team, Without the Overhead
               </motion.h1>
               <motion.p
-                className="mt-6 text-xl text-gray-300 mb-6"
+                className="text-xl text-gray-200 mb-10"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.2 }}
               >
-                Rockam is your data team—automated, intelligent, and affordable.
+                Rockam delivers data-driven insights to help businesses make smarter decisions.
               </motion.p>
-              <motion.p
-                className="text-lg font-medium text-primary"
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 justify-center"
                 variants={fadeInAnimation}
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.3 }}
-              >
-                ...Your Data Team, Without the Overhead.
-              </motion.p>
-              <motion.p
-                className="text-sm text-gray-400 mt-2"
-                variants={fadeInAnimation}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.4 }}
-              >
-                The trusted partner for SMBs that want insights, not more headcount.
-              </motion.p>
-              <motion.div
-                className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-                variants={fadeInAnimation}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.4 }}
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Button
