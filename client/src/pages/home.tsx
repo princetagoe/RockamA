@@ -550,54 +550,44 @@ const Home = () => {
           >
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
                 whileHover={{ scale: 1.05 }}
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Mailchimp.svg/1200px-Mailchimp.svg.png" 
-                  alt="Mailchimp" 
-                  className="h-10 w-auto object-contain" 
-                />
+                <div className="h-10 flex items-center justify-center text-blue-500 font-bold text-xl">
+                  Tech Craft
+                </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
                 whileHover={{ scale: 1.05 }}
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Squarespace_Logo.svg/1200px-Squarespace_Logo.svg.png" 
-                  alt="Squarespace" 
-                  className="h-8 w-auto object-contain" 
-                />
+                <div className="h-10 flex items-center justify-center text-emerald-600 font-bold text-xl">
+                  DataFlow
+                </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
                 whileHover={{ scale: 1.05 }}
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Shopify_logo.svg/1024px-Shopify_logo.svg.png" 
-                  alt="Shopify" 
-                  className="h-8 w-auto object-contain" 
-                />
+                <div className="h-10 flex items-center justify-center text-purple-600 font-bold text-xl">
+                  ByteWise
+                </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
                 whileHover={{ scale: 1.05 }}
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Hubspot_logo.svg/2560px-Hubspot_logo.svg.png" 
-                  alt="HubSpot" 
-                  className="h-9 w-auto object-contain" 
-                />
+                <div className="h-10 flex items-center justify-center text-red-500 font-bold text-xl">
+                  InnovateCo
+                </div>
               </motion.div>
               <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg"
                 whileHover={{ scale: 1.05 }}
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Slack_logo_2019.svg/2560px-Slack_logo_2019.svg.png" 
-                  alt="Slack" 
-                  className="h-8 w-auto object-contain" 
-                />
+                <div className="h-10 flex items-center justify-center text-amber-600 font-bold text-xl">
+                  NextLevel
+                </div>
               </motion.div>
             </div>
           </motion.div>
