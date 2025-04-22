@@ -128,7 +128,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#analytics" className="w-full">Learn More</ScrollLink>
+                  <ScrollLink to="/services#analytics" className="w-full">Learn&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#infrastructure" className="w-full">Learn More</ScrollLink>
+                  <ScrollLink to="/services#infrastructure" className="w-full">Learn&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -166,7 +166,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#governance" className="w-full">Learn More</ScrollLink>
+                  <ScrollLink to="/services#governance" className="w-full">Learn&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -420,7 +420,7 @@ const Home = () => {
                   Explore our comprehensive suite of data analytics and insights services
                 </p>
                 <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/services">View Services</ScrollLink>
+                  <ScrollLink to="/services">View&nbsp;Services</ScrollLink>
                 </Button>
               </div>
             </motion.div>
@@ -446,7 +446,7 @@ const Home = () => {
                   See how we serve different industries with specialized data solutions
                 </p>
                 <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/industries">View Industries</ScrollLink>
+                  <ScrollLink to="/industries">View&nbsp;Industries</ScrollLink>
                 </Button>
               </div>
             </motion.div>
@@ -472,7 +472,7 @@ const Home = () => {
                   Understand our process and how we help you get the most from your data
                 </p>
                 <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/how-it-works">Learn More</ScrollLink>
+                  <ScrollLink to="/how-it-works">Learn&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </motion.div>
@@ -500,7 +500,7 @@ const Home = () => {
                   See real-world examples of how we've helped our clients succeed
                 </p>
                 <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/case-studies">View Case Studies</ScrollLink>
+                  <ScrollLink to="/case-studies">View&nbsp;Case&nbsp;Studies</ScrollLink>
                 </Button>
               </div>
             </motion.div>
