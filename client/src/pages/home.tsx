@@ -128,7 +128,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#analytics" className="w-full">Learn&nbsp;More</ScrollLink>
+                  <ScrollLink to="/services#analytics" className="w-full">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#infrastructure" className="w-full">Learn&nbsp;More</ScrollLink>
+                  <ScrollLink to="/services#infrastructure" className="w-full">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -166,7 +166,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#governance" className="w-full">Learn&nbsp;More</ScrollLink>
+                  <ScrollLink to="/services#governance" className="w-full">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -472,7 +472,7 @@ const Home = () => {
                   Understand our process and how we help you get the most from your data
                 </p>
                 <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/how-it-works">Learn&nbsp;More</ScrollLink>
+                  <ScrollLink to="/how-it-works">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
                 </Button>
               </div>
             </motion.div>
