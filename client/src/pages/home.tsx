@@ -341,21 +341,21 @@ const Home = () => {
       <section className="py-16 bg-gradient-to-b from-white to-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="bg-white rounded-xl p-8 md:p-10 text-center shadow-xl border border-gray-200"
+            className="bg-primary rounded-xl p-8 md:p-10 text-center shadow-xl border border-white/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to transform your data strategy?
             </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-white/90 mb-8 max-w-2xl mx-auto">
               Schedule a free consultation with our data experts to discover how Rockam can help your business make better decisions, faster.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
-                className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+                className="bg-white text-primary font-semibold hover:bg-white/90 shadow-md"
                 size="lg"
                 asChild
               >
@@ -364,7 +364,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-primary bg-primary/80 text-white hover:bg-primary hover:border-primary/80"
+                className="border-white text-white hover:bg-white/10"
                 asChild
               >
                 <ScrollLink to="/services">Our Services</ScrollLink>
