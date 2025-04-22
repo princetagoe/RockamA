@@ -40,13 +40,36 @@ type FormValues = z.infer<typeof formSchema>;
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-
+  
+  // Parse the service from URL if present
+  const getInterestFromService = (service?: string) => {
+    if (!service) return "";
+    
+    const serviceMap: Record<string, string> = {
+      'dashboard-reporting': 'analytics',
+      'predictive-analytics': 'ai',
+      'insight-as-a-service': 'analytics',
+      'data-warehousing': 'cloud',
+      'data-engineering': 'development',
+      'cloud-management': 'cloud',
+      'data-governance': 'security',
+      'process-automation': 'development'
+    };
+    
+    return serviceMap[service] || '';
+  };
+  
+  // Get service from URL parameter
+  const urlService = window.location.search.includes('service=') 
+    ? window.location.search.split('service=')[1].split('&')[0]
+    : '';
+  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      interest: "",
+      interest: getInterestFromService(urlService),
       message: "",
     },
   });
