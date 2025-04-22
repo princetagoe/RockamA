@@ -364,7 +364,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-300 text-gray-800 hover:border-primary hover:text-primary"
+                className="border-primary bg-primary/80 text-white hover:bg-primary hover:border-primary/80"
                 asChild
               >
                 <ScrollLink to="/services">Our Services</ScrollLink>
