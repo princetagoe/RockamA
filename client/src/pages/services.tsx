@@ -92,18 +92,20 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service 1 */}
             <motion.div
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Processing & Dashboard Reporting</h3>
-              <p className="text-gray-600 mb-6">
-                Clean, decision-ready interactive dashboards in Power BI, Tableau, or Excel—designed for clarity, not confusion.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Processing & Dashboard Reporting</h3>
+                <p className="text-gray-600 mb-6">
+                  Clean, decision-ready interactive dashboards in Power BI, Tableau, or Excel—designed for clarity, not confusion.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=dashboard-reporting">Book a Consultation</Link>
@@ -112,18 +114,20 @@ const Services = () => {
 
             {/* Service 2 */}
             <motion.div
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Predictive Analytics & Machine Learning</h3>
-              <p className="text-gray-600 mb-6">
-                We forecast trends, optimize pricing, and reduce churn through advanced modeling that aligns with your KPIs.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Predictive Analytics & Machine Learning</h3>
+                <p className="text-gray-600 mb-6">
+                  We forecast trends, optimize pricing, and reduce churn through advanced modeling that aligns with your KPIs.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=predictive-analytics">Book a Consultation</Link>
@@ -132,18 +136,20 @@ const Services = () => {
 
             {/* Service 3 */}
             <motion.div
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Insight-as-a-Service</h3>
-              <p className="text-gray-600 mb-6">
-                Ongoing performance reviews, strategy updates, actionable insights, optimization tips and business-friendly reports delivered monthly or bi-weekly.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Insight-as-a-Service</h3>
+                <p className="text-gray-600 mb-6">
+                  Ongoing performance reviews, strategy updates, actionable insights, optimization tips and business-friendly reports delivered monthly or bi-weekly.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=insight-as-a-service">Book a Consultation</Link>
@@ -177,18 +183,20 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service 1 */}
             <motion.div
-              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Warehousing</h3>
-              <p className="text-gray-600 mb-6">
-                Centralized, scalable storage solutions for fast and reliable reporting across cloud or hybrid environments.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Warehousing</h3>
+                <p className="text-gray-600 mb-6">
+                  Centralized, scalable storage solutions for fast and reliable reporting across cloud or hybrid environments.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=data-warehousing">Book a Consultation</Link>
@@ -197,18 +205,20 @@ const Services = () => {
 
             {/* Service 2 */}
             <motion.div
-              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Engineering</h3>
-              <p className="text-gray-600 mb-6">
-                We design robust pipelines to automate the flow, transformation, and delivery of your business-critical data.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Engineering</h3>
+                <p className="text-gray-600 mb-6">
+                  We design robust pipelines to automate the flow, transformation, and delivery of your business-critical data.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=data-engineering">Book a Consultation</Link>
@@ -217,18 +227,20 @@ const Services = () => {
 
             {/* Service 3 */}
             <motion.div
-              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Cloud Management & Implementation</h3>
-              <p className="text-gray-600 mb-6">
-                Migrations, integration, and monitoring on AWS, Azure, or GCP—with low-maintenance, high-security setups.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Cloud Management & Implementation</h3>
+                <p className="text-gray-600 mb-6">
+                  Migrations, integration, and monitoring on AWS, Azure, or GCP—with low-maintenance, high-security setups.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=cloud-management">Book a Consultation</Link>
@@ -262,18 +274,20 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Service 1 */}
             <motion.div
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Governance</h3>
-              <p className="text-gray-600 mb-6">
-                We enforce structure, quality, and compliance across your data ecosystem, ensuring trust in every number.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Governance</h3>
+                <p className="text-gray-600 mb-6">
+                  We enforce structure, quality, and compliance across your data ecosystem, ensuring trust in every number.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=data-governance">Book a Consultation</Link>
@@ -282,18 +296,20 @@ const Services = () => {
 
             {/* Service 2 */}
             <motion.div
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Process Automation</h3>
-              <p className="text-gray-600 mb-6">
-                From weekly reports to cross-tool syncs, we automate the manual and repetitive, saving you time and reducing risk.
-              </p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Process Automation</h3>
+                <p className="text-gray-600 mb-6">
+                  From weekly reports to cross-tool syncs, we automate the manual and repetitive, saving you time and reducing risk.
+                </p>
+              </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90"
+                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
                 asChild
               >
                 <Link href="/contact?service=process-automation">Book a Consultation</Link>
