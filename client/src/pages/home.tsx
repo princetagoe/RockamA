@@ -128,7 +128,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#analytics" className="w-full">Learn More</ScrollLink>
+                  <Link href="/services#analytics" className="w-full">Learn&nbsp;More</Link>
                 </Button>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#infrastructure" className="w-full">Learn More</ScrollLink>
+                  <Link href="/services#infrastructure" className="w-full">Learn&nbsp;More</Link>
                 </Button>
               </div>
             </div>
@@ -166,7 +166,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
                 </div>
                 <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#governance" className="w-full">Learn More</ScrollLink>
+                  <Link href="/services#governance" className="w-full">Learn&nbsp;More</Link>
                 </Button>
               </div>
             </div>
