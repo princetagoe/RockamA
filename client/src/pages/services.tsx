@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import SolutionCard from "@/components/solution-card";
 import { services } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
+import { BarChart3, Database, ShieldCheck, ChevronRight } from "lucide-react";
 
 const Services = () => {
   return (
@@ -29,19 +29,35 @@ const Services = () => {
             <p className="text-xl text-gray-300 mb-8">
               Every insight, every dashboard, every forecast—without the cost of a full-house data team.
             </p>
-            <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
-              size="lg"
-              asChild
-            >
-              <Link href="/contact">Get a Free Consultation</Link>
-            </Button>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button
+                className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+                size="lg"
+                asChild
+              >
+                <Link href="#analytics">Data Analytics</Link>
+              </Button>
+              <Button
+                className="bg-white text-primary font-semibold hover:bg-gray-100 shadow-md"
+                size="lg"
+                asChild
+              >
+                <Link href="#infrastructure">Data Infrastructure</Link>
+              </Button>
+              <Button
+                className="bg-gray-700 text-white font-semibold hover:bg-gray-600 shadow-md"
+                size="lg"
+                asChild
+              >
+                <Link href="#governance">Governance</Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-white" id="services-grid">
+      {/* Services Overview */}
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
@@ -49,18 +65,240 @@ const Services = () => {
               A complete suite of data solutions tailored to your business needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <SolutionCard
-                key={service.id}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                link={service.link}
-                image={service.image}
-                delay={index}
-              />
-            ))}
+        </div>
+      </section>
+
+      {/* Data Analytics & Intelligence Section */}
+      <section id="analytics" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center mb-6">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                <BarChart3 className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-800">Data Analytics & Intelligence</h2>
+            </div>
+            <p className="text-lg text-gray-600 max-w-4xl mb-8">
+              Transform raw data into strategic insights that drive revenue growth, operational efficiency, and competitive advantage.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Processing & Dashboard Reporting</h3>
+              <p className="text-gray-600 mb-6">
+                Clean, decision-ready interactive dashboards in Power BI, Tableau, or Excel—designed for clarity, not confusion.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=dashboard-reporting">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+
+            {/* Service 2 */}
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Predictive Analytics & Machine Learning</h3>
+              <p className="text-gray-600 mb-6">
+                We forecast trends, optimize pricing, and reduce churn through advanced modeling that aligns with your KPIs.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=predictive-analytics">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+
+            {/* Service 3 */}
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Insight-as-a-Service</h3>
+              <p className="text-gray-600 mb-6">
+                Ongoing performance reviews, strategy updates, actionable insights, optimization tips and business-friendly reports delivered monthly or bi-weekly.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=insight-as-a-service">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Infrastructure & Engineering Section */}
+      <section id="infrastructure" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center mb-6">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                <Database className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-800">Data Infrastructure & Engineering</h2>
+            </div>
+            <p className="text-lg text-gray-600 max-w-4xl mb-8">
+              Build robust data foundations with scalable pipelines, storage solutions, and integration systems tailored to your needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <motion.div
+              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Warehousing</h3>
+              <p className="text-gray-600 mb-6">
+                Centralized, scalable storage solutions for fast and reliable reporting across cloud or hybrid environments.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=data-warehousing">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+
+            {/* Service 2 */}
+            <motion.div
+              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Engineering</h3>
+              <p className="text-gray-600 mb-6">
+                We design robust pipelines to automate the flow, transformation, and delivery of your business-critical data.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=data-engineering">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+
+            {/* Service 3 */}
+            <motion.div
+              className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Cloud Management & Implementation</h3>
+              <p className="text-gray-600 mb-6">
+                Migrations, integration, and monitoring on AWS, Azure, or GCP—with low-maintenance, high-security setups.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=cloud-management">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Governance & Automation Section */}
+      <section id="governance" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center mb-6">
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                <ShieldCheck className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-800">Governance & Automation</h2>
+            </div>
+            <p className="text-lg text-gray-600 max-w-4xl mb-8">
+              Ensure data quality, security, and compliance while automating routine processes to save time and reduce errors.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Service 1 */}
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Data Governance</h3>
+              <p className="text-gray-600 mb-6">
+                We enforce structure, quality, and compliance across your data ecosystem, ensuring trust in every number.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=data-governance">Book a Consultation</Link>
+              </Button>
+            </motion.div>
+
+            {/* Service 2 */}
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Process Automation</h3>
+              <p className="text-gray-600 mb-6">
+                From weekly reports to cross-tool syncs, we automate the manual and repetitive, saving you time and reducing risk.
+              </p>
+              <Button
+                className="w-full bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link href="/contact?service=process-automation">Book a Consultation</Link>
+              </Button>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -75,7 +313,7 @@ const Services = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
               className="bg-white p-6 rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 20 }}
@@ -134,10 +372,10 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center bg-white rounded-xl shadow-xl p-8 md:p-10 border border-gray-200"
+            className="text-center bg-gray-50 rounded-xl shadow-xl p-8 md:p-10 border border-gray-200"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
