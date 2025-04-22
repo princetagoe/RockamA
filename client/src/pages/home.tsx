@@ -114,7 +114,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -122,16 +122,18 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Analytics & Intelligence</h3>
-                <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
-                <Button variant="outline" size="sm" asChild>
-                  <ScrollLink to="/services" className="w-full">Learn More</ScrollLink>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Analytics & Intelligence</h3>
+                  <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
+                </div>
+                <Button variant="outline" size="sm" asChild className="mt-auto">
+                  <ScrollLink to="/services#analytics" className="w-full">Learn More</ScrollLink>
                 </Button>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -139,16 +141,18 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Infrastructure & Engineering</h3>
-                <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
-                <Button variant="outline" size="sm" asChild>
-                  <ScrollLink to="/services" className="w-full">Learn More</ScrollLink>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Infrastructure & Engineering</h3>
+                  <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
+                </div>
+                <Button variant="outline" size="sm" asChild className="mt-auto">
+                  <ScrollLink to="/services#infrastructure" className="w-full">Learn More</ScrollLink>
                 </Button>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1633158829875-e5316a358c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -156,11 +160,13 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Governance & Automation</h3>
-                <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
-                <Button variant="outline" size="sm" asChild>
-                  <ScrollLink to="/services" className="w-full">Learn More</ScrollLink>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Governance & Automation</h3>
+                  <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
+                </div>
+                <Button variant="outline" size="sm" asChild className="mt-auto">
+                  <ScrollLink to="/services#governance" className="w-full">Learn More</ScrollLink>
                 </Button>
               </div>
             </div>
@@ -193,7 +199,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -201,7 +207,7 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Database className="h-6 w-6 text-primary" />
                 </div>
@@ -210,7 +216,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -218,7 +224,7 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <BarChart3 className="h-6 w-6 text-primary" />
                 </div>
@@ -227,7 +233,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -235,7 +241,7 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <LineChart className="h-6 w-6 text-primary" />
                 </div>
@@ -244,7 +250,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -252,7 +258,7 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <ShieldCheck className="h-6 w-6 text-primary" />
                 </div>
@@ -261,7 +267,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -269,7 +275,7 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Database className="h-6 w-6 text-primary" />
                 </div>
