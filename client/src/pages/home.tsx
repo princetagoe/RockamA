@@ -62,7 +62,7 @@ const Home = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
               >
                 Your Data Team, <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-100">Without the Overhead</span>
+                <span className="blue-purple-text">Without the Overhead</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -111,8 +111,7 @@ const Home = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 bg-white rounded-xl shadow-xl p-4 w-full max-w-5xl">
               {/* Service Card 1 */}
               <motion.div 
-                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
-                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer service-card-hover"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <BarChart3 className="h-8 w-8 text-primary" />
@@ -122,8 +121,7 @@ const Home = () => {
               
               {/* Service Card 2 */}
               <motion.div 
-                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
-                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer service-card-hover"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <ServerCog className="h-8 w-8 text-primary" />
@@ -133,8 +131,7 @@ const Home = () => {
               
               {/* Service Card 3 */}
               <motion.div 
-                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
-                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer service-card-hover"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <ShieldCheck className="h-8 w-8 text-primary" />
@@ -144,8 +141,7 @@ const Home = () => {
               
               {/* Service Card 4 */}
               <motion.div 
-                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
-                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer service-card-hover"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Database className="h-8 w-8 text-primary" />
@@ -155,8 +151,7 @@ const Home = () => {
               
               {/* Service Card 5 */}
               <motion.div 
-                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
-                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer service-card-hover"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <LineChart className="h-8 w-8 text-primary" />
