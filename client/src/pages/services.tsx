@@ -330,11 +330,11 @@ const Services = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-primary">
+      <section className="py-16" style={{ backgroundColor: '#0047fc' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white">How Our Services Deliver Value</h2>
-            <p className="mt-4 text-lg text-blue-100 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-white/90 max-w-3xl mx-auto">
               We blend technical expertise with business insight to create data solutions that drive real results.
             </p>
           </div>
@@ -414,7 +414,7 @@ const Services = () => {
               Schedule a free consultation with our team to discuss your data challenges and discover how Rockam can help transform your business.
             </p>
             <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+              className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
               asChild
             >

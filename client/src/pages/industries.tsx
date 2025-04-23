@@ -75,7 +75,7 @@ const Industries = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-20" style={{ backgroundColor: '#0047fc' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -87,7 +87,7 @@ const Industries = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Industry Approach
             </h2>
-            <p className="text-blue-100 max-w-3xl mx-auto">
+            <p className="text-white/90 max-w-3xl mx-auto">
               We believe that effective technology solutions must be tailored to
               the specific needs and challenges of each industry.
             </p>

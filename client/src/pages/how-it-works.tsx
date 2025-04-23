@@ -107,11 +107,11 @@ const HowItWorks = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="py-16 bg-primary">
+      <section className="py-16" style={{ backgroundColor: '#0047fc' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+            <p className="text-lg text-white/90 max-w-3xl mx-auto">
               Common questions about our data services process
             </p>
           </div>
