@@ -15,37 +15,47 @@ const Services = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+            alt="Rockam Services"
+            className="w-full h-full object-cover"
+          />
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center max-w-3xl mx-auto"
+            className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What We Offer
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 text-shadow">
+              <span className="text-backdrop">What We Offer</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-200 mb-8 max-w-xl text-shadow bg-black/20 p-4 rounded-lg">
               Every insight, every dashboard, every forecast—without the cost of a full-house data team.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
               <Button
-                className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+                className="btn-gradient text-white font-semibold rounded-full"
                 size="lg"
                 asChild
               >
                 <Link href="#analytics">Data Analytics</Link>
               </Button>
               <Button
-                className="bg-white text-primary font-semibold hover:bg-gray-100 shadow-md"
+                className="bg-white text-primary font-semibold hover:bg-gray-100 shadow-md rounded-full border border-primary/20"
                 size="lg"
                 asChild
               >
                 <Link href="#infrastructure">Data Infrastructure</Link>
               </Button>
               <Button
-                className="bg-gray-700 text-white font-semibold hover:bg-gray-600 shadow-md"
+                className="bg-gray-800/80 backdrop-blur-sm text-white font-semibold hover:bg-gray-700 shadow-md rounded-full"
                 size="lg"
                 asChild
               >
@@ -105,7 +115,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=dashboard-reporting">Book a Consultation</Link>
@@ -127,7 +137,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=predictive-analytics">Book a Consultation</Link>
@@ -149,7 +159,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=insight-as-a-service">Book a Consultation</Link>
@@ -196,7 +206,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=data-warehousing">Book a Consultation</Link>
@@ -218,7 +228,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=data-engineering">Book a Consultation</Link>
@@ -240,7 +250,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=cloud-management">Book a Consultation</Link>
@@ -287,7 +297,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=data-governance">Book a Consultation</Link>
@@ -309,7 +319,7 @@ const Services = () => {
                 </p>
               </div>
               <Button
-                className="w-full bg-primary text-white hover:bg-primary/90 mt-auto"
+                className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
                 <Link href="/contact?service=process-automation">Book a Consultation</Link>
