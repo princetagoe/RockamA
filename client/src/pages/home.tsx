@@ -33,9 +33,9 @@ const Home = () => {
       <section className="relative overflow-hidden min-h-[650px] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src={import.meta.env.DEV ? '/src/assets/corporate-building.jpg' : '/assets/corporate-building.jpg'} 
-            alt="Corporate building"
-            className="w-full h-full object-cover object-center"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+            alt="Professional team analyzing data"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gray-900/70"></div>
           
@@ -44,8 +44,8 @@ const Home = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 gap-12 items-center">
-            <div className="mx-auto max-w-4xl text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl text-gray-200 mb-10 mx-auto max-w-2xl"
+                className="text-xl text-gray-200 mb-10 max-w-xl"
               >
                 Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
@@ -76,7 +76,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex justify-center gap-4"
+                className="flex flex-col sm:flex-row gap-4"
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Button
@@ -93,7 +93,13 @@ const Home = () => {
               </motion.div>
             </div>
             
-            {/* Image removed from hero section */}
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                alt="Professional data analyst"
+                className="max-w-md rounded-lg shadow-xl hidden lg:block"
+              />
+            </div>
           </div>
         </div>
       </section>
