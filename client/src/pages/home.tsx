@@ -9,17 +9,14 @@ import {
   ShieldCheck,
   LineChart,
   ArrowRight,
-  Coffee,
   LayoutDashboard,
   SlidersHorizontal,
   LucideIcon,
   PieChart,
-  ServerCog,
-  Shield
+  ServerCog
 } from "lucide-react";
-import Particles from "@/components/particles";
 import DemoModal from "@/components/demo-modal";
-import { fadeInAnimation, pageTransition, floatAnimation } from "@/utils/animations";
+import { fadeInAnimation, pageTransition } from "@/utils/animations";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
@@ -55,7 +52,7 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white/10 p-2 rounded-full inline-flex items-center mb-6"
               >
-                <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold">We are data analytics agency</span>
+                <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold">We are IT service agency</span>
               </motion.div>
               
               <motion.h1
@@ -65,7 +62,7 @@ const Home = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
               >
                 Think Big. We make <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-100">data possible!</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-100">IT, possible!</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -185,8 +182,83 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Data Services Section */}
-      <section className="py-24 bg-gray-50">
+      {/* About Company Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/2">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Team meeting"
+                  className="rounded-lg shadow-xl"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-primary/10 rounded-lg w-32 h-32 -z-10"></div>
+              </motion.div>
+            </div>
+            
+            <div className="lg:w-1/2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-primary font-medium mb-2">About Our Company</div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                  Choose The Best IT Service Company
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  At Rockam Data Services, we operate with the mission of making data accessible to all sizes of businesses. We're like a plumber who fixes your pipes. That's what our team is designed to do.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-6 mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Database className="text-primary w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Moneyback Guarantee</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <ShieldCheck className="text-primary w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Technical Support</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <Button
+                  className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-6"
+                  asChild
+                >
+                  <ScrollLink to="/contact" className="flex items-center gap-2">
+                    Contact Us
+                  </ScrollLink>
+                </Button>
+                
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="text-gray-800 font-semibold">Call Us Today:</div>
+                  <div className="text-primary font-bold text-xl">+1 123 456 7890</div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="py-24 bg-white angled-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -195,249 +267,97 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Our Data Services
+            <div className="inline-flex items-center justify-center">
+              <div className="h-px bg-primary/30 w-8 mr-2"></div>
+              <span className="text-primary font-semibold">Our Awesome Services</span>
+              <div className="h-px bg-primary/30 w-8 ml-2"></div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4 mb-6">
+              We Are <span className="text-primary">Dedicated</span> To Serve <br/>You All Time.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive data solutions to help you make smarter decisions with your business data.
-            </p>
           </motion.div>
           
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Data Analytics & Intelligence"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Service 1 */}
+            <motion.div
+              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+            >
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <LayoutDashboard className="h-8 w-8 text-primary" />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Analytics & Intelligence</h3>
-                  <p className="text-gray-600 mb-4">Turn your raw data into actionable insights with our advanced analytics services.</p>
-                </div>
-                <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#analytics" className="w-full">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
-                </Button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Data Infrastructure & Engineering"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Data Infrastructure & Engineering</h3>
-                  <p className="text-gray-600 mb-4">Build robust data pipelines and infrastructure to handle your business data efficiently.</p>
-                </div>
-                <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#infrastructure" className="w-full">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
-                </Button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1633158829875-e5316a358c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Governance & Automation"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Governance & Automation</h3>
-                  <p className="text-gray-600 mb-4">Ensure data quality and compliance while automating repetitive data processing tasks.</p>
-                </div>
-                <Button variant="outline" size="sm" asChild className="mt-auto">
-                  <ScrollLink to="/services#governance" className="w-full">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      
-      {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Governed, trustworthy analytics at scale
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hiring full-house analysts is expensive. Doing nothing is risky. Rockam is your in-between.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Data analytics dashboard"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Database className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Trustworthy analytics at scale</h3>
-                <p className="text-gray-600">Analytics that grow with your business needs and deliver reliable insights.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Business insights dashboard"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Actionable insights</h3>
-                <p className="text-gray-600">Insights you can understand and act on, not just data points and charts.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="AI prediction model"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <LineChart className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">AI-powered forecasts</h3>
-                <p className="text-gray-600">Predictive analytics that help you see what's coming and respond faster.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Data pipeline automation"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">End-to-end data engineering</h3>
-                <p className="text-gray-600">Automated pipelines and processes that save time and reduce manual work.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Secure data infrastructure"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Database className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Secure infrastructure</h3>
-                <p className="text-gray-600">Enterprise-grade security and compliance for your most valuable data assets.</p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Testimonial Pull Quote Banner */}
-          <motion.div
-            className="relative rounded-xl mb-16 shadow-lg overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="absolute inset-0">
-              <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
-                alt="Business meeting with data"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-primary/80"></div>
-            </div>
-            <div className="relative z-10 p-10 md:p-16 text-center">
-              <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">
-                "Rockam runs our numbers. We run the business."
-              </h3>
-              <div className="w-16 h-1 bg-white mx-auto my-6"></div>
-              <p className="text-lg text-white/90 italic">
-                - From our satisfied clients
+              <h3 className="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
+              <p className="text-gray-600 mb-6">
+                We're wildly passionate about crafting beautiful interfaces that help tell your story.
               </p>
-            </div>
-          </motion.div>
-
-          {/* Quick Solution Highlight */}
-          <motion.div
-            className="text-center bg-white p-8 rounded-xl shadow-md mb-16 border border-gray-100"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex justify-center mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                alt="Business growth"
-                className="w-24 h-24 rounded-full object-cover border-4 border-primary/20"
-              />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Decision-Ready Clarity
-            </h3>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              Rockam delivers decision-ready dashboards, forecasts, and reports—so you can grow with clarity.
-            </p>
-          </motion.div>
+            </motion.div>
+            
+            {/* Service 2 */}
+            <motion.div
+              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+            >
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <SlidersHorizontal className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Business Planning</h3>
+              <p className="text-gray-600 mb-6">
+                Our customers get exclusive business opportunities created for their projects.
+              </p>
+            </motion.div>
+            
+            {/* Service 3 */}
+            <motion.div
+              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+            >
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <ServerCog className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Project Management</h3>
+              <p className="text-gray-600 mb-6">
+                Our global consultants are always looking for the next opportunity.
+              </p>
+            </motion.div>
+            
+            {/* Service 4 */}
+            <motion.div
+              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+            >
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <ShieldCheck className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cyber Security</h3>
+              <p className="text-gray-600 mb-6">
+                We know our networks are secure and we are putting our expertise to work.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-primary/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="bg-white rounded-xl p-8 md:p-10 text-center shadow-xl border border-gray-200"
+            className="bg-white rounded-xl p-8 md:p-12 text-center shadow-xl border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -451,7 +371,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
-                className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+                className="bg-primary text-white font-semibold hover:bg-primary/90 rounded-full px-8"
                 size="lg"
                 asChild
               >
@@ -460,7 +380,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-300 text-white hover:border-primary hover:text-primary"
+                className="border-gray-300 text-gray-800 hover:border-primary hover:text-primary rounded-full px-8"
                 asChild
               >
                 <ScrollLink to="/services">Our Services</ScrollLink>
@@ -470,239 +390,76 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Navigation Section */}
-      <section className="py-16 bg-gray-900">
+      {/* Logo Grid Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Explore Rockam Data Services
-            </motion.h2>
-            <motion.p
-              className="text-gray-300 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              Discover how we can help transform your data into actionable insights
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <motion.div
-              className="bg-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-white/5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03, borderColor: 'rgba(0, 114, 206, 0.5)' }}
-            >
-              <div className="h-40 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Data services"
-                  className="w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4">Services</h3>
-                <p className="text-gray-300 mb-6">
-                  Explore our comprehensive suite of data analytics and insights services
-                </p>
-                <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/services">View&nbsp;Services</ScrollLink>
-                </Button>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              className="bg-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-white/5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03, borderColor: 'rgba(0, 114, 206, 0.5)' }}
-            >
-              <div className="h-40 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Industry solutions"
-                  className="w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4">Industries</h3>
-                <p className="text-gray-300 mb-6">
-                  See how we serve different industries with specialized data solutions
-                </p>
-                <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/industries">View&nbsp;Industries</ScrollLink>
-                </Button>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              className="bg-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-white/5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03, borderColor: 'rgba(0, 114, 206, 0.5)' }}
-            >
-              <div className="h-40 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="How it works"
-                  className="w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4">How It Works</h3>
-                <p className="text-gray-300 mb-6">
-                  Understand our process and how we help you get the most from your data
-                </p>
-                <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/how-it-works">Learn&nbsp;&nbsp;&nbsp;More</ScrollLink>
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <motion.div
-              className="bg-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-white/5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03, borderColor: 'rgba(0, 114, 206, 0.5)' }}
-            >
-              <div className="h-40 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Case studies"
-                  className="w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4">Case Studies</h3>
-                <p className="text-gray-300 mb-6">
-                  See real-world examples of how we've helped our clients succeed
-                </p>
-                <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/case-studies">View&nbsp;Case&nbsp;Studies</ScrollLink>
-                </Button>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              className="bg-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-white/5"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03, borderColor: 'rgba(0, 114, 206, 0.5)' }}
-            >
-              <div className="h-40 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="About us"
-                  className="w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4">About Us</h3>
-                <p className="text-gray-300 mb-6">
-                  Learn about our team, mission, and why we're passionate about data
-                </p>
-                <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-primary/20">
-                  <ScrollLink to="/about">About Rockam</ScrollLink>
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partner Logos */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-8"
+          <motion.div
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl font-medium text-gray-600">We Use the Same Tools Used By</h2>
+            <h2 className="text-xl font-medium text-gray-600">Trusted By Leading Companies</h2>
           </motion.div>
           
-          <motion.div 
-            className="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100"
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-center text-lg text-gray-500 mb-8">Helping small to medium businesses achieve data-driven growth</h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
-              <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.jpg"
-                  alt="Shopify" 
-                  className="max-h-10 w-auto object-contain" 
-                />
-              </motion.div>
-              <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://1000logos.net/wp-content/uploads/2021/02/Asana-logo.png"
-                  alt="Asana" 
-                  className="max-h-10 w-auto object-contain" 
-                />
-              </motion.div>
-              <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://1000logos.net/wp-content/uploads/2021/05/Atlassian-logo.png"
-                  alt="Atlassian" 
-                  className="max-h-10 w-auto object-contain" 
-                />
-              </motion.div>
-              <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://1000logos.net/wp-content/uploads/2021/05/Slack-logo.png"
-                  alt="Slack" 
-                  className="max-h-8 w-auto object-contain" 
-                />
-              </motion.div>
-              <motion.div 
-                className="grayscale hover:grayscale-0 transition-all duration-300 bg-white p-4 rounded-lg shadow-sm w-full h-16 flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://1000logos.net/wp-content/uploads/2021/10/Hubspot-Logo.png"
-                  alt="Hubspot" 
-                  className="max-h-8 w-auto object-contain" 
-                />
-              </motion.div>
-            </div>
+            <motion.div 
+              className="grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="https://cdn.worldvectorlogo.com/logos/shopify.svg"
+                alt="Shopify" 
+                className="max-h-10 w-auto" 
+              />
+            </motion.div>
+            <motion.div 
+              className="grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="https://cdn.worldvectorlogo.com/logos/asana-logo.svg"
+                alt="Asana" 
+                className="max-h-10 w-auto" 
+              />
+            </motion.div>
+            <motion.div 
+              className="grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="https://cdn.worldvectorlogo.com/logos/atlassian-1.svg"
+                alt="Atlassian" 
+                className="max-h-10 w-auto" 
+              />
+            </motion.div>
+            <motion.div 
+              className="grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg"
+                alt="Slack" 
+                className="max-h-8 w-auto" 
+              />
+            </motion.div>
+            <motion.div 
+              className="grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="https://cdn.worldvectorlogo.com/logos/hubspot.svg"
+                alt="Hubspot" 
+                className="max-h-10 w-auto" 
+              />
+            </motion.div>
           </motion.div>
         </div>
       </section>
