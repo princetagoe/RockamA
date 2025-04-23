@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition } from "@/utils/animations";
-import heroBackground from "@/assets/woman-working-laptop.jpg";
+import heroBackground from "@/assets/woman-working-laptop-optimized.jpg";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
@@ -38,10 +38,8 @@ const Home = () => {
             alt="Professional woman working on laptop"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gray-900/70"></div>
-          
-          {/* Diagonal Overlay */}
-          <div className="absolute inset-0 bg-primary/80 clip-diagonal-reverse"></div>
+          {/* Light overlay for better text readability */}
+          <div className="absolute inset-0 bg-gray-900/40"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
