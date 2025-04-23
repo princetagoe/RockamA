@@ -15,12 +15,12 @@ const Industries = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 pt-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <img 
             src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
             alt="Industries We Serve"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
           {/* Darker overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>

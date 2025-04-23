@@ -31,12 +31,12 @@ const Home = () => {
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[650px] flex items-center">
+      <section className="relative overflow-hidden min-h-[650px] flex items-center pt-16">
         <div className="absolute inset-0">
           <img 
             src={heroBackground} 
             alt="Professional woman working on laptop"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
           {/* Light overlay for better text readability */}
           <div className="absolute inset-0 bg-gray-900/40"></div>

@@ -16,12 +16,12 @@ const About = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 pt-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <img 
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="Team meeting"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
           {/* Darker overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
