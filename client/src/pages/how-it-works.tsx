@@ -14,22 +14,32 @@ const HowItWorks = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+            alt="How Our Process Works"
+            className="w-full h-full object-cover"
+          />
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center max-w-3xl mx-auto"
+            className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              From Raw Data to Results—Fast
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 text-shadow">
+              <span className="text-backdrop">From Raw Data to Results—Fast</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-200 mb-8 max-w-xl text-shadow bg-black/20 p-4 rounded-lg">
               Our process is simple, human, and fast. You don't need to know data science—we do.
             </p>
             <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+              className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
               asChild
             >
@@ -179,7 +189,7 @@ const HowItWorks = () => {
               Let's discuss how we can help you leverage your data to make smarter business decisions and drive growth.
             </p>
             <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+              className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
               asChild
             >
