@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition } from "@/utils/animations";
+import heroBackground from "@/assets/woman-working-laptop.jpg";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
@@ -33,8 +34,8 @@ const Home = () => {
       <section className="relative overflow-hidden min-h-[650px] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
-            alt="Professional team analyzing data"
+            src={heroBackground} 
+            alt="Professional woman working on laptop"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gray-900/70"></div>
@@ -44,8 +45,8 @@ const Home = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+          <div className="grid grid-cols-1 gap-12 items-center max-w-3xl mx-auto">
+            <div>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -91,14 +92,6 @@ const Home = () => {
                   </Button>
                 </motion.div>
               </motion.div>
-            </div>
-            
-            <div className="order-1 lg:order-2 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Professional data analyst"
-                className="max-w-md rounded-lg shadow-xl hidden lg:block"
-              />
             </div>
           </div>
         </div>
