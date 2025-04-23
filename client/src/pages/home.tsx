@@ -208,7 +208,7 @@ const Home = () => {
               >
                 <div className="text-primary font-medium mb-2">About Rockam</div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                  Your Data Team, Without the Overhead
+                  Your Data Team, <span className="blue-purple-text">Without the Overhead</span>
                 </h2>
                 <p className="text-gray-600 mb-6">
                   Rockam Data Services Ltd is a data science and analytics outsourcing company, that unlocks your ability to generate life-changing insights through focusing on what matters most for your business, and your customers.
@@ -275,7 +275,7 @@ const Home = () => {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4 mb-6">
               Every insight, every dashboard, every forecast—
-              <br/><span className="text-primary">without the cost of a full-house data team</span>
+              <br/><span className="blue-purple-text">without the cost of a full-house data team</span>
             </h2>
           </motion.div>
           
@@ -356,8 +356,8 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              Ready to transform your data strategy?
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to <span className="blue-purple-text">transform your data strategy?</span>
             </h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Whether you're just getting started or buried in spreadsheets, Rockam is here to help. Schedule a free consultation with our data experts to discover how Rockam can help your business make better decisions, faster.
