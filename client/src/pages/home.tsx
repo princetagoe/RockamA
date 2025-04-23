@@ -81,7 +81,7 @@ const Home = () => {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Button
                     size="lg"
-                    className="bg-primary text-white font-semibold hover:bg-primary/90 rounded-full px-8"
+                    className="btn-gradient text-white font-semibold rounded-full px-8"
                     asChild
                   >
                     <ScrollLink to="/contact" className="flex items-center gap-2">
@@ -240,7 +240,7 @@ const Home = () => {
                 </div>
                 
                 <Button
-                  className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-6"
+                  className="btn-gradient text-white rounded-full px-8 py-6"
                   asChild
                 >
                   <ScrollLink to="/contact" className="flex items-center gap-2">
@@ -367,7 +367,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
-                className="bg-primary text-white font-semibold hover:bg-primary/90 rounded-full px-8"
+                className="btn-gradient text-white font-semibold rounded-full px-8"
                 size="lg"
                 asChild
               >
@@ -376,7 +376,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-300 text-gray-800 hover:border-primary hover:text-primary rounded-full px-8"
+                className="border-gray-300 text-gray-800 rounded-full px-8 btn-outline-hover"
                 asChild
               >
                 <ScrollLink to="/services">Our Services</ScrollLink>
