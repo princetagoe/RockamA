@@ -75,7 +75,7 @@ const Industries = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-20" style={{ backgroundColor: '#0047fc' }}>
+      <section className="py-20 overflow-hidden bg-[#0047fc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
