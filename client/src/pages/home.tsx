@@ -32,7 +32,12 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[650px] flex items-center">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gray-900"></div>
+          <img 
+            src={import.meta.env.DEV ? '/src/assets/corporate-building.jpg' : '/assets/corporate-building.jpg'} 
+            alt="Corporate building"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gray-900/70"></div>
           
           {/* Diagonal Overlay */}
           <div className="absolute inset-0 bg-primary/80 clip-diagonal-reverse"></div>
