@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeInAnimation } from "@/utils/animations";
 import ScrollLink from "@/components/scroll-link";
 import { Button } from "@/components/ui/button";
-import rockamLogo from "@/assets/rockam-logo.png";
+import rockamLogo from "@/assets/rockam-logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,8 +94,7 @@ const Navbar = () => {
         animate="visible"
         variants={fadeInAnimation}
       >
-        {/* Diagonal Shape for Brand Section */}
-        <div className="absolute top-0 left-0 w-[300px] md:w-[350px] h-full bg-primary clip-diagonal z-0"></div>
+        {/* Removed Diagonal Shape for Brand Section - Using white background instead */}
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center justify-between h-16">
@@ -106,11 +105,8 @@ const Navbar = () => {
                     <img 
                       src={rockamLogo} 
                       alt="Rockam Data Services" 
-                      className="h-10 mr-2" 
+                      className="h-16 mr-2" 
                     />
-                    <span className="text-white font-bold text-xl hidden sm:inline-block">ROCKAM</span>
-                    <div className="h-6 border-l border-white/30 mx-2 hidden sm:block"></div>
-                    <span className="text-white text-xs hidden sm:block">Data Analytics & Services</span>
                   </div>
                 </ScrollLink>
               </div>
