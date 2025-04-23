@@ -17,18 +17,28 @@ const About = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt="Team meeting"
+            className="w-full h-full object-cover"
+          />
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center max-w-3xl mx-auto"
+            className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About Rockam
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 text-shadow">
+              <span className="text-backdrop">About Rockam</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-200 mb-8 max-w-xl text-shadow bg-black/20 p-4 rounded-lg">
               We're a team of passionate data experts dedicated to helping businesses
               make better decisions through powerful analytics.
             </p>
@@ -357,7 +367,7 @@ const About = () => {
               organization make better decisions through data analytics.
             </p>
             <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+              className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
               asChild
             >
