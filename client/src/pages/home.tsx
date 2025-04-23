@@ -396,16 +396,26 @@ const Home = () => {
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl font-medium text-gray-600">Trusted by businesses across industries</h2>
+            <h2 className="text-xl font-medium text-gray-600">Trusted By Leading Companies</h2>
           </motion.div>
           
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center"
+            className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
+            <motion.div 
+              className="grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="https://cdn.worldvectorlogo.com/logos/shopify.svg"
+                alt="Shopify" 
+                className="max-h-10 w-auto" 
+              />
+            </motion.div>
             <motion.div 
               className="grayscale hover:grayscale-0 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
