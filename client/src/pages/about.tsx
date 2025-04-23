@@ -241,7 +241,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Locations */}
+      {/* Location */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -252,60 +252,36 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Our Locations
+              Our Location
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We maintain offices across the United States to better serve our
-              clients.
+              Visit our office in Ontario, Canada to learn more about our services.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-xl mx-auto">
             <motion.div
-              className="bg-white rounded-xl p-6 shadow-md border border-gray-200"
+              className="bg-white rounded-xl p-8 shadow-md border border-gray-200"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
             >
               <div className="flex items-start">
                 <div className="text-primary mr-4 mt-1">
-                  <MapPin size={24} />
+                  <MapPin size={28} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium text-gray-800">
+                  <h4 className="text-xl font-medium text-gray-800 mb-2">
                     Headquarters
                   </h4>
-                  <p className="text-gray-600">
-                    100 Tech Plaza, Suite 300
+                  <p className="text-gray-600 text-lg">
+                    31 Tippett Road
                     <br />
-                    San Francisco, CA 94105
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-md border border-gray-200"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
-            >
-              <div className="flex items-start">
-                <div className="text-primary mr-4 mt-1">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-medium text-gray-800">
-                    East Coast Office
-                  </h4>
-                  <p className="text-gray-600">
-                    500 Innovation Drive
+                    Ontario, M3H 0C8
                     <br />
-                    Boston, MA 02110
+                    Canada
                   </p>
                 </div>
               </div>

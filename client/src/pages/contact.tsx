@@ -269,7 +269,7 @@ const Contact = () => {
             >
               <div className="bg-primary rounded-xl p-8 mb-8 shadow-lg text-white">
                 <h3 className="text-xl font-semibold text-white mb-6">
-                  Our Locations
+                  Our Location
                 </h3>
 
                 <div className="space-y-6">
@@ -380,7 +380,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Visit Our Offices
+              Visit Our Office
             </h2>
           </motion.div>
 
@@ -393,7 +393,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0952123206644!2d-122.39633072405955!3d37.79133111459036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858061cbb5a467%3A0x3ed6b05f41229f9c!2sEmbarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111!5e0!3m2!1sen!2sus!4v1659463264075!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.0448393650434!2d-79.46895568417178!3d43.710688879120644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b33c53d01889b%3A0xb05c9c21db2705d5!2s31%20Tippett%20Rd%2C%20North%20York%2C%20ON%20M3H%200C8%2C%20Canada!5e0!3m2!1sen!2sus!4v1745435662693!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 allowFullScreen
