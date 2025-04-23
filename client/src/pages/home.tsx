@@ -17,6 +17,9 @@ import {
 } from "lucide-react";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition } from "@/utils/animations";
+import heroBackground from "@/assets/hero-background.jpg";
+import teamImage from "@/assets/team-image.jpg";
+import aboutImage from "@/assets/about-image.jpg";
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
@@ -33,14 +36,10 @@ const Home = () => {
       <section className="relative overflow-hidden min-h-[650px] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
-            alt="Professional team analyzing data"
+            src={heroBackground} 
+            alt="Data analytics professional"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gray-900/70"></div>
-          
-          {/* Diagonal Overlay */}
-          <div className="absolute inset-0 bg-primary/80 clip-diagonal-reverse"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -50,16 +49,16 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white/10 p-2 rounded-full inline-flex items-center mb-6"
+                className="bg-white p-1 rounded-full inline-flex items-center mb-6 shadow-md"
               >
-                <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold">Data Analytics & Intelligence</span>
+                <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">Data Analytics & Intelligence</span>
               </motion.div>
               
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-800 mb-6"
               >
                 Your Data Team, <br/>
                 <span className="blue-purple-text">Without the Overhead</span>
@@ -68,7 +67,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl text-gray-200 mb-10 max-w-xl"
+                className="text-xl text-gray-600 mb-10 max-w-xl"
               >
                 Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
@@ -95,8 +94,8 @@ const Home = () => {
             
             <div className="order-1 lg:order-2 flex justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Professional data analyst"
+                src={teamImage} 
+                alt="Professional data team"
                 className="max-w-md rounded-lg shadow-xl hidden lg:block"
               />
             </div>
@@ -191,8 +190,8 @@ const Home = () => {
                 className="relative"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Team meeting"
+                  src={aboutImage}
+                  alt="Professional reviewing data reports"
                   className="rounded-lg shadow-xl"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary/10 rounded-lg w-32 h-32 -z-10"></div>
