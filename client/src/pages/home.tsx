@@ -52,7 +52,7 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white/10 p-2 rounded-full inline-flex items-center mb-6"
               >
-                <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold">We are IT service agency</span>
+                <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold">Data Analytics & Intelligence</span>
               </motion.div>
               
               <motion.h1
@@ -61,8 +61,8 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
               >
-                Think Big. We make <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-100">IT, possible!</span>
+                Your Data Team, <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-100">Without the Overhead</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-xl text-gray-200 mb-10 max-w-xl"
               >
-                We place you at the center of international networks to advance your strategic interests.
+                Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -115,9 +115,9 @@ const Home = () => {
                 whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <LayoutDashboard className="h-8 w-8 text-primary" />
+                  <BarChart3 className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-sm font-semibold text-center">UI/UX Design Services</h3>
+                <h3 className="text-sm font-semibold text-center">Data Analytics & Intelligence</h3>
               </motion.div>
               
               {/* Service Card 2 */}
@@ -126,9 +126,9 @@ const Home = () => {
                 whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <SlidersHorizontal className="h-8 w-8 text-primary" />
+                  <ServerCog className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-sm font-semibold text-center">Business Consultation</h3>
+                <h3 className="text-sm font-semibold text-center">Data Infrastructure & Engineering</h3>
               </motion.div>
               
               {/* Service Card 3 */}
@@ -137,9 +137,9 @@ const Home = () => {
                 whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <ServerCog className="h-8 w-8 text-primary" />
+                  <ShieldCheck className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-sm font-semibold text-center">Website Development</h3>
+                <h3 className="text-sm font-semibold text-center">Governance & Automation</h3>
               </motion.div>
               
               {/* Service Card 4 */}
@@ -148,9 +148,9 @@ const Home = () => {
                 whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="h-8 w-8 text-primary" />
+                  <Database className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-sm font-semibold text-center">Support Management</h3>
+                <h3 className="text-sm font-semibold text-center">Data Warehousing</h3>
               </motion.div>
               
               {/* Service Card 5 */}
@@ -159,24 +159,25 @@ const Home = () => {
                 whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <PieChart className="h-8 w-8 text-primary" />
+                  <LineChart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-sm font-semibold text-center">Market Research</h3>
+                <h3 className="text-sm font-semibold text-center">Predictive Analytics & ML</h3>
               </motion.div>
             </div>
           </div>
           
           <div className="text-center pb-8">
             <div className="inline-flex gap-2 items-center text-gray-500 text-sm mb-4">
-              <span>Join over +35,000 happy clients</span>
+              <span>Trusted by businesses across various industries</span>
               <div className="h-px bg-gray-300 w-16"></div>
             </div>
             
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
-              <img src="https://cdn.worldvectorlogo.com/logos/envato.svg" alt="Envato" className="h-6" />
-              <img src="https://cdn.worldvectorlogo.com/logos/slack-1.svg" alt="Slack" className="h-6" />
-              <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="h-6" />
-              <img src="https://cdn.worldvectorlogo.com/logos/sketch-2.svg" alt="Sketch" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/microsoft-power-bi.svg" alt="Power BI" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/azure-1.svg" alt="Azure" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" className="h-6" />
             </div>
           </div>
         </div>
@@ -210,30 +211,35 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <div className="text-primary font-medium mb-2">About Our Company</div>
+                <div className="text-primary font-medium mb-2">About Rockam</div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                  Choose The Best IT Service Company
+                  Your Data Team, Without the Overhead
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  At Rockam Data Services, we operate with the mission of making data accessible to all sizes of businesses. We're like a plumber who fixes your pipes. That's what our team is designed to do.
+                  Rockam Data Services Ltd is a data science and analytics outsourcing company, that unlocks your ability to generate life-changing insights through focusing on what matters most for your business, and your customers.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Our areas of expertise are data processing and management, analytics, AI driven process automation, dashboard reporting and insight generation, for medium and small-scale businesses.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
                       <Database className="text-primary w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Moneyback Guarantee</div>
+                      <div className="font-semibold text-gray-900 mb-1">Our Mission</div>
+                      <p className="text-gray-600 text-sm">To be the best-in-class innovative data science and analytics outsourcing company.</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
                       <ShieldCheck className="text-primary w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Technical Support</div>
+                      <div className="font-semibold text-gray-900 mb-1">Our Purpose</div>
+                      <p className="text-gray-600 text-sm">Innovate to help business' decision making better, operations leaner, and customers live better.</p>
                     </div>
                   </div>
                 </div>
@@ -248,8 +254,8 @@ const Home = () => {
                 </Button>
                 
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="text-gray-800 font-semibold">Call Us Today:</div>
-                  <div className="text-primary font-bold text-xl">+1 123 456 7890</div>
+                  <div className="text-gray-800 font-semibold">Email Us:</div>
+                  <div className="text-primary font-bold text-xl">info@rockam.ai</div>
                 </div>
               </motion.div>
             </div>
@@ -269,15 +275,16 @@ const Home = () => {
           >
             <div className="inline-flex items-center justify-center">
               <div className="h-px bg-primary/30 w-8 mr-2"></div>
-              <span className="text-primary font-semibold">Our Awesome Services</span>
+              <span className="text-primary font-semibold">Our Services</span>
               <div className="h-px bg-primary/30 w-8 ml-2"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4 mb-6">
-              We Are <span className="text-primary">Dedicated</span> To Serve <br/>You All Time.
+              Every insight, every dashboard, every forecast—
+              <br/><span className="text-primary">without the cost of a full-house data team</span>
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service 1 */}
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
@@ -288,11 +295,14 @@ const Home = () => {
               whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
             >
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <LayoutDashboard className="h-8 w-8 text-primary" />
+                <BarChart3 className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Data Analytics & Intelligence</h3>
               <p className="text-gray-600 mb-6">
-                We're wildly passionate about crafting beautiful interfaces that help tell your story.
+                Clean, decision-ready interactive dashboards in Power BI, Tableau, or Excel—designed for clarity, not confusion.
+              </p>
+              <p className="text-gray-600 mb-6">
+                We forecast trends, optimize pricing, and reduce churn through advanced modeling that aligns with your KPIs.
               </p>
             </motion.div>
             
@@ -306,11 +316,14 @@ const Home = () => {
               whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
             >
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <SlidersHorizontal className="h-8 w-8 text-primary" />
+                <ServerCog className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Business Planning</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Data Infrastructure & Engineering</h3>
               <p className="text-gray-600 mb-6">
-                Our customers get exclusive business opportunities created for their projects.
+                Centralized, scalable storage solutions for fast and reliable reporting across cloud or hybrid environments.
+              </p>
+              <p className="text-gray-600 mb-6">
+                We design robust pipelines to automate the flow, transformation, and delivery of your business-critical data.
               </p>
             </motion.div>
             
@@ -324,29 +337,14 @@ const Home = () => {
               whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
             >
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <ServerCog className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Project Management</h3>
-              <p className="text-gray-600 mb-6">
-                Our global consultants are always looking for the next opportunity.
-              </p>
-            </motion.div>
-            
-            {/* Service 4 */}
-            <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
-            >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <ShieldCheck className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Cyber Security</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Governance & Automation</h3>
               <p className="text-gray-600 mb-6">
-                We know our networks are secure and we are putting our expertise to work.
+                We enforce structure, quality, and compliance across your data ecosystem, ensuring trust in every number.
+              </p>
+              <p className="text-gray-600 mb-6">
+                From weekly reports to cross-tool syncs, we automate the manual and repetitive, saving you time and reducing risk.
               </p>
             </motion.div>
           </div>
@@ -367,7 +365,10 @@ const Home = () => {
               Ready to transform your data strategy?
             </h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Schedule a free consultation with our data experts to discover how Rockam can help your business make better decisions, faster.
+              Whether you're just getting started or buried in spreadsheets, Rockam is here to help. Schedule a free consultation with our data experts to discover how Rockam can help your business make better decisions, faster.
+            </p>
+            <p className="text-sm text-gray-500 mb-4">
+              <span className="font-medium">ADDRESS:</span> 31 Tippett Road, Ontario, M3H 0C8, Canada
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
