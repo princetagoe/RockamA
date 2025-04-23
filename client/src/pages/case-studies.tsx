@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { testimonials } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
-import { ExternalLink } from "lucide-react";
 
 const CaseStudies = () => {
   // Sample case studies data
@@ -122,14 +121,9 @@ const CaseStudies = () => {
                   </div>
                   
                   <div className="lg:w-3/5 p-8">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2">{study.title}</h3>
-                        <p className="text-primary font-medium mb-4">{study.client}</p>
-                      </div>
-                      <Button variant="outline" size="sm" className="text-primary border-primary hover:bg-primary/10">
-                        <ExternalLink className="h-4 w-4 mr-1" /> Full Case Study
-                      </Button>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">{study.title}</h3>
+                      <p className="text-primary font-medium mb-4">{study.client}</p>
                     </div>
                     
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
