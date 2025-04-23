@@ -61,22 +61,32 @@ const CaseStudies = () => {
       variants={pageTransition}
     >
       {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+            alt="Case Studies"
+            className="w-full h-full object-cover"
+          />
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center max-w-3xl mx-auto"
+            className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our Clients Say
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 text-shadow">
+              <span className="text-backdrop">What Our Clients Say</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-200 mb-8 max-w-xl text-shadow bg-black/20 p-4 rounded-lg">
               Real results from businesses that trusted Rockam with their data challenges.
             </p>
             <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+              className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
               asChild
             >
@@ -155,11 +165,11 @@ const CaseStudies = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-primary">
+      <section className="py-16 bg-[#0047fc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Client Testimonials</h2>
-            <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+            <p className="text-lg text-white/90 max-w-3xl mx-auto">
               Don't just take our word for it - here's what our clients have to say
             </p>
           </div>
@@ -212,7 +222,7 @@ const CaseStudies = () => {
               Join our growing list of satisfied clients and see how Rockam can transform your data into a competitive advantage.
             </p>
             <Button
-              className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-md"
+              className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
               asChild
             >
