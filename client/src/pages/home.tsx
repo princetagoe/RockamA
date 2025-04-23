@@ -10,6 +10,12 @@ import {
   LineChart,
   ArrowRight,
   Coffee,
+  LayoutDashboard,
+  SlidersHorizontal,
+  LucideIcon,
+  PieChart,
+  ServerCog,
+  Shield
 } from "lucide-react";
 import Particles from "@/components/particles";
 import DemoModal from "@/components/demo-modal";
@@ -20,14 +26,14 @@ const Home = () => {
   
   return (
     <motion.div
-      className="pt-16"
+      className="pt-0"
       initial="initial"
       animate="enter"
       exit="exit"
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 md:pb-32">
+      <section className="relative overflow-hidden min-h-[650px] flex items-center">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
@@ -35,65 +41,155 @@ const Home = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gray-900/70"></div>
+          
+          {/* Diagonal Overlay */}
+          <div className="absolute inset-0 bg-primary/80 clip-diagonal-reverse"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-            <motion.div 
-              variants={fadeInAnimation}
-            >
-              <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
-                variants={fadeInAnimation}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 p-2 rounded-full inline-flex items-center mb-6"
               >
-                Your Data Team, Without the Overhead
+                <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold">We are data analytics agency</span>
+              </motion.div>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
+              >
+                Think Big. We make <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-100">data possible!</span>
               </motion.h1>
               <motion.p
-                className="text-xl text-gray-200 mb-10"
-                variants={fadeInAnimation}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.2 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-xl text-gray-200 mb-10 max-w-xl"
               >
-                Rockam delivers data-driven insights to help businesses make smarter decisions.
+                We place you at the center of international networks to advance your strategic interests.
               </motion.p>
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                variants={fadeInAnimation}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.3 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-4"
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Button
                     size="lg"
-                    className="bg-primary text-white font-semibold hover:bg-primary/90"
+                    className="bg-primary text-white font-semibold hover:bg-primary/90 rounded-full px-8"
                     asChild
                   >
-                    <ScrollLink to="/contact">Contact Us</ScrollLink>
-                  </Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-gray-400 text-white hover:border-primary hover:text-primary"
-                    onClick={() => setDemoModalOpen(true)}
-                  >
-                    Get a Free Consultation
+                    <ScrollLink to="/contact" className="flex items-center gap-2">
+                      Our Team
+                      <ArrowRight size={16} />
+                    </ScrollLink>
                   </Button>
                 </motion.div>
               </motion.div>
-            </motion.div>
+            </div>
+            
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                alt="Professional data analyst"
+                className="max-w-md rounded-lg shadow-xl hidden lg:block"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section - Moved up as requested */}
-      <section className="py-16 bg-white">
+      {/* Services Cards - Similar to the inspiration */}
+      <section className="py-24 bg-white relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center -mt-32 mb-20">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 bg-white rounded-xl shadow-xl p-4 w-full max-w-5xl">
+              {/* Service Card 1 */}
+              <motion.div 
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
+                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <LayoutDashboard className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-sm font-semibold text-center">UI/UX Design Services</h3>
+              </motion.div>
+              
+              {/* Service Card 2 */}
+              <motion.div 
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
+                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <SlidersHorizontal className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-sm font-semibold text-center">Business Consultation</h3>
+              </motion.div>
+              
+              {/* Service Card 3 */}
+              <motion.div 
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
+                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <ServerCog className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-sm font-semibold text-center">Website Development</h3>
+              </motion.div>
+              
+              {/* Service Card 4 */}
+              <motion.div 
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
+                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <ShieldCheck className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-sm font-semibold text-center">Support Management</h3>
+              </motion.div>
+              
+              {/* Service Card 5 */}
+              <motion.div 
+                className="flex flex-col items-center p-5 hover:shadow-lg transition-all rounded-lg cursor-pointer"
+                whileHover={{ y: -10, backgroundColor: "rgba(122, 54, 207, 0.05)" }}
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <PieChart className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-sm font-semibold text-center">Market Research</h3>
+              </motion.div>
+            </div>
+          </div>
+          
+          <div className="text-center pb-8">
+            <div className="inline-flex gap-2 items-center text-gray-500 text-sm mb-4">
+              <span>Join over +35,000 happy clients</span>
+              <div className="h-px bg-gray-300 w-16"></div>
+            </div>
+            
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+              <img src="https://cdn.worldvectorlogo.com/logos/envato.svg" alt="Envato" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/slack-1.svg" alt="Slack" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/sketch-2.svg" alt="Sketch" className="h-6" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Services Section */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
