@@ -236,11 +236,6 @@ const Home = () => {
                     Contact Us
                   </ScrollLink>
                 </Button>
-                
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="text-gray-800 font-semibold">Email Us:</div>
-                  <div className="text-primary font-bold text-xl">info@rockam.ai</div>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -366,79 +361,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Logo Grid Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-xl font-medium text-gray-600">Trusted By Leading Companies</h2>
-          </motion.div>
-          
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <motion.div 
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img 
-                src="https://cdn.worldvectorlogo.com/logos/shopify.svg"
-                alt="Shopify" 
-                className="max-h-10 w-auto" 
-              />
-            </motion.div>
-            <motion.div 
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img 
-                src="https://cdn.worldvectorlogo.com/logos/asana-logo.svg"
-                alt="Asana" 
-                className="max-h-10 w-auto" 
-              />
-            </motion.div>
-            <motion.div 
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img 
-                src="https://cdn.worldvectorlogo.com/logos/atlassian-1.svg"
-                alt="Atlassian" 
-                className="max-h-10 w-auto" 
-              />
-            </motion.div>
-            <motion.div 
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img 
-                src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg"
-                alt="Slack" 
-                className="max-h-8 w-auto" 
-              />
-            </motion.div>
-            <motion.div 
-              className="grayscale hover:grayscale-0 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img 
-                src="https://cdn.worldvectorlogo.com/logos/hubspot.svg"
-                alt="Hubspot" 
-                className="max-h-10 w-auto" 
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+
       
       {/* How It Works Section */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
