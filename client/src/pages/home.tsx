@@ -25,7 +25,7 @@ import heroBackground from "@/assets/woman-working-laptop-optimized.jpg";
 
 // Helper function to render icons
 const IconRenderer = ({ icon: Icon }: { icon: LucideIcon }) => {
-  return <Icon className="h-6 w-6" />;
+  return <Icon className="h-8 w-8" />;
 };
 
 const Home = () => {
@@ -482,43 +482,38 @@ const Home = () => {
                 {
                   id: 1,
                   icon: CalendarDays,
-                  title: "Book a Discovery Call",
-                  description: "We'll discuss your goals, challenges, and data sources to understand your needs."
+                  title: "Book a Discovery Call"
                 },
                 {
                   id: 2,
                   icon: LinkIcon,
-                  title: "Connect Data Sources",
-                  description: "We'll securely connect to your existing systems and data to begin analysis."
+                  title: "Connect Data Sources"
                 },
                 {
                   id: 3,
                   icon: Cog,
-                  title: "We Analyze, Build, Automate",
-                  description: "Our team gets to work creating dashboards, reports, and automated processes."
+                  title: "We Analyze, Build, Automate"
                 },
                 {
                   id: 4,
                   icon: PieChart,
-                  title: "You Get Clear Reports & Insights",
-                  description: "Access decision-ready dashboards and actionable reports on demand."
+                  title: "You Get Clear Reports & Insights"
                 }
               ];
               
               return howItWorks.map((step, index) => (
                 <motion.div
                   key={step.id}
-                  className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all relative"
+                  className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all relative text-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  <div className="h-20 w-20 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 mx-auto">
                     <IconRenderer icon={step.icon} />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
                   
                   {/* Step connector line (except for the last item) */}
                   {index < howItWorks.length - 1 && (
