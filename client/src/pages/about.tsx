@@ -96,56 +96,100 @@ const About = () => {
       </section>
 
       {/* Mission, Purpose & Values */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+              What Drives Us
+            </h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our mission, purpose and values are the foundation of everything we do at Rockam
+            </p>
+          </motion.div>
+
+          {/* Mission & Purpose Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto"
+              className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
+              whileHover={{ y: -5 }}
             >
-              <div className="mb-10">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-                  Our Mission
-                </h3>
-                <p className="text-gray-600 text-center">
-                  To be the best-in-class innovative data science and analytics outsourcing 
-                  company, delivering actionable insights that drive meaningful transformation
-                  and sustainable growth.
-                </p>
+              <div className="h-12 w-12 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
+                  <path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                  <path d="M12 14v8"></path>
+                </svg>
               </div>
-
-              <div className="mb-10">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-                  Our Purpose
-                </h3>
-                <p className="text-gray-600 text-center">
-                  Innovate to help businesses make better decisions, create leaner operations, 
-                  and enable customers to live better through the power of data.
-                </p>
-              </div>
-
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-                Our Values
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                Our Mission
               </h3>
-              <p className="text-gray-600 mb-4 text-center">
-                To fulfill our purpose and achieve our mission, we live by these essential values 
-                which make up the foundation of our business:
+              <p className="text-gray-600 text-center">
+                To be the best-in-class innovative data science and analytics outsourcing 
+                company, delivering actionable insights that drive meaningful transformation
+                and sustainable growth.
               </p>
-              <div className="space-y-4">
-                {values.map((value) => (
-                  <ValueCard
-                    key={value.id}
-                    icon={value.icon}
-                    title={value.title}
-                    description={value.description}
-                  />
-                ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="h-12 w-12 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"></path>
+                </svg>
               </div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                Our Purpose
+              </h3>
+              <p className="text-gray-600 text-center">
+                Innovate to help businesses make better decisions, create leaner operations, 
+                and enable customers to live better through the power of data.
+              </p>
             </motion.div>
           </div>
+
+          {/* Values */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+              Our Values
+            </h3>
+            <p className="text-gray-600 mb-8 text-center">
+              To fulfill our purpose and achieve our mission, we live by these essential values 
+              which make up the foundation of our business:
+            </p>
+            <div className="space-y-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              {values.map((value) => (
+                <ValueCard
+                  key={value.id}
+                  icon={value.icon}
+                  title={value.title}
+                  description={value.description}
+                />
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
