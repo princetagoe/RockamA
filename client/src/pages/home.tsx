@@ -51,8 +51,6 @@ const Home = () => {
         </div>
         <div className="geometric-line line-2"></div>
         <div className="geometric-line line-3"></div>
-        <div className="geometric-dot dot-1"></div>
-        <div className="geometric-dot dot-2"></div>
         <div className="geometric-shape shape-1"></div>
         <div className="geometric-shape shape-2"></div>
         
