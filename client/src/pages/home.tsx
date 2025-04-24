@@ -527,8 +527,7 @@ const Home = () => {
           <div className="flex justify-center mt-8">
             <Button
               asChild
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10"
+              className="btn-gradient text-white rounded-full px-8"
             >
               <Link href="/how-it-works">
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -613,8 +612,7 @@ const Home = () => {
           <div className="flex justify-center mt-8">
             <Button
               asChild
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10"
+              className="btn-gradient text-white rounded-full px-8"
             >
               <Link href="/case-studies">
                 View All Case Studies <ArrowRight className="ml-2 h-4 w-4" />
