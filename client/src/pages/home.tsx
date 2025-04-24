@@ -49,7 +49,6 @@ const Home = () => {
             className="w-full h-full object-cover object-top"
           />
         </div>
-        <div className="geometric-line line-1"></div>
         <div className="geometric-line line-2"></div>
         <div className="geometric-line line-3"></div>
         <div className="geometric-dot dot-1"></div>
