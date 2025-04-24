@@ -54,7 +54,7 @@ const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left pt-8 md:pt-12">
+            <div className="text-left pt-8 md:pt-12 bg-gradient-to-r from-primary/80 to-purple-700/80 p-8 rounded-xl backdrop-blur-sm">
               
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
