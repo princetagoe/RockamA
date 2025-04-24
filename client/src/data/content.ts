@@ -46,42 +46,42 @@ export const services = [
 export const industries = [
   {
     id: 1,
-    title: "Retail",
+    title: "Retail & E-commerce",
     description:
       "Drive inventory optimization, customer insights, and sales forecasting with data-driven retail analytics.",
     image: "https://images.unsplash.com/photo-1561715276-a2d087060f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 2,
-    title: "Healthcare",
+    title: "Healthcare & Life Sciences",
     description:
       "Improve patient outcomes and operational efficiency through tailored healthcare analytics solutions.",
     image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 3,
-    title: "Travel",
+    title: "Travel & Hospitality",
     description:
       "Optimize revenue management and enhance customer experience with travel industry data solutions.",
     image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 4,
-    title: "Logistics",
+    title: "Logistics & Supply Chain",
     description:
       "Streamline supply chain operations and improve delivery efficiency with logistics data analytics.",
     image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 5,
-    title: "Education",
+    title: "Education & Nonprofits",
     description:
       "Enhance learning outcomes and administrative efficiency through education-focused data solutions.",
     image: "https://images.unsplash.com/photo-1530973428-5bf2db2e4d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 6,
-    title: "Energy",
+    title: "Energy & Aviation",
     description:
       "Optimize resource allocation and improve sustainability with data-driven energy sector solutions.",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
