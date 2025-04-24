@@ -48,8 +48,8 @@ const Home = () => {
             alt="Professional woman working on laptop"
             className="w-full h-full object-cover object-top"
           />
-          {/* Blue-purple gradient overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/60 to-purple-700/60"></div>
+          {/* Light overlay for better text readability */}
+          <div className="absolute inset-0 bg-gray-900/40"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
