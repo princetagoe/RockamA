@@ -62,14 +62,14 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
               >
-                Your Data Team, <br/>
+                <span className="text-white">Your Data Team,</span> <br/>
                 <span className="blue-purple-text">Without the Overhead</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl text-gray-200 mb-10 max-w-xl"
+                className="text-xl text-white mb-10 max-w-xl"
               >
                 Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
