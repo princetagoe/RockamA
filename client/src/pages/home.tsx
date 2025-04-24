@@ -264,7 +264,7 @@ const Home = () => {
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             {/* Service 1 */}
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
@@ -318,6 +318,17 @@ const Home = () => {
                 Ensuring data quality and automating repetitive tasks, saving you time while maintaining compliance and reducing risk.
               </p>
             </motion.div>
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <Button
+              asChild
+              className="btn-gradient text-white rounded-full px-8"
+            >
+              <Link href="/services">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
