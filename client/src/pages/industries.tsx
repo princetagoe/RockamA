@@ -52,7 +52,7 @@ const Industries = () => {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Industry Expertise</h2>
@@ -60,15 +60,16 @@ const Industries = () => {
               Delivering specialized solutions across various sectors to address unique industry challenges
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <IndustryCard
-                key={industry.id}
-                title={industry.title}
-                description={industry.description}
-                image={industry.image}
-                delay={index}
-              />
+              <div key={industry.id} className="relative z-10">
+                <IndustryCard
+                  title={industry.title}
+                  description={industry.description}
+                  image={industry.image}
+                  delay={index}
+                />
+              </div>
             ))}
           </div>
         </div>
