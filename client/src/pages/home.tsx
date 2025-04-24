@@ -203,10 +203,7 @@ const Home = () => {
                   Your Data Team, <span className="blue-purple-text">Without the Overhead</span>
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Rockam Data Services Ltd is a data science and analytics outsourcing company, that unlocks your ability to generate life-changing insights through focusing on what matters most for your business, and your customers.
-                </p>
-                <p className="text-gray-600 mb-6">
-                  Our areas of expertise are data processing and management, analytics, AI driven process automation, dashboard reporting and insight generation, for medium and small-scale businesses.
+                  Rockam is a data science and analytics outsourcing company that unlocks insights for your business by focusing on what matters most.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -286,10 +283,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Data Analytics & Intelligence</h3>
               <p className="text-gray-600 mb-6">
-                Clean, decision-ready interactive dashboards in Power BI, Tableau, or Excel—designed for clarity, not confusion.
-              </p>
-              <p className="text-gray-600 mb-6">
-                We forecast trends, optimize pricing, and reduce churn through advanced modeling that aligns with your KPIs.
+                Interactive dashboards and forecasting models designed for clarity and aligned with your business KPIs.
               </p>
             </motion.div>
             
@@ -307,10 +301,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Data Infrastructure & Engineering</h3>
               <p className="text-gray-600 mb-6">
-                Centralized, scalable storage solutions for fast and reliable reporting across cloud or hybrid environments.
-              </p>
-              <p className="text-gray-600 mb-6">
-                We design robust pipelines to automate the flow, transformation, and delivery of your business-critical data.
+                Scalable storage solutions and automated data pipelines for fast, reliable delivery of your business-critical data.
               </p>
             </motion.div>
             
@@ -328,10 +319,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Governance & Automation</h3>
               <p className="text-gray-600 mb-6">
-                We enforce structure, quality, and compliance across your data ecosystem, ensuring trust in every number.
-              </p>
-              <p className="text-gray-600 mb-6">
-                From weekly reports to cross-tool syncs, we automate the manual and repetitive, saving you time and reducing risk.
+                Ensuring data quality and automating repetitive tasks, saving you time while maintaining compliance and reducing risk.
               </p>
             </motion.div>
           </div>
