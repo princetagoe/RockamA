@@ -50,9 +50,6 @@ const Home = () => {
           />
           {/* Light overlay for better text readability */}
           <div className="absolute inset-0 bg-gray-900/40"></div>
-          
-          {/* Diagonal gradient overlay */}
-          <div className="absolute inset-0 from-blue-600/80 to-purple-600/80 bg-gradient-to-tr transform -skew-y-6 origin-top-right"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
