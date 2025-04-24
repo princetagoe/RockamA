@@ -78,7 +78,7 @@
   }
   
   .blue-purple-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#0047fc] to-[#7A36CF];
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#4e80ff] to-[#a36df5];
   }
   
   .blue-light-gradient {
