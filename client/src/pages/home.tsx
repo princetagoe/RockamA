@@ -86,7 +86,7 @@ const Home = () => {
                     asChild
                   >
                     <ScrollLink to="/contact" className="flex items-center gap-2">
-                      Our Team
+                      Request a Free Consultation
                       <ArrowRight size={16} />
                     </ScrollLink>
                   </Button>
