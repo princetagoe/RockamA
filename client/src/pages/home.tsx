@@ -48,8 +48,8 @@ const Home = () => {
             alt="Professional woman working on laptop"
             className="w-full h-full object-cover object-top"
           />
-          {/* Light overlay for better text readability */}
-          <div className="absolute inset-0 bg-gray-900/40"></div>
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-gray-900/60"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -60,7 +60,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-lg"
               >
                 Your Data Team, <br/>
                 <span className="blue-purple-text">Without the Overhead</span>
@@ -69,7 +69,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl text-gray-200 mb-10 max-w-xl"
+                className="text-xl text-gray-200 mb-10 max-w-xl drop-shadow-md"
               >
                 Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
               </motion.p>
