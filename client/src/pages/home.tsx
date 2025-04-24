@@ -41,7 +41,7 @@ const Home = () => {
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[650px] flex items-center pt-16">
+      <section className="relative overflow-hidden min-h-[650px] flex items-center pt-16 geometric-background">
         <div className="absolute inset-0">
           <img 
             src={heroBackground} 
@@ -49,6 +49,13 @@ const Home = () => {
             className="w-full h-full object-cover object-top"
           />
         </div>
+        <div className="geometric-line line-1"></div>
+        <div className="geometric-line line-2"></div>
+        <div className="geometric-line line-3"></div>
+        <div className="geometric-dot dot-1"></div>
+        <div className="geometric-dot dot-2"></div>
+        <div className="geometric-shape shape-1"></div>
+        <div className="geometric-shape shape-2"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -242,7 +249,7 @@ const Home = () => {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-24 bg-white angled-background">
+      <section className="py-24 bg-white angled-background services-geometric">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"

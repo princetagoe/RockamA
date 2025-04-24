@@ -164,6 +164,196 @@
   }
 }
 
+/* Geometric background elements */
+.geometric-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.geometric-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 30%, rgba(240, 240, 255, 0.1) 60%, rgba(230, 230, 250, 0.2) 100%);
+  transform: skewX(-15deg);
+  z-index: 0;
+}
+
+.geometric-background::after {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  width: 40%;
+  height: 60%;
+  background: linear-gradient(135deg, rgba(230, 230, 250, 0.1) 0%, transparent 80%);
+  transform: skewY(-10deg);
+  z-index: 0;
+}
+
+.geometric-line {
+  position: absolute;
+  background: rgba(240, 240, 255, 0.2);
+  z-index: 1;
+}
+
+.geometric-line.line-1 {
+  top: 15%;
+  right: 10%;
+  width: 15%;
+  height: 1px;
+  transform: rotate(-30deg);
+}
+
+.geometric-line.line-2 {
+  bottom: 25%;
+  left: 20%;
+  width: 10%;
+  height: 1px;
+  transform: rotate(-15deg);
+}
+
+.geometric-line.line-3 {
+  top: 30%;
+  left: 15%;
+  width: 5%;
+  height: 5%;
+  border: 1px solid rgba(240, 240, 255, 0.2);
+  transform: rotate(15deg);
+}
+
+.geometric-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(240, 240, 255, 0.3);
+  z-index: 1;
+}
+
+.geometric-dot.dot-1 {
+  top: 20%;
+  right: 25%;
+}
+
+.geometric-dot.dot-2 {
+  bottom: 30%;
+  left: 15%;
+}
+
+.geometric-shape {
+  position: absolute;
+  border: 1px solid rgba(240, 240, 255, 0.15);
+  z-index: 1;
+}
+
+.geometric-shape.shape-1 {
+  top: 15%;
+  right: 15%;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+}
+
+.geometric-shape.shape-2 {
+  bottom: 25%;
+  left: 30%;
+  width: 25px;
+  height: 25px;
+  transform: rotate(30deg);
+}
+
+/* Services section geometric elements */
+.services-geometric {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-geometric::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 40%;
+  height: 50%;
+  background: linear-gradient(135deg, rgba(240, 240, 255, 0.1) 0%, transparent 80%);
+  transform: rotate(15deg);
+  z-index: 0;
+}
+
+.services-geometric::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 40%;
+  background: linear-gradient(135deg, transparent 30%, rgba(240, 240, 255, 0.15) 100%);
+  transform: skewY(-8deg);
+  z-index: 0;
+}
+
+/* Footer geometric elements */
+.footer-geometric {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-geometric::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+  z-index: 0;
+}
+
+.footer-geometric::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05) 50%, transparent);
+  transform: skewX(-15deg);
+  z-index: 0;
+}
+
+.footer-line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+.footer-line.line-1 {
+  top: 20%;
+  right: 15%;
+  width: 10%;
+  height: 1px;
+  transform: rotate(-30deg);
+}
+
+.footer-shape {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+.footer-shape.shape-1 {
+  bottom: 20%;
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(15deg);
+  opacity: 0.5;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
