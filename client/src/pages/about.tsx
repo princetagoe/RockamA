@@ -91,53 +91,43 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="mb-10 p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center border-b pb-2 border-gray-200">
-                  Our Foundation
+              <div className="mb-10">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Our Mission
                 </h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-white p-5 rounded-lg shadow-sm">
-                    <h4 className="text-xl font-medium text-primary mb-3 text-center">Our Mission</h4>
-                    <p className="text-gray-600">
-                      To be the best-in-class innovative data science and analytics outsourcing 
-                      company, delivering actionable insights that drive meaningful transformation
-                      and sustainable growth.
-                    </p>
-                  </div>
+                <p className="text-gray-600">
+                  To be the best-in-class innovative data science and analytics outsourcing 
+                  company, delivering actionable insights that drive meaningful transformation
+                  and sustainable growth.
+                </p>
+              </div>
 
-                  <div className="bg-white p-5 rounded-lg shadow-sm">
-                    <h4 className="text-xl font-medium text-primary mb-3 text-center">Our Purpose</h4>
-                    <p className="text-gray-600">
-                      Innovate to help businesses make better decisions, create leaner operations, 
-                      and enable customers to live better through the power of data.
-                    </p>
-                  </div>
+              <div className="mb-10">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Our Purpose
+                </h3>
+                <p className="text-gray-600">
+                  Innovate to help businesses make better decisions, create leaner operations, 
+                  and enable customers to live better through the power of data.
+                </p>
+              </div>
 
-                  <div className="bg-white p-5 rounded-lg shadow-sm">
-                    <h4 className="text-xl font-medium text-primary mb-3 text-center">Our Values</h4>
-                    <p className="text-gray-600">
-                      To fulfill our purpose and achieve our mission, we live by these essential values:
-                      <span className="font-medium block mt-2">Excellence, Customer-Focus, Agility, and Accountability</span>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="mt-8 pt-4 border-t border-gray-200">
-                  <p className="text-gray-600 mb-4 text-center font-medium">
-                    Our values in action:
-                  </p>
-                  <div className="space-y-4">
-                    {values.map((value) => (
-                      <ValueCard
-                        key={value.id}
-                        icon={value.icon}
-                        title={value.title}
-                        description={value.description}
-                      />
-                    ))}
-                  </div>
-                </div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+                Our Values
+              </h3>
+              <p className="text-gray-600 mb-4">
+                To fulfill our purpose and achieve our mission, we live by these essential values 
+                which make up the foundation of our business:
+              </p>
+              <div className="space-y-4">
+                {values.map((value) => (
+                  <ValueCard
+                    key={value.id}
+                    icon={value.icon}
+                    title={value.title}
+                    description={value.description}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>
