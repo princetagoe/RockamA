@@ -149,27 +149,33 @@ export const howItWorks = [
 export const testimonials = [
   {
     id: 1,
-    quote: "Rockam gave us all we needed to make better inventory decisions.",
-    author: "Sarah Chen",
-    position: "COO, RetailPlus",
+    quote: "I didn't have to hire anyone. Rockam gave us all we needed.",
+    author: "John Smith",
+    position: "Clinic Operations Manager",
   },
   {
     id: 2,
-    quote: "We finally understand our numbers and what they mean for our business.",
-    author: "Michael Johnson",
-    position: "CEO, HealthFirst Clinic",
+    quote: "We finally understand what our numbers are saying, and what to do next.",
+    author: "Emma Brown",
+    position: "Fashion Retailer",
   },
   {
     id: 3,
-    quote: "They feel like part of the team, but without the overhead of hiring.",
-    author: "Priya Patel",
-    position: "CFO, LogisTech Solutions",
+    quote: "They feel like part of the team, but way more efficient. Rockam runs our numbers. We run the business.",
+    author: "Raj Patel",
+    position: "Marketing Agency Owner",
   },
   {
     id: 4,
-    quote: "Rockam runs our numbers. We run the business.",
-    author: "David Wilson",
-    position: "Director, EduTrack Systems",
+    quote: "I used to spend Mondays building reports. Now I read them over coffee.",
+    author: "Maria Rodriguez",
+    position: "Supply Chain Manager",
+  },
+  {
+    id: 5,
+    quote: "We didn't need a full data department. We needed answers. Rockam delivered both.",
+    author: "Thomas Walker",
+    position: "Retail Pharmacy Manager",
   },
 ];
 

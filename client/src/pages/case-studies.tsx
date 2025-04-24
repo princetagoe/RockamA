@@ -168,7 +168,7 @@ const CaseStudies = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div 
                 key={testimonial.id}
@@ -196,6 +196,26 @@ const CaseStudies = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Solution Highlight */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Quick Solution Highlight
+            </h2>
+            <p className="text-white text-xl mb-8 max-w-3xl mx-auto font-semibold">
+              "Rockam delivers decision-ready dashboards, forecasts, and reports—so you can grow with clarity."
+            </p>
+          </motion.div>
         </div>
       </section>
 
