@@ -47,14 +47,15 @@ const Contact = () => {
     if (!service) return "";
     
     const serviceMap: Record<string, string> = {
-      'dashboard-reporting': 'analytics',
-      'predictive-analytics': 'ai',
+      'dashboard-reporting': 'dashboards',
+      'predictive-analytics': 'predictive',
       'insight-as-a-service': 'analytics',
-      'data-warehousing': 'cloud',
-      'data-engineering': 'development',
-      'cloud-management': 'cloud',
-      'data-governance': 'security',
-      'process-automation': 'development'
+      'data-warehousing': 'infrastructure',
+      'data-engineering': 'infrastructure',
+      'cloud-management': 'infrastructure',
+      'data-governance': 'governance',
+      'process-automation': 'governance',
+      'strategy-consulting': 'consulting'
     };
     
     return serviceMap[service] || '';
@@ -228,23 +229,23 @@ const Contact = () => {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="ai">
-                              AI & Machine Learning
-                            </SelectItem>
-                            <SelectItem value="cloud">
-                              Cloud Infrastructure
-                            </SelectItem>
-                            <SelectItem value="security">
-                              Cybersecurity
-                            </SelectItem>
-                            <SelectItem value="development">
-                              Custom Development
-                            </SelectItem>
                             <SelectItem value="analytics">
-                              Data Analytics
+                              Data Analytics & Intelligence
                             </SelectItem>
-                            <SelectItem value="mobile">
-                              Mobile Solutions
+                            <SelectItem value="infrastructure">
+                              Data Infrastructure & Engineering
+                            </SelectItem>
+                            <SelectItem value="governance">
+                              Governance & Automation
+                            </SelectItem>
+                            <SelectItem value="dashboards">
+                              Dashboard Reporting
+                            </SelectItem>
+                            <SelectItem value="predictive">
+                              Predictive Analytics
+                            </SelectItem>
+                            <SelectItem value="consulting">
+                              Data Strategy Consulting
                             </SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
