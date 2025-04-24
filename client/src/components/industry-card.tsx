@@ -32,14 +32,14 @@ const IndustryCard = ({
           alt={`${title} industry`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
         <div className="absolute inset-0 p-6 flex flex-col justify-end transition-all duration-300">
           <motion.div
             className="transform transition-all duration-500"
             whileHover={{ y: -16 }}
           >
             <h3 className="text-xl font-semibold text-white mb-1">{title}</h3>
-            <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 p-2 rounded-md">
               {description}
             </p>
           </motion.div>
