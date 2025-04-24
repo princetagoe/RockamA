@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -13,11 +13,20 @@ import {
   SlidersHorizontal,
   LucideIcon,
   PieChart,
-  ServerCog
+  ServerCog,
+  CalendarDays,
+  Link as LinkIcon,
+  Cog,
+  FileBarChart
 } from "lucide-react";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition } from "@/utils/animations";
 import heroBackground from "@/assets/woman-working-laptop-optimized.jpg";
+
+// Helper function to render icons
+const IconRenderer = ({ icon: Icon }: { icon: LucideIcon }) => {
+  return <Icon className="h-6 w-6" />;
+};
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
@@ -440,6 +449,183 @@ const Home = () => {
               />
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+      
+      {/* How It Works Section */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center justify-center">
+              <div className="h-px bg-primary/30 w-8 mr-2"></div>
+              <span className="text-primary font-semibold">Our Process</span>
+              <div className="h-px bg-primary/30 w-8 ml-2"></div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
+              How It Works
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We've simplified the process to get you from data to decisions quickly
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            {/* Import howItWorks from content.ts */}
+            {(() => {
+              const howItWorks = [
+                {
+                  id: 1,
+                  icon: CalendarDays,
+                  title: "Book a Discovery Call",
+                  description: "We'll discuss your goals, challenges, and data sources to understand your needs."
+                },
+                {
+                  id: 2,
+                  icon: LinkIcon,
+                  title: "Connect Data Sources",
+                  description: "We'll securely connect to your existing systems and data to begin analysis."
+                },
+                {
+                  id: 3,
+                  icon: Cog,
+                  title: "We Analyze, Build, Automate",
+                  description: "Our team gets to work creating dashboards, reports, and automated processes."
+                },
+                {
+                  id: 4,
+                  icon: PieChart,
+                  title: "You Get Clear Reports & Insights",
+                  description: "Access decision-ready dashboards and actionable reports on demand."
+                }
+              ];
+              
+              return howItWorks.map((step, index) => (
+                <motion.div
+                  key={step.id}
+                  className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all relative"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                    <IconRenderer icon={step.icon} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                  
+                  {/* Step connector line (except for the last item) */}
+                  {index < howItWorks.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 w-6 border-t-2 border-dashed border-primary/30"></div>
+                  )}
+                </motion.div>
+              ));
+            })()}
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <Button
+              asChild
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10"
+            >
+              <Link href="/how-it-works">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real businesses getting real results with Rockam Data Services
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {/* Import testimonials from content.ts */}
+            {(() => {
+              const testimonials = [
+                {
+                  id: 1,
+                  quote: "I didn't have to hire anyone. Rockam gave us all we needed.",
+                  author: "John Smith",
+                  position: "Clinic Operations Manager"
+                },
+                {
+                  id: 2,
+                  quote: "We finally understand what our numbers are saying, and what to do next.",
+                  author: "Emma Brown",
+                  position: "Fashion Retailer"
+                },
+                {
+                  id: 3,
+                  quote: "They feel like part of the team, but way more efficient. Rockam runs our numbers. We run the business.",
+                  author: "Raj Patel",
+                  position: "Marketing Agency Owner"
+                }
+              ];
+              
+              return testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.id}
+                  className="bg-white/10 p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="mb-4">
+                    {/* Quote mark */}
+                    <svg
+                      className="h-8 w-8 text-primary/70"
+                      fill="currentColor"
+                      viewBox="0 0 32 32"
+                      aria-hidden="true"
+                    >
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-100 mb-4">{testimonial.quote}</p>
+                  <div>
+                    <p className="font-semibold text-gray-100">{testimonial.author}</p>
+                    <p className="text-gray-400">{testimonial.position}</p>
+                  </div>
+                </motion.div>
+              ));
+            })()}
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <Button
+              asChild
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white/10"
+            >
+              <Link href="/case-studies">
+                View All Case Studies <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
