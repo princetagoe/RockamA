@@ -250,6 +250,9 @@ const Home = () => {
 
       {/* Our Services Section */}
       <section className="py-24 bg-white angled-background services-geometric">
+        <div className="diagonal-line-1"></div>
+        <div className="diagonal-line-2"></div>
+        <div className="geometric-square"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
