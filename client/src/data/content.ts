@@ -84,7 +84,7 @@ export const industries = [
     title: "Energy",
     description:
       "Optimize resource allocation and improve sustainability with data-driven energy sector solutions.",
-    image: "https://images.unsplash.com/photo-1458129453883-6a4b1fa6be7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
   },
 ];
 
