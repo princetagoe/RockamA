@@ -30,9 +30,10 @@ import { contactInfo, locations } from "@/data/content";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
+  company: z.string().min(1, "Please enter your company name"),
   email: z.string().email("Please enter a valid email address"),
-  interest: z.string().min(1, "Please select an area of interest"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  interest: z.string().min(1, "Please select a service you're interested in"),
+  message: z.string().min(10, "Brief message must be at least 10 characters"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -68,6 +69,7 @@ const Contact = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      company: "",
       email: "",
       interest: getInterestFromService(urlService),
       message: "",
@@ -127,8 +129,8 @@ const Contact = () => {
               <span className="text-backdrop">Contact Us</span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-xl text-shadow bg-black/20 p-4 rounded-lg">
-              Have questions or ready to transform your data strategy? Reach out to our team
-              today.
+              Whether you're just getting started or buried in spreadsheets, Rockam is here to help.
+              Schedule a free consultation with our data experts.
             </p>
           </motion.div>
         </div>
@@ -145,8 +147,11 @@ const Contact = () => {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-xl font-semibold text-gray-800 mb-6">
-                Send Us a Message
+                Schedule a Free Consultation
               </h3>
+              <p className="text-gray-600 mb-6">
+                Discover how Rockam can help your business make better decisions, faster.
+              </p>
 
               <Form {...form}>
                 <form
@@ -162,6 +167,24 @@ const Contact = () => {
                         <FormControl>
                           <Input
                             placeholder="Your name"
+                            className="bg-white border-gray-300 focus:border-primary"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-700">Company Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your company"
                             className="bg-white border-gray-300 focus:border-primary"
                             {...field}
                           />
@@ -194,14 +217,14 @@ const Contact = () => {
                     name="interest"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-700">Area of Interest</FormLabel>
+                        <FormLabel className="text-gray-700">Services You're Interested In</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
                         >
                           <FormControl>
                             <SelectTrigger className="bg-white border-gray-300 focus:ring-primary">
-                              <SelectValue placeholder="Select your interest" />
+                              <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
@@ -236,10 +259,10 @@ const Contact = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-700">Message</FormLabel>
+                        <FormLabel className="text-gray-700">Brief Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="How can we help you?"
+                            placeholder="Tell us about your data challenges or questions"
                             className="bg-white border-gray-300 focus:border-primary"
                             rows={4}
                             {...field}
@@ -255,7 +278,7 @@ const Contact = () => {
                     className="w-full btn-gradient text-white font-semibold hover:shadow-lg transition-all"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Submitting..." : "Request a Free Consultation"}
                   </Button>
                 </form>
               </Form>
