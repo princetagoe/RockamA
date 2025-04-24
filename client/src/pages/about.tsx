@@ -38,8 +38,8 @@ const About = () => {
               <span className="text-backdrop">About Rockam</span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-xl text-shadow bg-black/20 p-4 rounded-lg">
-              We're a team of passionate data experts dedicated to helping businesses
-              make better decisions through powerful analytics.
+              We unlock your ability to generate life-changing insights by focusing on 
+              what matters most for your business and your customers.
             </p>
           </motion.div>
         </div>
@@ -71,19 +71,54 @@ const About = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                Our Mission
-              </h3>
-              <p className="text-gray-600 mb-6">
-                At Rockam, we believe data should empower organizations
-                to achieve their fullest potential. Our mission is to deliver
-                actionable insights that drive meaningful transformation and
-                sustainable growth.
-              </p>
+              <div className="mb-10">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Who We Are
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Rockam Data Services Ltd is a data science and analytics outsourcing company 
+                  that unlocks your ability to generate life-changing insights by focusing on 
+                  what matters most for your business and your customers.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Our areas of expertise include data processing and management, analytics, 
+                  AI-driven process automation, dashboard reporting, and insight generation
+                  for medium and small-scale businesses.
+                </p>
+                <p className="text-gray-600 font-medium">
+                  Ultimately, our goal is to enable you to make data-driven decisions, 
+                  <span className="text-primary font-semibold"> Without the Overhead!</span>
+                </p>
+              </div>
 
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6 mt-10">
+              <div className="mb-10">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Our Mission
+                </h3>
+                <p className="text-gray-600">
+                  To be the best-in-class innovative data science and analytics outsourcing 
+                  company, delivering actionable insights that drive meaningful transformation
+                  and sustainable growth.
+                </p>
+              </div>
+
+              <div className="mb-10">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Our Purpose
+                </h3>
+                <p className="text-gray-600">
+                  Innovate to help businesses make better decisions, create leaner operations, 
+                  and enable customers to live better through the power of data.
+                </p>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
                 Our Values
               </h3>
+              <p className="text-gray-600 mb-4">
+                To fulfill our purpose and achieve our mission, we live by these essential values 
+                which make up the foundation of our business:
+              </p>
               <div className="space-y-4">
                 {values.map((value) => (
                   <ValueCard
@@ -113,7 +148,7 @@ const About = () => {
               Why Choose Rockam
             </h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              What sets us apart from other data analytics providers in the industry.
+              Enable data-driven decisions without the overhead – that's our promise to you.
             </p>
           </motion.div>
 
@@ -130,11 +165,11 @@ const About = () => {
                 <span className="text-primary font-bold">01</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Industry Expertise
+                Excellence
               </h3>
               <p className="text-gray-300">
-                Our team brings deep knowledge and experience across multiple
-                industries, allowing us to understand your specific data challenges.
+                We strive for excellence in everything we do, from the quality of our analytics 
+                to the insights we deliver, ensuring you receive the highest standard of service.
               </p>
             </motion.div>
 
@@ -150,11 +185,11 @@ const About = () => {
                 <span className="text-primary font-bold">02</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Advanced Analytics
+                Customer-Focus
               </h3>
               <p className="text-gray-300">
-                We leverage cutting-edge analytics tools and techniques, ensuring our
-                insights are always accurate, actionable, and future-ready.
+                Your business needs and goals are at the center of everything we do. 
+                We listen, understand, and deliver solutions that address your specific challenges.
               </p>
             </motion.div>
 
@@ -170,11 +205,11 @@ const About = () => {
                 <span className="text-primary font-bold">03</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Client Partnership
+                Agility
               </h3>
               <p className="text-gray-300">
-                We view every engagement as a partnership, working closely with
-                you to achieve your business objectives and long-term success.
+                Business conditions change rapidly. We adapt quickly to new challenges and 
+                opportunities, ensuring your data strategy stays ahead of the curve.
               </p>
             </motion.div>
 
@@ -190,11 +225,11 @@ const About = () => {
                 <span className="text-primary font-bold">04</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Tailored Approach
+                Accountability
               </h3>
               <p className="text-gray-300">
-                No one-size-fits-all solutions here. We customize our analytics to
-                address your unique requirements and business context.
+                We take responsibility for our work and stand by our results. 
+                You can count on us to deliver on our promises with transparency and integrity.
               </p>
             </motion.div>
 
@@ -210,11 +245,11 @@ const About = () => {
                 <span className="text-primary font-bold">05</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Proven Results
+                Data Expertise
               </h3>
               <p className="text-gray-300">
-                Our track record of successful implementations speaks for itself,
-                with measurable results and satisfied clients across industries.
+                Our team specializes in data processing, analytics, AI-driven automation,
+                and insightful dashboard reporting for small and medium-sized businesses.
               </p>
             </motion.div>
 
@@ -230,11 +265,11 @@ const About = () => {
                 <span className="text-primary font-bold">06</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Ongoing Support
+                No Overhead
               </h3>
               <p className="text-gray-300">
-                We're committed to your long-term success, providing continuous
-                support, updates, and optimization for all our data solutions.
+                Our outsourcing model enables you to access high-quality data services 
+                without the burden of building and maintaining your own analytics team.
               </p>
             </motion.div>
           </div>
