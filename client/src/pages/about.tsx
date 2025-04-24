@@ -45,7 +45,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Values */}
+      {/* Who We Are */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -71,7 +71,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="mb-10">
+              <div>
                 <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                   Who We Are
                 </h3>
@@ -90,12 +90,27 @@ const About = () => {
                   <span className="text-primary font-semibold"> Without the Overhead!</span>
                 </p>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
+      {/* Mission, Purpose & Values */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
               <div className="mb-10">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
                   Our Mission
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-center">
                   To be the best-in-class innovative data science and analytics outsourcing 
                   company, delivering actionable insights that drive meaningful transformation
                   and sustainable growth.
@@ -103,19 +118,19 @@ const About = () => {
               </div>
 
               <div className="mb-10">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
                   Our Purpose
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-center">
                   Innovate to help businesses make better decisions, create leaner operations, 
                   and enable customers to live better through the power of data.
                 </p>
               </div>
 
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
                 Our Values
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 text-center">
                 To fulfill our purpose and achieve our mission, we live by these essential values 
                 which make up the foundation of our business:
               </p>
