@@ -17,7 +17,8 @@ import {
   CalendarDays,
   Link as LinkIcon,
   Cog,
-  FileBarChart
+  FileBarChart,
+  Phone
 } from "lucide-react";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition } from "@/utils/animations";
@@ -530,6 +531,39 @@ const Home = () => {
               </Link>
             </Button>
           </div>
+        </div>
+      </section>
+      
+      {/* Contact CTA Section */}
+      <section className="py-16 bg-primary/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Experience the <span className="blue-purple-text">Rockam Difference?</span>
+            </h2>
+            <p className="text-gray-700 text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+              Get started with a free consultation today. Our data experts are ready to discuss how we can transform your business data into actionable insights.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <Button
+                className="btn-gradient text-white rounded-full px-10 py-6 text-lg"
+                asChild
+              >
+                <Link href="/contact">
+                  Request a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <div className="flex items-center gap-2 mt-4 sm:mt-0">
+                <Phone className="h-5 w-5 text-primary" />
+                <span className="text-gray-800 font-medium">Call us: <span className="text-primary font-semibold">(+1) 416-123-4567</span></span>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
