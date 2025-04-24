@@ -63,7 +63,7 @@ const Home = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
               >
                 <span className="text-white">Your Data Team,</span> <br/>
-                <span className="blue-purple-text">Without the Overhead</span>
+                <span className="text-white">Without the Overhead</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
