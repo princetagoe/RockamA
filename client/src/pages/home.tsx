@@ -41,7 +41,7 @@ const Home = () => {
       variants={pageTransition}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[95vh] flex items-center pt-16 geometric-background">
+      <section className="relative overflow-hidden min-h-[650px] flex items-center pt-16 geometric-background">
         <div className="absolute inset-0">
           <img 
             src={heroBackground} 
@@ -56,44 +56,42 @@ const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left bg-gray-900/60 p-8 pb-16 rounded-xl flex flex-col h-full justify-end" style={{ paddingTop: "28rem" }}>
+            <div className="text-left pt-64 md:pt-80 bg-gray-900/60 p-8 rounded-xl">
               
-              <motion.div className="mt-auto">
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
-                >
-                  <span className="text-white">Your Data Team,</span> <br/>
-                  <span className="blue-purple-text">Without the Overhead</span>
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-xl text-white mb-10 max-w-xl"
-                >
-                  Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
-                </motion.p>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="flex flex-col sm:flex-row gap-4"
-                >
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                    <Button
-                      size="lg"
-                      className="btn-gradient text-white font-semibold rounded-full px-8"
-                      asChild
-                    >
-                      <ScrollLink to="/contact" className="flex items-center gap-2">
-                        Request a Free Consultation
-                        <ArrowRight size={16} />
-                      </ScrollLink>
-                    </Button>
-                  </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
+              >
+                <span className="text-white">Your Data Team,</span> <br/>
+                <span className="blue-purple-text">Without the Overhead</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-xl text-white mb-10 max-w-xl"
+              >
+                Rockam is your data team—automated and intelligent; a trusted partner for SMBs that want insights, not more headcount.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                  <Button
+                    size="lg"
+                    className="btn-gradient text-white font-semibold rounded-full px-8"
+                    asChild
+                  >
+                    <ScrollLink to="/contact" className="flex items-center gap-2">
+                      Request a Free Consultation
+                      <ArrowRight size={16} />
+                    </ScrollLink>
+                  </Button>
                 </motion.div>
               </motion.div>
             </div>
