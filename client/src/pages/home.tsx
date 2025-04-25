@@ -164,7 +164,10 @@ const Home = () => {
             
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
               <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" className="h-6" />
-              <img src="https://cdn.worldvectorlogo.com/logos/microsoft-power-bi.svg" alt="Power BI" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/power-bi-microsoft.svg" alt="Power BI" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/r-lang.svg" alt="R Language" className="h-6" />
+              <img src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" alt="SQL" className="h-6" />
               <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" className="h-6" />
               <img src="https://cdn.worldvectorlogo.com/logos/azure-1.svg" alt="Azure" className="h-6" />
               <img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" className="h-6" />
