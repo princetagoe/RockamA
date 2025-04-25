@@ -235,9 +235,9 @@ const Home = () => {
                   className="btn-gradient text-white rounded-full px-8 py-6"
                   asChild
                 >
-                  <ScrollLink to="/contact" className="flex items-center gap-2">
-                    Contact Us
-                  </ScrollLink>
+                  <Link href="/about" className="flex items-center gap-2">
+                    Find Out More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </motion.div>
             </div>
