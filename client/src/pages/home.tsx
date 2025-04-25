@@ -353,9 +353,6 @@ const Home = () => {
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Whether you're just getting started or buried in spreadsheets, Rockam is here to help. Schedule a free consultation with our data experts to discover how Rockam can help your business make better decisions, faster.
             </p>
-            <p className="text-sm text-gray-500 mb-4">
-              <span className="font-medium">ADDRESS:</span> 31 Tippett Road, Ontario, M3H 0C8, Canada
-            </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
                 className="btn-gradient text-white font-semibold rounded-full px-8"
