@@ -206,7 +206,7 @@ const Home = () => {
                   Your Data Team, <span className="blue-purple-text">Without the Overhead</span>
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Rockam is a data science and analytics outsourcing company that unlocks insights for your business by focusing on what matters most.
+                  Rockam Data Services Ltd is a data science and analytics outsourcing company, that unlocks your ability to generate life-changing insights through focusing on what matters most for your business, and your customers.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
