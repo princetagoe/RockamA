@@ -56,8 +56,8 @@ const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left bg-gray-900/60 rounded-xl flex flex-col h-[30rem] md:h-[36rem] lg:w-2/3">
-              <div className="p-8 flex flex-col justify-center h-full">
+            <div className="text-left bg-gray-900/60 rounded-xl flex flex-col h-[30rem] md:h-[36rem]">
+              <div className="p-8 mt-20 md:mt-24">
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
