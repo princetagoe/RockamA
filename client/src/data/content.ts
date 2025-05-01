@@ -91,31 +91,31 @@ export const industries = [
 export const values = [
   {
     id: 1,
-    icon: Lightbulb,
-    title: "Actionable Insights",
+    icon: Shield,
+    title: "Excellence",
     description:
-      "We deliver clear, practical intelligence that drives real business decisions, not just fancy charts.",
+      "We strive for excellence in everything we do, from the quality of our analytics to the insights we deliver, ensuring you receive the highest standard of service.",
   },
   {
     id: 2,
-    icon: LineChart,
-    title: "AI Forecasting",
+    icon: Users,
+    title: "Customer-Focus",
     description:
-      "Our predictive models help you see what's coming, so you can plan better and react faster.",
+      "Your business needs and goals are at the center of everything we do. We listen, understand, and deliver solutions that address your specific challenges.",
   },
   {
     id: 3,
-    icon: Database,
-    title: "Data Engineering",
+    icon: LineChart,
+    title: "Agility",
     description:
-      "We build reliable data pipelines and infrastructure that grow with your business needs.",
+      "Business conditions change rapidly. We adapt quickly to new challenges and opportunities, ensuring your data strategy stays ahead of the curve.",
   },
   {
     id: 4,
     icon: Shield,
-    title: "Secure Infrastructure",
+    title: "Accountability",
     description:
-      "Your data's safety is our priority with enterprise-grade security and compliance standards.",
+      "We take responsibility for our work and stand by our results. You can count on us to deliver on our promises with transparency and integrity.",
   },
 ];
 

@@ -224,11 +224,10 @@ const About = () => {
                 <span className="text-primary font-bold">01</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Excellence
+                Actionable Insights
               </h3>
               <p className="text-gray-300">
-                We strive for excellence in everything we do, from the quality of our analytics 
-                to the insights we deliver, ensuring you receive the highest standard of service.
+                We deliver clear, practical intelligence that drives real business decisions, not just fancy charts.
               </p>
             </motion.div>
 
@@ -244,11 +243,10 @@ const About = () => {
                 <span className="text-primary font-bold">02</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Customer-Focus
+                AI Forecasting
               </h3>
               <p className="text-gray-300">
-                Your business needs and goals are at the center of everything we do. 
-                We listen, understand, and deliver solutions that address your specific challenges.
+                Our predictive models help you see what's coming, so you can plan better and react faster.
               </p>
             </motion.div>
 
@@ -264,11 +262,10 @@ const About = () => {
                 <span className="text-primary font-bold">03</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Agility
+                Data Engineering
               </h3>
               <p className="text-gray-300">
-                Business conditions change rapidly. We adapt quickly to new challenges and 
-                opportunities, ensuring your data strategy stays ahead of the curve.
+                We build reliable data pipelines and infrastructure that grow with your business needs.
               </p>
             </motion.div>
 
@@ -284,11 +281,10 @@ const About = () => {
                 <span className="text-primary font-bold">04</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Accountability
+                Secure Infrastructure
               </h3>
               <p className="text-gray-300">
-                We take responsibility for our work and stand by our results. 
-                You can count on us to deliver on our promises with transparency and integrity.
+                Your data's safety is our priority with enterprise-grade security and compliance standards.
               </p>
             </motion.div>
 
