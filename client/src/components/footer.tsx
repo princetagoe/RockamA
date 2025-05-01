@@ -193,30 +193,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex justify-center items-center">
           <p className="text-gray-500 text-sm">
             © {currentYear} Rockam Data Services. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="/privacy-policy"
-              className="text-gray-500 hover:text-primary text-sm transition duration-300 py-1 px-2 cursor-pointer footer-link"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="text-gray-500 hover:text-primary text-sm transition duration-300 py-1 px-2 cursor-pointer footer-link"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/cookie-policy"
-              className="text-gray-500 hover:text-primary text-sm transition duration-300 py-1 px-2 cursor-pointer footer-link"
-            >
-              Cookie Policy
-            </Link>
-          </div>
         </div>
       </div>
     </motion.footer>
