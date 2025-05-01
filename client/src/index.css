@@ -421,6 +421,7 @@
 .footer-link {
   position: relative;
   overflow: hidden;
+  cursor: pointer !important;
 }
 
 .footer-link::after {
@@ -432,6 +433,11 @@
   height: 2px;
   background: #0047fc;
   transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0047fc !important; /* Force blue color on hover */
+  text-decoration: none;
 }
 
 .footer-link:hover::after {
