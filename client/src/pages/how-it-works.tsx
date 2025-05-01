@@ -25,7 +25,7 @@ const HowItWorks = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
