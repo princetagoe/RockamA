@@ -52,7 +52,7 @@ const Navbar = () => {
       >
         {/* Removed Diagonal Shape for Brand Section - Using white background instead */}
         
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center z-10">
               <div className="flex-shrink-0">

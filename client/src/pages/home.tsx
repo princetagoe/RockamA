@@ -53,7 +53,7 @@ const Home = () => {
         <div className="geometric-shape shape-1"></div>
         <div className="geometric-shape shape-2"></div>
         
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="text-left bg-gray-900/60 rounded-xl flex flex-col justify-center h-[40rem] md:h-[45rem] lg:col-span-8 -mt-20">
               <div className="p-8 -mt-8 md:-mt-12">
@@ -101,7 +101,7 @@ const Home = () => {
 
       {/* Services Cards - Similar to the inspiration */}
       <section className="py-24 bg-white relative z-10">
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center -mt-32 mb-20">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 bg-white rounded-xl shadow-xl p-4 w-full max-w-5xl">
               {/* Service Card 1 */}
@@ -178,7 +178,7 @@ const Home = () => {
 
       {/* About Company Section */}
       <section className="py-20 bg-gray-50">
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <motion.div
@@ -252,7 +252,7 @@ const Home = () => {
       <section className="py-24 bg-white angled-background services-geometric">
         <div className="diagonal-line-2"></div>
         <div className="geometric-square"></div>
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}

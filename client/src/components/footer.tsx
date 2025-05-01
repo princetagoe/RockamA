@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="footer-shape shape-1"></div>
       <div className="footer-dot dot-1"></div>
       <div className="footer-dot dot-2"></div>
-      <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-5">
