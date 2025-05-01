@@ -168,7 +168,7 @@ const CaseStudies = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {testimonials.map((testimonial, index) => (
               <motion.div 
                 key={testimonial.id}
@@ -221,7 +221,7 @@ const CaseStudies = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center bg-white rounded-xl shadow-xl p-8 md:p-10 border border-gray-200"
             initial={{ opacity: 0, y: 20 }}
