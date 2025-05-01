@@ -344,7 +344,7 @@
   width: 100%;
   height: 2px;
   background: linear-gradient(to right, transparent, rgba(76, 81, 191, 0.15), transparent);
-  z-index: 0;
+  z-index: -1; /* Put behind content */
 }
 
 .footer-geometric::after {
@@ -356,13 +356,14 @@
   height: 100%;
   background: linear-gradient(135deg, transparent, rgba(76, 81, 191, 0.08) 50%, transparent);
   transform: skewX(-25deg);
-  z-index: 0;
+  z-index: -1; /* Put behind content */
 }
 
 .footer-line {
   position: absolute;
   background: rgba(76, 81, 191, 0.15);
-  z-index: 1;
+  z-index: -1; /* Put behind content */
+  pointer-events: none; /* Make sure clicks pass through */
 }
 
 .footer-line.line-1 {
@@ -376,7 +377,8 @@
 .footer-shape {
   position: absolute;
   border: 2px solid rgba(76, 81, 191, 0.1);
-  z-index: 1;
+  z-index: -1; /* Put behind content */
+  pointer-events: none; /* Make sure clicks pass through */
 }
 
 .footer-shape.shape-1 {
@@ -404,7 +406,8 @@
   height: 6px;
   border-radius: 50%;
   background: rgba(76, 81, 191, 0.2);
-  z-index: 1;
+  z-index: -1; /* Put behind content */
+  pointer-events: none; /* Make sure clicks pass through */
 }
 
 .footer-dot.dot-1 {

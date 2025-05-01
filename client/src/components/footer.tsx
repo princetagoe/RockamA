@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="footer-shape shape-1"></div>
       <div className="footer-dot dot-1"></div>
       <div className="footer-dot dot-2"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-5">
@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href={contactInfo.socialMedia.linkedin}
-                className="text-gray-400 hover:text-primary transition duration-300"
+                className="text-gray-400 hover:text-primary transition duration-300 relative z-10"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,7 +42,7 @@ const Footer = () => {
               </a>
               <a
                 href={contactInfo.socialMedia.twitter}
-                className="text-gray-400 hover:text-primary transition duration-300"
+                className="text-gray-400 hover:text-primary transition duration-300 relative z-10"
                 aria-label="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +51,7 @@ const Footer = () => {
               </a>
               <a
                 href={contactInfo.socialMedia.facebook}
-                className="text-gray-400 hover:text-primary transition duration-300"
+                className="text-gray-400 hover:text-primary transition duration-300 relative z-10"
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -60,7 +60,7 @@ const Footer = () => {
               </a>
               <a
                 href={contactInfo.socialMedia.instagram}
-                className="text-gray-400 hover:text-primary transition duration-300"
+                className="text-gray-400 hover:text-primary transition duration-300 relative z-10"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
