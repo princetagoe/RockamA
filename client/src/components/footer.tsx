@@ -76,7 +76,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/services"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Data Analytics & Intelligence
                 </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/services"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Data Infrastructure & Engineering
                 </Link>
@@ -92,7 +92,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/services"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Governance & Automation
                 </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Retail
                 </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Healthcare
                 </Link>
@@ -122,7 +122,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Travel
                 </Link>
@@ -130,7 +130,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Logistics
                 </Link>
@@ -138,7 +138,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Education
                 </Link>
@@ -146,7 +146,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/industries"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Energy
                 </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   About
                 </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/case-studies"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Case Studies
                 </Link>
@@ -176,7 +176,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/how-it-works"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   How It Works
                 </Link>
@@ -184,7 +184,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-400 hover:text-primary transition duration-300"
+                  className="text-gray-400 hover:text-primary transition duration-300 block w-full py-1 cursor-pointer footer-link"
                 >
                   Contact
                 </Link>
@@ -200,19 +200,19 @@ const Footer = () => {
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               href="/privacy-policy"
-              className="text-gray-500 hover:text-primary text-sm transition duration-300"
+              className="text-gray-500 hover:text-primary text-sm transition duration-300 py-1 px-2 cursor-pointer footer-link"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="text-gray-500 hover:text-primary text-sm transition duration-300"
+              className="text-gray-500 hover:text-primary text-sm transition duration-300 py-1 px-2 cursor-pointer footer-link"
             >
               Terms of Service
             </Link>
             <Link
               href="/cookie-policy"
-              className="text-gray-500 hover:text-primary text-sm transition duration-300"
+              className="text-gray-500 hover:text-primary text-sm transition duration-300 py-1 px-2 cursor-pointer footer-link"
             >
               Cookie Policy
             </Link>
