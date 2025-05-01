@@ -71,7 +71,7 @@ const CaseStudies = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ const CaseStudies = () => {
 
       {/* Case Studies */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {caseStudies.map((study, index) => (
               <motion.div 
@@ -160,7 +160,7 @@ const CaseStudies = () => {
 
       {/* Testimonials */}
       <section className="py-16 bg-[#0047fc]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Client Testimonials</h2>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
@@ -201,7 +201,7 @@ const CaseStudies = () => {
 
       {/* Solution Highlight */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
