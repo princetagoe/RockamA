@@ -190,7 +190,6 @@ export const locations = [
 
 export const contactInfo = {
   email: "info@rockam.ai",
-  phone: "+1 (647) 555-1234",
   address: "31 Tippett Road, Ontario, M3H 0C8, Canada",
   hours: "Monday - Friday: 9am - 5pm EST",
   socialMedia: {

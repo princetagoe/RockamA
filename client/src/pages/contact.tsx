@@ -335,17 +335,7 @@ const Contact = () => {
                     </a>
                   </div>
 
-                  <div className="flex items-center">
-                    <div className="bg-primary/10 rounded-full p-2 mr-4">
-                      <Phone className="h-5 w-5 text-primary" />
-                    </div>
-                    <a
-                      href={`tel:${contactInfo.phone.replace(/[^0-9+]/g, '')}`}
-                      className="text-gray-700 hover:text-primary transition duration-300"
-                    >
-                      {contactInfo.phone}
-                    </a>
-                  </div>
+
 
                   <div className="flex items-center">
                     <div className="bg-primary/10 rounded-full p-2 mr-4">
@@ -451,16 +441,7 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-800 font-medium">Phone Support</h4>
-                    <p className="text-gray-600">{contactInfo.phone}</p>
-                    <p className="text-gray-500 text-sm">For urgent inquiries</p>
-                  </div>
-                </div>
+
                 
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
