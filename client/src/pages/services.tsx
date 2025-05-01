@@ -26,7 +26,7 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-left max-w-3xl pt-8 md:pt-12"
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Services = () => {
 
       {/* Services Overview */}
       <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -80,7 +80,7 @@ const Services = () => {
 
       {/* Data Analytics & Intelligence Section */}
       <section id="analytics" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ const Services = () => {
 
       {/* Data Infrastructure & Engineering Section */}
       <section id="infrastructure" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -262,7 +262,7 @@ const Services = () => {
 
       {/* Governance & Automation Section */}
       <section id="governance" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -331,7 +331,7 @@ const Services = () => {
 
       {/* Features Section */}
       <section className="py-16 bg-[#0047fc]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white">How Our Services Deliver Value</h2>
             <p className="mt-4 text-lg text-white/90 max-w-3xl mx-auto">
@@ -399,7 +399,7 @@ const Services = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center bg-gray-50 rounded-xl shadow-xl p-8 md:p-10 border border-gray-200"
             initial={{ opacity: 0, y: 20 }}
