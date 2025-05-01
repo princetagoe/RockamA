@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { Mail, Clock, MapPin } from "lucide-react";
 import { FaLinkedinIn, FaTwitter, FaGithub, FaMediumM } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import {

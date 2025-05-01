@@ -17,8 +17,7 @@ import {
   CalendarDays,
   Link as LinkIcon,
   Cog,
-  FileBarChart,
-  Phone
+  FileBarChart
 } from "lucide-react";
 import DemoModal from "@/components/demo-modal";
 import { fadeInAnimation, pageTransition } from "@/utils/animations";
@@ -574,10 +573,7 @@ const Home = () => {
                   Request a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <div className="flex items-center gap-2 mt-4 sm:mt-0">
-                <Phone className="h-5 w-5 text-primary" />
-                <span className="text-gray-800 font-medium">Call us: <span className="text-primary font-semibold">(+1) 416-123-4567</span></span>
-              </div>
+
             </div>
           </motion.div>
         </div>
