@@ -342,7 +342,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-primary/5">
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="bg-white rounded-xl p-8 md:p-12 text-center shadow-xl border border-gray-100"
             initial={{ opacity: 0, y: 20 }}
@@ -381,7 +381,7 @@ const Home = () => {
       
       {/* How It Works Section */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -466,7 +466,7 @@ const Home = () => {
       
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-900 text-white">
-        <div className="w-full max-w-[95%] 2xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -551,7 +551,7 @@ const Home = () => {
       
       {/* Contact CTA Section */}
       <section className="py-16 bg-primary/10">
-        <div className="w-full max-w-[90%] 2xl:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
