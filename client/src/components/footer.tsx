@@ -2,7 +2,6 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { fadeInAnimation } from "@/utils/animations";
-import ScrollLink from "@/components/scroll-link";
 import { contactInfo } from "@/data/content";
 
 const Footer = () => {
@@ -75,28 +74,28 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-5">Services</h3>
             <ul className="space-y-3">
               <li>
-                <ScrollLink
-                  to="/services"
+                <Link
+                  href="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Data Analytics & Intelligence
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/services"
+                <Link
+                  href="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Data Infrastructure & Engineering
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/services"
+                <Link
+                  href="/services"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Governance & Automation
-                </ScrollLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -105,52 +104,52 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-5">Industries</h3>
             <ul className="space-y-3">
               <li>
-                <ScrollLink
-                  to="/industries"
+                <Link
+                  href="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Retail
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/industries"
+                <Link
+                  href="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Healthcare
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/industries"
+                <Link
+                  href="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Travel
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/industries"
+                <Link
+                  href="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Logistics
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/industries"
+                <Link
+                  href="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Education
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/industries"
+                <Link
+                  href="/industries"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Energy
-                </ScrollLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -159,36 +158,36 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-5">Company</h3>
             <ul className="space-y-3">
               <li>
-                <ScrollLink
-                  to="/about"
+                <Link
+                  href="/about"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   About
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/case-studies"
+                <Link
+                  href="/case-studies"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Case Studies
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/how-it-works"
+                <Link
+                  href="/how-it-works"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   How It Works
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="/contact"
+                <Link
+                  href="/contact"
                   className="text-gray-400 hover:text-primary transition duration-300"
                 >
                   Contact
-                </ScrollLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -199,24 +198,24 @@ const Footer = () => {
             © {currentYear} Rockam Data Services. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <ScrollLink
-              to="/privacy-policy"
+            <Link
+              href="/privacy-policy"
               className="text-gray-500 hover:text-primary text-sm transition duration-300"
             >
               Privacy Policy
-            </ScrollLink>
-            <ScrollLink
-              to="/terms-of-service"
+            </Link>
+            <Link
+              href="/terms-of-service"
               className="text-gray-500 hover:text-primary text-sm transition duration-300"
             >
               Terms of Service
-            </ScrollLink>
-            <ScrollLink
-              to="/cookie-policy"
+            </Link>
+            <Link
+              href="/cookie-policy"
               className="text-gray-500 hover:text-primary text-sm transition duration-300"
             >
               Cookie Policy
-            </ScrollLink>
+            </Link>
           </div>
         </div>
       </div>
