@@ -61,7 +61,7 @@ const Navbar = () => {
                     <img 
                       src={rockamLogo} 
                       alt="Rockam Data Services" 
-                      className="h-12 mr-2" 
+                      className="h-14 mr-2" 
                     />
                   </div>
                 </ScrollLink>
