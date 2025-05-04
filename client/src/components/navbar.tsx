@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeInAnimation } from "@/utils/animations";
 import ScrollLink from "@/components/scroll-link";
 import { Button } from "@/components/ui/button";
-import rockamLogo from "@/assets/rockam-logo.jpg";
+import rockamLogo from "@/assets/logo-horizontal.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
       {/* Main Navigation */}
       <motion.nav
         className={`relative w-full z-50 transition-all duration-300 ${
-          isScrolled ? "py-2 bg-white shadow-md" : "py-3 bg-white"
+          isScrolled ? "py-3 bg-white shadow-md" : "py-4 bg-white"
         }`}
         initial="hidden"
         animate="visible"
@@ -61,7 +61,7 @@ const Navbar = () => {
                     <img 
                       src={rockamLogo} 
                       alt="Rockam Data Services" 
-                      className="h-16 mr-2" 
+                      className="h-12 mr-2" 
                     />
                   </div>
                 </ScrollLink>
