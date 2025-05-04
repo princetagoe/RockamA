@@ -158,7 +158,7 @@ const Home = () => {
           
           <div className="text-center pb-8">
             <div className="inline-flex gap-2 items-center text-gray-500 text-sm mb-4">
-              <span>Trusted by businesses across various industries</span>
+              <span>We leverage industry-leading tools and technologies</span>
               <div className="h-px bg-gray-300 w-16"></div>
             </div>
             
