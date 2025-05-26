@@ -199,9 +199,9 @@ const HowItWorks = () => {
             <Button
               className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
-              asChild
+              onClick={handleContactClick}
             >
-              <Link href="/contact">Book Your Discovery Call</Link>
+              Book Your Discovery Call
             </Button>
           </motion.div>
         </div>

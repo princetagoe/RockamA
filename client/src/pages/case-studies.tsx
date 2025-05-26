@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { testimonials } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
 
 const CaseStudies = () => {
+  const [, setLocation] = useLocation();
+
+  const handleContactClick = () => {
+    setLocation('/contact');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
   // Sample case studies data
   const caseStudies = [
     {
