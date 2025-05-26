@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import IndustryCard from "@/components/industry-card";
 import { industries } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
 
 const Industries = () => {
+  const [, setLocation] = useLocation();
+
+  const handleContactClick = () => {
+    setLocation('/contact');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
   return (
     <motion.div
       className="pt-16"
@@ -175,9 +183,9 @@ const Industries = () => {
             <Button
               className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
-              asChild
+              onClick={handleContactClick}
             >
-              <Link href="/contact">Get in Touch</Link>
+              Get in Touch
             </Button>
           </motion.div>
         </div>

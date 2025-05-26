@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { howItWorks } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
 
 const HowItWorks = () => {
+  const [, setLocation] = useLocation();
+
+  const handleContactClick = () => {
+    setLocation('/contact');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
   return (
     <motion.div
       className="pt-16"
