@@ -134,12 +134,12 @@ const Navbar = () => {
                   {link.name}
                 </ScrollLink>
               ))}
-              <ScrollLink
-                to="/contact"
-                className="block px-3 py-2 mt-2 text-base font-medium bg-primary text-white rounded-md"
+              <button
+                onClick={handleContactClick}
+                className="block px-3 py-2 mt-2 text-base font-medium bg-primary text-white rounded-md w-full text-left"
               >
                 Contact Us
-              </ScrollLink>
+              </button>
             </div>
           </motion.div>
         )}
