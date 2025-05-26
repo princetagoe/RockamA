@@ -30,6 +30,13 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
+  const handleContactClick = () => {
+    window.location.href = '/contact';
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -84,10 +91,10 @@ const Navbar = () => {
                   </ScrollLink>
                 ))}
                 <Button
-                  asChild
                   className="bg-primary text-white hover:bg-primary/90 rounded-full ml-4"
+                  onClick={handleContactClick}
                 >
-                  <ScrollLink to="/contact">Get a quote now</ScrollLink>
+                  Get a quote now
                 </Button>
               </div>
             </div>

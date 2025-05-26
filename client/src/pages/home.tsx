@@ -575,11 +575,9 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <Button
                 className="btn-gradient text-white rounded-full px-10 py-6 text-lg"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">
-                  Request a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                Request a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
 
             </div>
