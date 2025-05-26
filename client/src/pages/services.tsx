@@ -238,9 +238,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
 
@@ -260,9 +260,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
           </div>
@@ -307,9 +307,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
 
@@ -329,9 +329,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
           </div>
