@@ -1,11 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { services } from "@/data/content";
 import { pageTransition } from "@/utils/animations";
 import { BarChart3, Database, ShieldCheck, ChevronRight } from "lucide-react";
 
 const Services = () => {
+  const [, setLocation] = useLocation();
+
+  const handleContactClick = () => {
+    setLocation("/contact");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <motion.div
       className="pt-16"
@@ -116,9 +125,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
 
@@ -138,9 +147,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
 
@@ -160,9 +169,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
           </div>
@@ -207,9 +216,9 @@ const Services = () => {
               </div>
               <Button
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
-                asChild
+                onClick={handleContactClick}
               >
-                <Link href="/contact">Book a Consultation</Link>
+                Book a Consultation
               </Button>
             </motion.div>
 
