@@ -118,7 +118,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=dashboard-reporting">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
 
@@ -140,7 +140,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=predictive-analytics">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
 
@@ -162,7 +162,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=insight-as-a-service">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
           </div>
@@ -209,7 +209,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=data-warehousing">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
 
@@ -231,7 +231,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=data-engineering">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
 
@@ -253,7 +253,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=cloud-management">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
           </div>
@@ -300,7 +300,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=data-governance">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
 
@@ -322,7 +322,7 @@ const Services = () => {
                 className="w-full btn-gradient text-white hover:shadow-lg transition-all mt-auto"
                 asChild
               >
-                <Link href="/contact?service=process-automation">Book a Consultation</Link>
+                <Link href="/contact">Book a Consultation</Link>
               </Button>
             </motion.div>
           </div>
