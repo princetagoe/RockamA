@@ -43,23 +43,23 @@ const Services = () => {
               <Button
                 className="btn-gradient text-white font-semibold rounded-full"
                 size="lg"
-                asChild
+                onClick={() => document.getElementById('analytics')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Link href="#analytics">Data Analytics</Link>
+                Data Analytics
               </Button>
               <Button
                 className="bg-white text-primary font-semibold hover:bg-gray-100 shadow-md rounded-full border border-primary/20"
                 size="lg"
-                asChild
+                onClick={() => document.getElementById('infrastructure')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Link href="#infrastructure">Data Infrastructure</Link>
+                Data Infrastructure
               </Button>
               <Button
                 className="bg-gray-800/80 backdrop-blur-sm text-white font-semibold hover:bg-gray-700 shadow-md rounded-full"
                 size="lg"
-                asChild
+                onClick={() => document.getElementById('governance')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Link href="#governance">Governance</Link>
+                Governance
               </Button>
             </div>
           </motion.div>
