@@ -252,7 +252,7 @@ const Home = () => {
       <section className="py-24 bg-white angled-background services-geometric">
         <div className="diagonal-line-2"></div>
         <div className="geometric-square"></div>
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -327,10 +327,10 @@ const Home = () => {
             </motion.div>
           </div>
           
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8 relative z-10">
             <Button
               asChild
-              className="btn-gradient text-white rounded-full px-8"
+              className="btn-gradient text-white rounded-full px-8 relative z-10"
             >
               <Link href="/services">
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
