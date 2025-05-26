@@ -425,9 +425,9 @@ const Services = () => {
             <Button
               className="btn-gradient text-white font-semibold rounded-full px-8 py-6"
               size="lg"
-              asChild
+              onClick={handleContactClick}
             >
-              <Link href="/contact">Request a Free Proposal</Link>
+              Request a Free Proposal
             </Button>
           </motion.div>
         </div>
