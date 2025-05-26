@@ -306,6 +306,7 @@
   background: rgba(76, 81, 191, 0.3);
   transform: rotate(-35deg);
   z-index: 1;
+  pointer-events: none;
 }
 
 .services-geometric .diagonal-line-2 {
@@ -317,6 +318,7 @@
   background: rgba(76, 81, 191, 0.3);
   transform: rotate(20deg);
   z-index: 1;
+  pointer-events: none;
 }
 
 .services-geometric .geometric-square {
@@ -328,6 +330,7 @@
   border: 2px solid rgba(76, 81, 191, 0.2);
   transform: rotate(25deg);
   z-index: 1;
+  pointer-events: none;
 }
 
 /* Footer geometric elements */
