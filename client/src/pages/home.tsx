@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import ScrollLink from "@/components/scroll-link"; 
 import {
   BarChart3,
@@ -30,6 +30,14 @@ const IconRenderer = ({ icon: Icon }: { icon: LucideIcon }) => {
 
 const Home = () => {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [, setLocation] = useLocation();
+
+  const handleContactClick = () => {
+    setLocation('/contact');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
   
   return (
     <motion.div
@@ -84,12 +92,12 @@ const Home = () => {
                     <Button
                       size="lg"
                       className="btn-gradient text-white font-semibold rounded-full px-8"
-                      asChild
+                      onClick={handleContactClick}
                     >
-                      <ScrollLink to="/contact" className="flex items-center gap-2">
+                      <span className="flex items-center gap-2">
                         Request a Free Consultation
                         <ArrowRight size={16} />
-                      </ScrollLink>
+                      </span>
                     </Button>
                   </motion.div>
                 </motion.div>
