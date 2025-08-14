@@ -1,5 +1,4 @@
 import { insertContactMessageSchema } from "../shared/schema";
-import { storage } from "../server/storage";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 import type { VercelRequest, VercelResponse } from '@vercel/node';
@@ -8,12 +7,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method === "POST") {
     try {
       const contactData = insertContactMessageSchema.parse(req.body);
-      const savedMessage = await storage.createContactMessage(contactData);
       console.log(`\n=========== EMAIL NOTIFICATION ==========\nTO: info@rockam.ai\nFROM: ${contactData.email}\nSUBJECT: New Contact Form Submission\nNAME: ${contactData.name}\nINTEREST: ${contactData.interest}\nMESSAGE: ${contactData.message}\n========================================\n`);
       return res.status(200).json({
         success: true,
         message: "Contact message received successfully. Would be sent to info@rockam.ai in production.",
-        data: savedMessage
+        data: contactData
       });
     } catch (error) {
       if (error instanceof ZodError) {
@@ -32,10 +30,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
   } else if (req.method === "GET") {
     try {
-      const messages = await storage.getContactMessages();
       return res.status(200).json({
         success: true,
-        data: messages
+        data: []
       });
     } catch (error) {
       console.error("Error retrieving contact messages:", error);
